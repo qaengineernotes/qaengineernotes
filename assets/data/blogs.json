@@ -1,0 +1,119 @@
+{
+    "blogs": [
+        {
+            "id": "best-practices-test-cases",
+            "title": "Best Practices for Writing Test Cases",
+            "date": "2025-05-15",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "Learn essential guidelines and techniques for creating effective test cases that ensure software quality and reliability.",
+            "path": "blogs/best-practices-test-cases.html",
+            "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop",
+            "readTime": "8 min read"
+        },
+        {
+            "id": "intro-ai-software-testing",
+            "title": "Introduction to AI in Software Testing",
+            "date": "2025-05-10",
+            "author": "Nikunj Mistri",
+            "category": "AI",
+            "description": "Explore how artificial intelligence is revolutionizing software quality assurance. Learn about AI-driven testing, defect prediction, and more.",
+            "path": "blogs/intro-ai-software-testing.html",
+            "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop",
+            "readTime": "10 min read"
+        },
+        {
+            "id": "jmeter-performance-testing",
+            "title": "Introduction to JMeter for Performance Testing",
+            "date": "2024-03-05",
+            "author": "Nikunj Mistri",
+            "category": "Performance",
+            "description": "A comprehensive guide to setting up and using Apache JMeter for effective performance testing",
+            "path": "blogs/jmeter-performance-testing.html",
+            "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop",
+            "readTime": "12 min read"
+        },
+        {
+            "id": "how-to-write-great-test-case",
+            "title": "How to Write a Great Test Case",
+            "date": "2025-05-20",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "Master the art of creating effective and efficient test cases for software testing. Learn proven techniques and best practices.",
+            "path": "blogs/how-to-write-great-test-case.html",
+            "image": "https://images.unsplash.com/photo-1650331264110-72cd4206d092?q=80&w=1932&auto=format&fit=crop",
+            "readTime": "12 min read"
+        },
+        {
+            "id": "effective-regression-testing",
+            "title": "How to Perform Effective Regression Testing",
+            "date": "2025-05-25",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "Learn comprehensive strategies and best practices for performing effective regression testing in software development.",
+            "path": "blogs/effective-regression-testing.html",
+            "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop",
+            "readTime": "15 min read"
+        },
+        {
+            "id": "qa-testing-glossary",
+            "title": "Essential QA Testing Glossary: Key Terms Explained",
+            "date": "2025-06-01",
+            "author": "Nikunj Mistri", 
+            "category": "Testing",
+            "description": "A comprehensive glossary of QA testing terminology, helping both beginners and experienced testers understand important concepts and jargon.",
+            "path": "blogs/qa-testing-glossary.html",
+            "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop",
+            "readTime": "10 min read"
+        },
+        {
+            "id": "what-is-software-testing",
+            "title": "What is Software Testing? A Beginner's Guide",
+            "date": "2025-04-05",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "An introductory guide to software testing fundamentals, types of testing, and why testing is crucial in software development.",
+            "path": "blogs/what-is-software-testing.html", 
+            "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
+            "readTime": "8 min read"
+        }, 
+        {
+            "id": "role-of-qa-engineer",
+            "title": "Understanding the Role of a QA Engineer",
+            "date": "2025-03-30",
+            "author": "Nikunj Mistri",
+            "category": "Career",
+            "description": "A detailed look at the responsibilities, skills, and day-to-day activities of Quality Assurance Engineers in modern software development.",
+            "path": "blogs/role-of-qa-engineer.html",
+            "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
+            "readTime": "10 min read"
+        },
+        {
+            "id": "software-development-lifecycle",
+            "title": "Understanding the Software Development Life Cycle (SDLC)",
+            "date": "2025-03-15",
+            "author": "Nikunj Mistri",
+            "category": "Development",
+            "description": "A comprehensive guide to the Software Development Life Cycle (SDLC), including its phases, methodologies, and best practices for successful software delivery.",
+            "path": "blogs/software-development-life-cycle.html",
+            "image": "https://images.unsplash.com/photo-1522071901873-411886a10004?q=80&w=2070&auto=format&fit=crop",
+            "readTime": "12 min read"
+        },
+        {
+            "id": "software-testing-lifecycle",
+            "title": "Software Testing Life Cycle (STLC): A Complete Overview",
+            "date": "2025-03-01",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "An in-depth exploration of the Software Testing Life Cycle (STLC), covering all phases from requirement analysis to test closure, and best practices for each stage.",
+            "path": "blogs/software-testing-life-cycle.html",
+            "image": "https://images.unsplash.com/photo-1699679887215-605aa31a5a5d?q=80&w=1932&auto=format&fit=crop",
+            "readTime": "12 min read"
+        }
+        
+    ],
+    "pagination": {
+        "itemsPerPage": 6,
+        "totalPages": 1
+    }
+} 

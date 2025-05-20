@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Practices for Writing Test Cases - QA Engineer Notes</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Best Practices for Writing Test Cases - Learn essential guidelines and techniques for creating effective test cases">
+    <meta name="keywords"
+        content="test cases, software testing, QA best practices, test case design, test case writing, software quality assurance">
+    <meta name="author" content="Nikunj Mistri">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Best Practices for Writing Test Cases">
+    <meta property="og:description"
+        content="Learn essential guidelines and techniques for creating effective test cases that ensure software quality and reliability.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://qaengineer.notes/blogs/best-practices-test-cases">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Best Practices for Writing Test Cases">
+    <meta name="twitter:description"
+        content="Learn essential guidelines and techniques for creating effective test cases that ensure software quality and reliability.">
+    <meta name="twitter:image" content="/assets/images/og-image.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Best Practices for Writing Test Cases",
+        "description": "Learn essential guidelines and techniques for creating effective test cases that ensure software quality and reliability.",
+        "author": {
+            "@type": "Person",
+            "name": "Nikunj Mistri"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "QA Engineer Notes",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://qaengineer.notes/assets/images/logo.png"
+            }
+        },
+        "datePublished": "2025-05-15",
+        "dateModified": "2025-05-15"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="navbar" role="banner">
+        <div class="container-fluid px-4">
+            <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
+                <div class="navbar-section navbar-brand-section">
+                    <a href="/" class="navbar-brand" aria-label="QA Engineer Notes Home">QA Engineer Notes</a>
+                </div>
+                <div class="navbar-section nav-links-section">
+                    <div class="nav-links">
+                        <a href="/" class="nav-link">Home</a>
+                        <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
+                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-section navbar-search-section">
+                    <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper w-100">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search articles..."
+                            aria-label="Search articles">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close search"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results" role="region" aria-label="Search results">
+                        <!-- Search States -->
+                        <div id="searchLoading" class="search-state" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
+                            </div>
+                            <p>Searching articles...</p>
+                        </div>
+                        <div id="searchNoResults" class="search-state" style="display: none;">
+                            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+                            <p>No articles found matching your search.</p>
+                            <p class="text-muted">Try different keywords or browse our categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="menu-icon"></span>
+    </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Reading Progress Bar -->
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+
+        <!-- Blog Post -->
+        <article class="blog-post py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Blog Header -->
+                        <header class="blog-header mb-5">
+                            <div class="blog-meta mb-3">
+                                <span><i class="far fa-calendar"></i> May 15, 2025</span>
+                                <span><i class="far fa-folder"></i> Testing</span>
+                                <span><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h1 class="blog-title display-4 fw-bold mb-4">Best Practices for Writing Test Cases</h1>
+
+                            <!-- Featured Image -->
+                            <img src="https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1932&auto=format&fit=crop"
+                                alt="Test Cases Best Practices" class="featured-image">
+
+                            <div class="blog-author d-flex align-items-center">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri"
+                                    class="author-avatar rounded-circle me-3">
+                                <div>
+                                    <p class="author-name mb-1">Nikunj Mistri</p>
+                                    <p class="author-title text-muted mb-0">Founder, QA Engineer Notes</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Key Takeaways -->
+                        <div class="key-takeaways">
+                            <h3><i class="fas fa-lightbulb me-2"></i>Key Takeaways</h3>
+                            <ul>
+                                <li>Test cases are crucial for ensuring software quality and reliability</li>
+                                <li>Well-written test cases improve clarity and consistency in testing</li>
+                                <li>Following best practices helps create effective and maintainable test cases</li>
+                                <li>Proper test case documentation is essential for team collaboration</li>
+                            </ul>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <div class="highlight-section">
+                                <p class="lead">In the world of software testing, test cases are the backbone of
+                                    ensuring
+                                    that an application functions as intended. A well-written test case not only helps
+                                    identify defects but also ensures clarity, consistency, and efficiency throughout
+                                    the
+                                    testing process. However, writing effective test cases is both an art and a science.
+                                    It
+                                    requires attention to detail, a clear understanding of requirements, and adherence
+                                    to
+                                    best practices.</p>
+                                <p>In this blog post, we'll explore the best practices for writing test cases that are
+                                    clear, concise, and actionable. Whether you're a beginner or an experienced QA
+                                    engineer,
+                                    these tips will help you create high-quality test cases that improve your testing
+                                    outcomes.</p>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">Why Are Test Cases Important?</h2>
+                            <p>Before diving into the best practices, let's understand why test cases are so crucial:
+                            </p>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Clarity:</strong> Test cases provide a structured way to define what
+                                            needs to be tested and how.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Consistency:</strong> They ensure that all testers follow the same
+                                            approach, reducing ambiguity.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Traceability:</strong> Test cases help track requirements and ensure
+                                            that every feature is tested.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Reusability:</strong> Well-written test cases can be reused across
+                                            projects, saving time and effort.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Documentation:</strong> They serve as a reference for future testing
+                                            cycles and onboarding new team members.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <h2 class="mt-5 mb-4">1. Understand the Requirements Thoroughly</h2>
+                            <p>The foundation of any good test case is a deep understanding of the requirements. Before
+                                you
+                                start writing test cases, ensure you have a clear grasp of:</p>
+                            <ul>
+                                <li><strong>Functional Requirements:</strong> What the system should do.</li>
+                                <li><strong>Non-Functional Requirements:</strong> Performance, usability, security, etc.
+                                </li>
+                                <li><strong>User Stories:</strong> How end-users will interact with the application.
+                                </li>
+                                <li><strong>Acceptance Criteria:</strong> The conditions that must be met for the
+                                    feature to
+                                    be considered complete.</li>
+                            </ul>
+                            <p>If anything is unclear, don't hesitate to ask questions or seek clarification from
+                                stakeholders. Misunderstandings at this stage can lead to incomplete or incorrect test
+                                cases.</p>
+
+                            <h2 class="mt-5 mb-4">2. Follow a Standard Template</h2>
+                            <p>Using a consistent format for your test cases ensures clarity and makes them easier to
+                                understand. Below is an example of a structured test case template:</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Column Name</th>
+                                            <th>Description</th>
+                                            <th>Test Steps</th>
+                                            <th>Condition (If Any)</th>
+                                            <th>Test Data (If Any)</th>
+                                            <th>Expected Result</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Test Case Category</td>
+                                            <td>Functional</td>
+                                            <td>1. Open login page<br>2. Enter valid username and password<br>3. Click
+                                                "Login"</td>
+                                            <td>Login page should load successfully</td>
+                                            <td>Username: user@example.com<br>Password: CorrectPass123</td>
+                                            <td>User is redirected to the dashboard/homepage</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">3. Keep Test Cases Simple and Clear</h2>
+                            <p>A good test case should be easy to understand and straightforward to execute. Avoid using
+                                complex language or technical jargon that might confuse testers. Here are some tips for
+                                simplicity:</p>
+                            <ul>
+                                <li>Use clear and concise language.</li>
+                                <li>Write each step in a single action (e.g., "Click the Login button" instead of "Go to
+                                    the
+                                    login page, enter credentials, and click Login").</li>
+                                <li>Avoid unnecessary details that don't contribute to the test.</li>
+                            </ul>
+                            <div class="card bg-light mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Example:</h5>
+                                    <p class="mb-1"><strong>Test Case ID:</strong> TC_001</p>
+                                    <p class="mb-1"><strong>Title:</strong> Verify successful login with valid
+                                        credentials
+                                    </p>
+                                    <p class="mb-1"><strong>Preconditions:</strong> User is on the login page</p>
+                                    <p class="mb-1"><strong>Test Steps:</strong></p>
+                                    <ol>
+                                        <li>Enter valid username "testuser".</li>
+                                        <li>Enter valid password "password123".</li>
+                                        <li>Click the "Login" button.</li>
+                                    </ol>
+                                    <p class="mb-0"><strong>Expected Result:</strong> User is redirected to the
+                                        dashboard.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">4. Focus on One Functionality at a Time</h2>
+                            <p>Each test case should focus on testing a single functionality or requirement. This makes
+                                it
+                                easier to isolate issues and ensures that the test case remains relevant even if the
+                                application evolves.</p>
+                            <p>For example, instead of writing one test case to validate both login and dashboard
+                                navigation, split them into two separate test cases:</p>
+                            <ul>
+                                <li>Test Case 1: Verify successful login with valid credentials.</li>
+                                <li>Test Case 2: Verify redirection to the dashboard after login.</li>
+                            </ul>
+                            <p>This approach improves readability and maintainability.</p>
+
+                            <h2 class="mt-5 mb-4">5. Include Positive and Negative Scenarios</h2>
+                            <p>While it's important to test the happy path (positive scenarios), don't forget to include
+                                negative scenarios as well. Negative testing ensures that the application handles
+                                invalid
+                                inputs or unexpected behaviors gracefully.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Positive Scenario</h5>
+                                            <p class="card-text">Verify login with valid credentials.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Negative Scenario</h5>
+                                            <p class="card-text">Verify error message when entering an incorrect
+                                                password.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">6. Use Realistic and Diverse Test Data</h2>
+                            <p>The quality of your test data directly impacts the effectiveness of your test cases.
+                                Always
+                                use realistic and diverse data to simulate real-world scenarios. Consider edge cases,
+                                boundary values, and unusual inputs.</p>
+                            <p>For example:</p>
+                            <ul>
+                                <li>Test with minimum and maximum input lengths.</li>
+                                <li>Test with special characters, numbers, and spaces.</li>
+                                <li>Use different datasets for various user roles (admin, guest, etc.).</li>
+                            </ul>
+                            <p>If possible, automate the generation of test data to save time and ensure consistency.
+                            </p>
+
+                            <h2 class="mt-5 mb-4">7. Make Test Cases Reusable and Maintainable</h2>
+                            <p>Write test cases in a way that they can be reused across multiple test cycles or
+                                projects.
+                                Avoid hardcoding values or creating overly specific test cases that may become obsolete
+                                with
+                                minor changes.</p>
+                            <p>For example:</p>
+                            <ul>
+                                <li>Instead of hardcoding a specific username, use placeholders like
+                                    &lt;valid_username&gt;
+                                    or &lt;invalid_username&gt;.</li>
+                                <li>Update test cases regularly to reflect changes in the application.</li>
+                            </ul>
+                            <p>Reusable test cases reduce duplication and make maintenance easier.</p>
+
+                            <h2 class="mt-5 mb-4">8. Prioritize Test Cases Based on Risk</h2>
+                            <p>Not all test cases are equally important. Prioritize them based on the risk they address
+                                or
+                                the criticality of the functionality being tested. High-priority test cases should cover
+                                core functionalities, while lower-priority ones can focus on less critical features.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 bg-light border-0">
+                                        <div class="card-body">
+                                            <h5 class="card-title">High Priority</h5>
+                                            <p class="card-text">Verify payment gateway functionality.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 bg-light border-0">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Low Priority</h5>
+                                            <p class="card-text">Validate font size on the homepage.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Prioritization helps allocate resources effectively during tight deadlines.</p>
+
+                            <h2 class="mt-5 mb-4">9. Review and Refine Test Cases Regularly</h2>
+                            <p>Test cases are living documents that need regular updates. As the application evolves,
+                                review
+                                and refine your test cases to ensure they remain relevant. Conduct peer reviews to catch
+                                errors or ambiguities early.</p>
+                            <p>Tips for reviews:</p>
+                            <ul>
+                                <li>Ensure all preconditions and steps are clear.</li>
+                                <li>Validate expected results against current requirements.</li>
+                                <li>Remove redundant or outdated test cases.</li>
+                            </ul>
+
+                            <h2 class="mt-5 mb-4">10. Automate Where Possible</h2>
+                            <p>While manual testing is essential, automating repetitive or time-consuming test cases can
+                                significantly improve efficiency. Identify test cases that are stable, frequently
+                                executed,
+                                and unlikely to change often for automation.</p>
+                            <p>For example:</p>
+                            <ul>
+                                <li>Automate regression tests to ensure existing functionality isn't broken.</li>
+                                <li>Use tools like Selenium, Cypress, or Playwright for UI automation.</li>
+                            </ul>
+                            <p>However, avoid over-automating. Some test cases, especially exploratory ones, are better
+                                suited for manual testing.</p>
+
+                            <h2 class="mt-5 mb-4">11. Document Assumptions and Dependencies</h2>
+                            <p>If your test case relies on certain assumptions or external dependencies (e.g.,
+                                third-party
+                                APIs, network connectivity), document them clearly. This helps testers understand the
+                                context and avoids confusion during execution.</p>
+                            <div class="card bg-light mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Example:</h5>
+                                    <ul class="mb-0">
+                                        <li><strong>Assumption:</strong> Internet connection is stable.</li>
+                                        <li><strong>Dependency:</strong> API endpoint must return a 200 status code.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">12. Collaborate with Developers and Stakeholders</h2>
+                            <p>Collaboration is key to writing effective test cases. Work closely with developers,
+                                product
+                                owners, and business analysts to ensure alignment with requirements. Their insights can
+                                help
+                                you identify edge cases or overlooked scenarios.</p>
+
+                            <h2 class="mt-5 mb-4">Conclusion</h2>
+                            <p>Writing effective test cases is a skill that improves with practice and experience. By
+                                following these best practices—understanding requirements, keeping test cases simple,
+                                focusing on one functionality, including diverse scenarios, and prioritizing—you can
+                                create
+                                test cases that are clear, actionable, and impactful.</p>
+                            <p>Remember, the goal of testing is not just to find bugs but to ensure that the application
+                                delivers value to its users. Well-written test cases play a vital role in achieving this
+                                goal.</p>
+                            <p>Are you ready to apply these best practices in your next project? Share your thoughts or
+                                experiences in the comments below. Let's learn and grow together!</p>
+
+                            <!-- Share Section -->
+                            <div class="share-section">
+                                <h3 class="h4 mb-3">Found this article helpful?</h3>
+                                <p class="mb-4">Share it with your network and help others discover the best practices
+                                    for writing test cases!</p>
+                                <div class="social-share">
+                                    <button class="btn btn-primary" onclick="shareOnTwitter()">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="shareOnLinkedIn()">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="shareOnFacebook()">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="copyLink()">
+                                        <i class="fas fa-link"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Related Articles -->
+                            <div class="related-articles">
+                                <h3>Related Articles</h3>
+                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Getting Started with Test Automation</h4>
+                                                <p class="card-text">Learn the fundamentals of test automation and how
+                                                    to implement it in your testing strategy. Discover best practices
+                                                    and tools for successful automation.</p>
+                                                <a href="#" class="btn-link">Read More <i
+                                                        class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">The Future of Software Testing</h4>
+                                                <p class="card-text">Discover emerging trends and technologies shaping
+                                                    the future of software testing. Stay ahead of the curve with
+                                                    insights into upcoming innovations.</p>
+                                                <a href="#" class="btn-link">Read More <i
+                                                        class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-author-bio">
+                                <h3>About the Author</h3>
+                                <div class="author-info">
+                                    <img src="../assets/images/profile.png" alt="Nikunj Mistri" class="author-avatar">
+                                    <div class="author-details">
+                                        <h4>Nikunj Mistri</h4>
+                                        <p class="author-title">Founder, QA Engineer Notes</p>
+                                        <p>Passionate about software testing and quality assurance, helping teams
+                                            deliver better software through innovative testing approaches. With years of
+                                            experience in the industry, I'm dedicated to sharing knowledge and best
+                                            practices with the QA community.</p>
+                                        <div class="author-social">
+                                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                            <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="call-to-action bg-light p-5 mt-5 rounded">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <div class="text-center text-md-start">
+                                                <h3 class="mb-3">Subscribe to QA Engineer Notes</h3>
+                                                <p class="mb-4">Get more insightful articles on software testing,
+                                                    automation, and the latest trends in QA. Together, let's build
+                                                    better
+                                                    software—one test at a time!</p>
+                                                <div class="d-flex justify-content-center justify-content-md-start">
+                                                    <button class="btn btn-primary px-4 py-2 me-3">
+                                                        <i class="bi bi-envelope me-2"></i> Subscribe Now
+                                                    </button>
+                                                    <button class="btn btn-outline-primary px-4 py-2">
+                                                        <i class="bi bi-bookmark me-2"></i> Save for Later
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <div class="mt-4 mt-md-0">
+                                                <p class="mb-2">Happy Testing,</p>
+                                                <h4 class="mb-1">Nikunj Mistri</h4>
+                                                <p class=" small mb-0">Founder, QA Engineer Notes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand-section">
+                    <h3 class="footer-brand">QA Engineer Notes</h3>
+                    <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
+                        and inspiration for QA professionals.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about" class="footer-link">About</a></li>
+                        <li><a href="/contact" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Random Blog Posts -->
+                <div class="footer-blogs-section">
+                    <h4 class="footer-title">You Might Also Like</h4>
+                    <div class="footer-blogs" id="footer-blogs" role="list">
+                        <!-- Loading State -->
+                        <div class="loading-state" aria-live="polite">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> QA Engineer Notes. Made with <i
+                        class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/footer-blogs.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/back-to-top.js"></script>
+    <script src="../assets/js/scroll-progress.js"></script>
+    <script src="../assets/js/mobile-menu.js"></script>
+
+    <!-- Additional Scripts for Blog -->
+    <script>
+        // Reading Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.reading-progress-bar').style.width = scrolled + '%';
+        });
+
+        // Social Share Functions
+        function shareOnTwitter() {
+            const text = encodeURIComponent('Check out this article about Test Case Best Practices!');
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        }
+
+        // Smooth Scroll for Table of Contents
+        document.querySelectorAll('.blog-toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+# Build output
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Cache directories
+.cache/
+.next/
+
+# Generated files
+*.min.js
+*.min.css
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg 

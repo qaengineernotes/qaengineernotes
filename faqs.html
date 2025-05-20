@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+    <link rel="manifest" href="assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Testing FAQs | QA Engineer Notes</title>
+    <meta name="description" content="Find answers to the most common questions about software testing, QA, automation, performance, API testing, and QA careers.">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is software testing?", "acceptedAnswer": {"@type": "Answer", "text": "Software testing is the process of evaluating a software application to ensure it meets specified requirements and functions as intended. It involves identifying defects, validating functionality, and ensuring quality."}},
+        {"@type": "Question", "name": "Why is software testing important?", "acceptedAnswer": {"@type": "Answer", "text": "Software testing ensures that applications are free of bugs, meet user expectations, and perform reliably. It helps prevent costly errors in production and enhances user satisfaction."}},
+        {"@type": "Question", "name": "What are the different types of software testing?", "acceptedAnswer": {"@type": "Answer", "text": "Common types include: Functional Testing, Non-Functional Testing, Manual Testing, Automation Testing, Unit Testing, Integration Testing, System Testing, Regression Testing, User Acceptance Testing (UAT)."}},
+        {"@type": "Question", "name": "What is the difference between QA and testing?", "acceptedAnswer": {"@type": "Answer", "text": "QA (Quality Assurance) focuses on improving processes to prevent defects, while testing focuses on finding defects after development."}},
+        {"@type": "Question", "name": "What is the testing life cycle (STLC)?", "acceptedAnswer": {"@type": "Answer", "text": "The Software Testing Life Cycle (STLC) includes phases like: Requirement Analysis, Test Planning, Test Case Development, Test Environment Setup, Test Execution, Test Closure."}},
+        {"@type": "Question", "name": "What is a test case?", "acceptedAnswer": {"@type": "Answer", "text": "A test case is a set of conditions or variables under which a tester determines whether a system satisfies requirements or works correctly."}},
+        {"@type": "Question", "name": "What makes a good test case?", "acceptedAnswer": {"@type": "Answer", "text": "A good test case is clear, concise, specific, reusable, and covers all possible scenarios (positive and negative)."}},
+        {"@type": "Question", "name": "What is defect or bug tracking?", "acceptedAnswer": {"@type": "Answer", "text": "Defect tracking involves identifying, documenting, and managing issues found during testing using tools like JIRA, Bugzilla, or TestRail."}},
+        {"@type": "Question", "name": "What is exploratory testing?", "acceptedAnswer": {"@type": "Answer", "text": "Exploratory testing is an unscripted approach where testers explore the application dynamically to uncover unexpected issues."}},
+        {"@type": "Question", "name": "What is smoke testing?", "acceptedAnswer": {"@type": "Answer", "text": "Smoke testing is a quick check to ensure the most critical functionalities of an application work after a build."}}
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation (copied from index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h1 class="h4 mb-0">QA Engineer Notes</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">CATEGORIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="nav-search">
+                    <button class="btn btn-link text-dark p-0" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Modal (copied from index.html) -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="modal-title mb-0">Search Articles</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form class="search-form mb-4" id="searchForm">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0 ps-0" id="searchInput" placeholder="Type to search articles..." autocomplete="off">
+                        </div>
+                    </form>
+                    <div id="searchResults" class="search-results">
+                        <div class="text-center">
+                            <i class="bi bi-search display-6 mb-3"></i>
+                            <p>Enter keywords to search articles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Content -->
+    <section class="faq-section py-5 mt-5">
+        <div class="container">
+            <h1 class="mb-5 text-center">Software Testing FAQs</h1>
+            <div class="accordion" id="faqAccordion">
+                <!-- General Testing FAQs -->
+                <div class="mb-4">
+                    <h2 class="h4 mb-3">General Testing FAQs</h2>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">What is software testing?</button></h3>
+                        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion"><div class="accordion-body">Software testing is the process of evaluating a software application to ensure it meets specified requirements and functions as intended. It involves identifying defects, validating functionality, and ensuring quality.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Why is software testing important?</button></h3>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion"><div class="accordion-body">Software testing ensures that applications are free of bugs, meet user expectations, and perform reliably. It helps prevent costly errors in production and enhances user satisfaction.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">What are the different types of software testing?</button></h3>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion"><div class="accordion-body">Common types include:<br><strong>Functional Testing</strong>: Validates that features work as expected.<br><strong>Non-Functional Testing</strong>: Tests performance, usability, security, etc.<br><strong>Manual Testing</strong>: Performed by humans without automation tools.<br><strong>Automation Testing</strong>: Uses scripts and tools to automate repetitive tasks.<br><strong>Unit Testing</strong>: Focuses on individual components or units of code.<br><strong>Integration Testing</strong>: Ensures modules work together correctly.<br><strong>System Testing</strong>: Tests the entire system end-to-end.<br><strong>Regression Testing</strong>: Verifies that recent changes haven't introduced new defects.<br><strong>User Acceptance Testing (UAT)</strong>: Confirms the product meets business requirements.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq4"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">What is the difference between QA and testing?</button></h3>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion"><div class="accordion-body">QA (Quality Assurance) focuses on improving processes to prevent defects, while testing focuses on finding defects after development.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq5"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">What is the testing life cycle (STLC)?</button></h3>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion"><div class="accordion-body">The Software Testing Life Cycle (STLC) includes phases like:<br>Requirement Analysis<br>Test Planning<br>Test Case Development<br>Test Environment Setup<br>Test Execution<br>Test Closure</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq6"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">What is a test case?</button></h3>
+                        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion"><div class="accordion-body">A test case is a set of conditions or variables under which a tester determines whether a system satisfies requirements or works correctly.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq7"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">What makes a good test case?</button></h3>
+                        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#faqAccordion"><div class="accordion-body">A good test case is clear, concise, specific, reusable, and covers all possible scenarios (positive and negative).</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq8"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">What is defect or bug tracking?</button></h3>
+                        <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion"><div class="accordion-body">Defect tracking involves identifying, documenting, and managing issues found during testing using tools like JIRA, Bugzilla, or TestRail.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq9"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">What is exploratory testing?</button></h3>
+                        <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#faqAccordion"><div class="accordion-body">Exploratory testing is an unscripted approach where testers explore the application dynamically to uncover unexpected issues.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq10"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">What is smoke testing?</button></h3>
+                        <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#faqAccordion"><div class="accordion-body">Smoke testing is a quick check to ensure the most critical functionalities of an application work after a build.</div></div>
+                    </div>
+                </div>
+                <!-- Manual Testing FAQs -->
+                <div class="mb-4">
+                    <h2 class="h4 mb-3">Manual Testing FAQs</h2>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq11"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">What is manual testing?</button></h3>
+                        <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="faq11" data-bs-parent="#faqAccordion"><div class="accordion-body">Manual testing involves testers executing test cases manually without using automation tools.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq12"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">When should you use manual testing?</button></h3>
+                        <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="faq12" data-bs-parent="#faqAccordion"><div class="accordion-body">Manual testing is ideal for exploratory, usability, and ad-hoc testing, as well as when automation isn't feasible or cost-effective.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq13"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">What are the advantages of manual testing?</button></h3>
+                        <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="faq13" data-bs-parent="#faqAccordion"><div class="accordion-body">Advantages include flexibility, ability to detect visual/UI issues, and no need for scripting knowledge.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq14"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">What are the disadvantages of manual testing?</button></h3>
+                        <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="faq14" data-bs-parent="#faqAccordion"><div class="accordion-body">Disadvantages include being time-consuming, prone to human error, and unsuitable for large-scale or repetitive tasks.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq15"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">How do you write effective test cases for manual testing?</button></h3>
+                        <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="faq15" data-bs-parent="#faqAccordion"><div class="accordion-body">Use clear language, focus on one functionality per test case, include preconditions and steps, and define expected results.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq16"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">What is boundary value analysis?</button></h3>
+                        <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="faq16" data-bs-parent="#faqAccordion"><div class="accordion-body">Boundary value analysis tests input values at the edges of acceptable ranges to catch potential errors.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq17"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">What is equivalence partitioning?</button></h3>
+                        <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="faq17" data-bs-parent="#faqAccordion"><div class="accordion-body">Equivalence partitioning divides inputs into groups that are expected to behave similarly, reducing the number of test cases.</div></div>
+                    </div>
+                </div>
+                <!-- Automation Testing FAQs -->
+                <div class="mb-4">
+                    <h2 class="h4 mb-3">Automation Testing FAQs</h2>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq18"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">What is automation testing?</button></h3>
+                        <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="faq18" data-bs-parent="#faqAccordion"><div class="accordion-body">Automation testing uses scripts and tools to execute test cases automatically, reducing manual effort and increasing efficiency.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq19"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">When should you use automation testing?</button></h3>
+                        <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="faq19" data-bs-parent="#faqAccordion"><div class="accordion-body">Automation is suitable for repetitive, time-consuming, or regression tests, especially in agile and CI/CD environments.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq20"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">What are the benefits of automation testing?</button></h3>
+                        <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="faq20" data-bs-parent="#faqAccordion"><div class="accordion-body">Benefits include faster execution, increased accuracy, reusability of test scripts, and better coverage.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq21"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">What are the limitations of automation testing?</button></h3>
+                        <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="faq21" data-bs-parent="#faqAccordion"><div class="accordion-body">Limitations include high initial setup costs, inability to handle subjective aspects like usability, and maintenance overhead.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq22"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">Which tools are commonly used for automation testing?</button></h3>
+                        <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="faq22" data-bs-parent="#faqAccordion"><div class="accordion-body">Popular tools include Selenium, Cypress, Appium, TestComplete, Katalon Studio, and Playwright.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq23"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">What is a test automation framework?</button></h3>
+                        <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="faq23" data-bs-parent="#faqAccordion"><div class="accordion-body">A test automation framework is a set of guidelines, tools, and libraries used to design and execute automated tests efficiently.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq24"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">What is Selenium? Why is it popular?</button></h3>
+                        <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="faq24" data-bs-parent="#faqAccordion"><div class="accordion-body">Selenium is an open-source tool for automating web browsers. It's popular due to its flexibility, support for multiple programming languages, and wide adoption.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq25"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">What is the difference between Selenium WebDriver and Selenium IDE?</button></h3>
+                        <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="faq25" data-bs-parent="#faqAccordion"><div class="accordion-body">Selenium WebDriver is used for browser automation with programming languages, while Selenium IDE is a record-and-playback tool for simpler tests.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq26"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">What is cross-browser testing?</button></h3>
+                        <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="faq26" data-bs-parent="#faqAccordion"><div class="accordion-body">Cross-browser testing ensures that an application works consistently across different browsers (e.g., Chrome, Firefox, Safari).</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq27"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">What is continuous integration (CI) in testing?</button></h3>
+                        <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="faq27" data-bs-parent="#faqAccordion"><div class="accordion-body">CI integrates automated tests into the development pipeline to validate code changes continuously.</div></div>
+                    </div>
+                </div>
+                <!-- Performance Testing FAQs -->
+                <div class="mb-4">
+                    <h2 class="h4 mb-3">Performance Testing FAQs</h2>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq28"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">What is performance testing?</button></h3>
+                        <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="faq28" data-bs-parent="#faqAccordion"><div class="accordion-body">Performance testing evaluates how an application performs under various conditions, such as load, stress, and scalability.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq29"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">What are the types of performance testing?</button></h3>
+                        <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="faq29" data-bs-parent="#faqAccordion"><div class="accordion-body">Types include:<br><strong>Load Testing</strong>: Tests the system under expected user loads.<br><strong>Stress Testing</strong>: Evaluates behavior under extreme conditions.<br><strong>Spike Testing</strong>: Checks response to sudden increases in traffic.<br><strong>Endurance Testing</strong>: Assesses long-term stability.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq30"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">What is JMeter?</button></h3>
+                        <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="faq30" data-bs-parent="#faqAccordion"><div class="accordion-body">Apache JMeter is an open-source tool for performance and load testing.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq31"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">What metrics are measured in performance testing?</button></h3>
+                        <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="faq31" data-bs-parent="#faqAccordion"><div class="accordion-body">Metrics include response time, throughput, CPU/memory usage, error rate, and concurrent users supported.</div></div>
+                    </div>
+                </div>
+                <!-- API Testing FAQs -->
+                <div class="mb-4">
+                    <h2 class="h4 mb-3">API Testing FAQs</h2>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq32"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">What is API testing?</button></h3>
+                        <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="faq32" data-bs-parent="#faqAccordion"><div class="accordion-body">API testing validates the functionality, reliability, and security of APIs (Application Programming Interfaces).</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq33"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">What tools are used for API testing?</button></h3>
+                        <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="faq33" data-bs-parent="#faqAccordion"><div class="accordion-body">Tools include Postman, SoapUI, RestAssured, and Swagger.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq34"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">What is the difference between REST and SOAP APIs?</button></h3>
+                        <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="faq34" data-bs-parent="#faqAccordion"><div class="accordion-body">REST uses lightweight JSON/XML formats over HTTP, while SOAP is protocol-based and uses XML exclusively.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq35"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">How do you test an API?</button></h3>
+                        <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="faq35" data-bs-parent="#faqAccordion"><div class="accordion-body">Steps include sending requests, validating responses, checking status codes, and verifying data integrity.</div></div>
+                    </div>
+                </div>
+                <!-- Career and Skill FAQs -->
+                <div class="mb-4">
+                    <h2 class="h4 mb-3">Career and Skill FAQs</h2>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq36"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">What skills are required to become a QA engineer?</button></h3>
+                        <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="faq36" data-bs-parent="#faqAccordion"><div class="accordion-body">Skills include analytical thinking, attention to detail, knowledge of testing tools, programming basics (e.g., Python, Java), and familiarity with SDLC/STLC.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq37"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">Is coding necessary for software testing?</button></h3>
+                        <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="faq37" data-bs-parent="#faqAccordion"><div class="accordion-body">While not always mandatory, coding skills are increasingly important, especially for automation testing roles.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq38"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">What certifications are useful for QA engineers?</button></h3>
+                        <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="faq38" data-bs-parent="#faqAccordion"><div class="accordion-body">Certifications like ISTQB, CSTE, and Selenium/automation-specific courses add value to a tester's profile.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq39"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse39" aria-expanded="false" aria-controls="collapse39">How can I transition from manual to automation testing?</button></h3>
+                        <div id="collapse39" class="accordion-collapse collapse" aria-labelledby="faq39" data-bs-parent="#faqAccordion"><div class="accordion-body">Learn programming languages (e.g., Python, Java), practice automation frameworks (e.g., Selenium), and take online courses.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq40"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">What is the future of software testing?</button></h3>
+                        <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="faq40" data-bs-parent="#faqAccordion"><div class="accordion-body">The future lies in AI-driven testing, DevOps integration, shift-left testing, and increased reliance on automation.</div></div>
+                    </div>
+                </div>
+                <!-- Miscellaneous FAQs -->
+                <div class="mb-4">
+                    <h2 class="h4 mb-3">Miscellaneous FAQs</h2>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq41"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">What is shift-left testing?</button></h3>
+                        <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="faq41" data-bs-parent="#faqAccordion"><div class="accordion-body">Shift-left testing involves starting testing earlier in the development lifecycle to identify issues sooner.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq42"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse42" aria-expanded="false" aria-controls="collapse42">What is crowdtesting?</button></h3>
+                        <div id="collapse42" class="accordion-collapse collapse" aria-labelledby="faq42" data-bs-parent="#faqAccordion"><div class="accordion-body">Crowdtesting leverages a community of testers to test applications across diverse environments and devices.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq43"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse43" aria-expanded="false" aria-controls="collapse43">What is the role of AI in testing?</button></h3>
+                        <div id="collapse43" class="accordion-collapse collapse" aria-labelledby="faq43" data-bs-parent="#faqAccordion"><div class="accordion-body">AI helps in test case generation, defect prediction, self-healing tests, and intelligent test prioritization.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq44"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse44" aria-expanded="false" aria-controls="collapse44">What is a test plan?</button></h3>
+                        <div id="collapse44" class="accordion-collapse collapse" aria-labelledby="faq44" data-bs-parent="#faqAccordion"><div class="accordion-body">A test plan is a document outlining the scope, objectives, resources, schedule, and approach for testing activities.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq45"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse45" aria-expanded="false" aria-controls="collapse45">What is risk-based testing?</button></h3>
+                        <div id="collapse45" class="accordion-collapse collapse" aria-labelledby="faq45" data-bs-parent="#faqAccordion"><div class="accordion-body">Risk-based testing prioritizes testing efforts based on the likelihood and impact of risks.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq46"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse46" aria-expanded="false" aria-controls="collapse46">What is a test environment?</button></h3>
+                        <div id="collapse46" class="accordion-collapse collapse" aria-labelledby="faq46" data-bs-parent="#faqAccordion"><div class="accordion-body">A test environment is a setup that mimics the production environment for executing tests.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq47"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse47" aria-expanded="false" aria-controls="collapse47">What is the difference between verification and validation?</button></h3>
+                        <div id="collapse47" class="accordion-collapse collapse" aria-labelledby="faq47" data-bs-parent="#faqAccordion"><div class="accordion-body">Verification checks if the product is built correctly (static analysis), while validation ensures it meets user needs (dynamic testing).</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq48"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse48" aria-expanded="false" aria-controls="collapse48">What is a traceability matrix?</button></h3>
+                        <div id="collapse48" class="accordion-collapse collapse" aria-labelledby="faq48" data-bs-parent="#faqAccordion"><div class="accordion-body">A traceability matrix maps requirements to test cases to ensure complete coverage.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq49"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse49" aria-expanded="false" aria-controls="collapse49">What is the difference between smoke and sanity testing?</button></h3>
+                        <div id="collapse49" class="accordion-collapse collapse" aria-labelledby="faq49" data-bs-parent="#faqAccordion"><div class="accordion-body">Smoke testing is a shallow check of critical functionalities, while sanity testing is a deeper check of specific functionalities after minor changes.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h3 class="accordion-header" id="faq50"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse50" aria-expanded="false" aria-controls="collapse50">What is the V-model in testing?</button></h3>
+                        <div id="collapse50" class="accordion-collapse collapse" aria-labelledby="faq50" data-bs-parent="#faqAccordion"><div class="accordion-body">The V-model aligns testing phases with corresponding development phases, emphasizing early testing.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (copied from index.html) -->
+    <footer class="footer-modern text-white pt-5 mt-5">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <!-- About -->
+                <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column justify-content-between">
+                    <div>
+                        <a href="index.html" class="d-inline-block mb-3">
+                            <h5>About QA Engineer Notes</h5>
+                        </a>
+                        <p class="small mb-3">QA Engineer Notes is your go-to resource for software testing knowledge, best practices, and inspiration for QA professionals.</p>
+                    </div>
+                    <div class="footer-social mt-3">
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Random Blog Posts -->
+                <div class="col-md-6">
+                    <h6 class="fw-bold mb-3">You Might Also Like</h6>
+                    <div class="row g-3" id="footer-blogs">
+                        <!-- JS will inject 3 random blog posts here -->
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="row">
+                <div class="col-12 text-center small">
+                    <span>&copy; <script>document.write(new Date().getFullYear())</script> QA Engineer Notes. Made with <i class="bi bi-heart-fill text-danger"></i> by Nikunj Mistri</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/footer-blogs.js"></script>
+</body>
+</html> 

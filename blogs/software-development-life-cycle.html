@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Life Cycle (SDLC): A Comprehensive Guide - QA Engineer Notes</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="A comprehensive guide to the Software Development Life Cycle (SDLC): phases, methodologies, benefits, challenges, and the role of QA in software projects.">
+    <meta name="keywords"
+        content="SDLC, software development life cycle, software process, QA, software testing, SDLC phases, SDLC methodologies, software quality">
+    <meta name="author" content="Nikunj Mistri">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Software Development Life Cycle (SDLC): A Comprehensive Guide">
+    <meta property="og:description"
+        content="A comprehensive guide to the Software Development Life Cycle (SDLC): phases, methodologies, benefits, challenges, and the role of QA in software projects.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://qaengineer.notes/blogs/software-development-life-cycle">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Software Development Life Cycle (SDLC): A Comprehensive Guide">
+    <meta name="twitter:description"
+        content="A comprehensive guide to the Software Development Life Cycle (SDLC): phases, methodologies, benefits, challenges, and the role of QA in software projects.">
+    <meta name="twitter:image" content="/assets/images/og-image.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Software Development Life Cycle (SDLC): A Comprehensive Guide",
+        "description": "A comprehensive guide to the Software Development Life Cycle (SDLC): phases, methodologies, benefits, challenges, and the role of QA in software projects.",
+        "author": {
+            "@type": "Person",
+            "name": "Nikunj Mistri"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "QA Engineer Notes",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://qaengineer.notes/assets/images/logo.png"
+            }
+        },
+        "datePublished": "2025-06-12",
+        "dateModified": "2025-06-12"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="navbar" role="banner">
+        <div class="container-fluid px-4">
+            <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
+                <div class="navbar-section navbar-brand-section">
+                    <a href="/" class="navbar-brand" aria-label="QA Engineer Notes Home">QA Engineer Notes</a>
+                </div>
+                <div class="navbar-section nav-links-section">
+                    <div class="nav-links">
+                        <a href="/" class="nav-link">Home</a>
+                        <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
+                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-section navbar-search-section">
+                    <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper w-100">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search articles..."
+                            aria-label="Search articles">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close search"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results" role="region" aria-label="Search results">
+                        <!-- Search States -->
+                        <div id="searchLoading" class="search-state" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
+                            </div>
+                            <p>Searching articles...</p>
+                        </div>
+                        <div id="searchNoResults" class="search-state" style="display: none;">
+                            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+                            <p>No articles found matching your search.</p>
+                            <p class="text-muted">Try different keywords or browse our categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="menu-icon"></span>
+    </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Reading Progress Bar -->
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+
+        <!-- Blog Post -->
+        <article class="blog-post py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Blog Header -->
+                        <header class="blog-header mb-5">
+                            <div class="blog-meta mb-3">
+                                <span><i class="far fa-calendar"></i> June 12, 2025</span>
+                                <span><i class="far fa-folder"></i> Software Process</span>
+                                <span><i class="far fa-clock"></i> 15 min read</span>
+                            </div>
+                            <h1 class="blog-title display-4 fw-bold mb-4">Software Development Life Cycle (SDLC): A
+                                Comprehensive Guide</h1>
+
+                            <!-- Featured Image -->
+                            <img src="../assets/images/sdlc-guide.jpg" alt="Software Development Life Cycle"
+                                class="featured-image">
+
+                            <div class="blog-author d-flex align-items-center">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri"
+                                    class="author-avatar rounded-circle me-3">
+                                <div>
+                                    <p class="author-name mb-1">Nikunj Mistri</p>
+                                    <p class="author-title text-muted mb-0">Founder, QA Engineer Notes</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Key Takeaways -->
+                        <div class="key-takeaways">
+                            <h3><i class="fas fa-lightbulb me-2"></i>Key Takeaways</h3>
+                            <ul>
+                                <li>SDLC provides a structured framework for software development</li>
+                                <li>Understanding SDLC phases is crucial for successful project delivery</li>
+                                <li>Different methodologies suit different project needs</li>
+                                <li>QA plays a vital role throughout the SDLC process</li>
+                            </ul>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <div class="highlight-section">
+                                <p class="lead">In the world of software development, delivering high-quality
+                                    applications on time and within budget is no small feat. To achieve this, teams
+                                    follow a structured process known as the <strong>Software Development Life Cycle
+                                        (SDLC)</strong>. The SDLC provides a framework for planning, designing,
+                                    building, testing, and deploying software in a systematic and efficient manner.</p>
+                                <p>In this blog post, we'll explore the Software Development Life Cycle (SDLC) in
+                                    detail, covering its phases, methodologies, benefits, and how QA fits into the
+                                    process. Whether you're a beginner or a seasoned professional, this guide will help
+                                    you understand the foundations of SDLC and its importance in software development.
+                                </p>
+                            </div>
+                            <h2 class="mt-5 mb-4">What is the Software Development Life Cycle (SDLC)?</h2>
+                            <p>The Software Development Life Cycle (SDLC) is a structured process used by software
+                                development teams to design, develop, test, and deploy high-quality software. It
+                                outlines the steps required to take a project from the initial concept to a fully
+                                functional application. By following the SDLC, teams can ensure that software is
+                                delivered efficiently, meets user requirements, and adheres to quality standards.</p>
+                            <p>The SDLC is not just about coding—it encompasses everything from gathering requirements
+                                to maintaining the software after deployment. Each phase of the SDLC has specific goals
+                                and deliverables, ensuring a clear path to success.</p>
+                            <h2 class="mt-5 mb-4">Phases of the Software Development Life Cycle (SDLC)</h2>
+                            <ol>
+                                <li><strong>Requirement Analysis</strong>
+                                    <ul>
+                                        <li><strong>Objective</strong>: Understand the needs and expectations of
+                                            stakeholders.</li>
+                                        <li><strong>Activities</strong>:
+                                            <ul>
+                                                <li>Gather requirements through interviews, surveys, and workshops.</li>
+                                                <li>Document functional and non-functional requirements.</li>
+                                                <li>Create a Software Requirements Specification (SRS) document.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Outcome</strong>: A clear understanding of what the software should
+                                            do and why it's needed.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Planning</strong>
+                                    <ul>
+                                        <li><strong>Objective</strong>: Define the project scope, timeline, resources,
+                                            and risks.</li>
+                                        <li><strong>Activities</strong>:
+                                            <ul>
+                                                <li>Develop a project plan outlining milestones and deliverables.</li>
+                                                <li>Identify potential risks and mitigation strategies.</li>
+                                                <li>Allocate resources and define roles and responsibilities.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Outcome</strong>: A roadmap for the project that aligns with
+                                            business goals.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Design</strong>
+                                    <ul>
+                                        <li><strong>Objective</strong>: Create a blueprint for the software architecture
+                                            and user interface.</li>
+                                        <li><strong>Activities</strong>:
+                                            <ul>
+                                                <li>Develop system architecture diagrams.</li>
+                                                <li>Design database schemas and data flow models.</li>
+                                                <li>Create wireframes and prototypes for the user interface.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Outcome</strong>: A detailed design document that developers can use
+                                            to build the software.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Implementation (Coding)</strong>
+                                    <ul>
+                                        <li><strong>Objective</strong>: Transform the design into functional code.</li>
+                                        <li><strong>Activities</strong>:
+                                            <ul>
+                                                <li>Write clean, maintainable, and efficient code.</li>
+                                                <li>Follow coding standards and best practices.</li>
+                                                <li>Conduct unit testing to validate individual components.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Outcome</strong>: A working version of the software ready for
+                                            testing.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Testing</strong>
+                                    <ul>
+                                        <li><strong>Objective</strong>: Ensure the software meets requirements and is
+                                            free of defects.</li>
+                                        <li><strong>Activities</strong>:
+                                            <ul>
+                                                <li>Perform functional, non-functional, and regression testing.</li>
+                                                <li>Use manual and automated testing techniques.</li>
+                                                <li>Log and track defects until they are resolved.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Outcome</strong>: A thoroughly tested application that is ready for
+                                            deployment.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Deployment</strong>
+                                    <ul>
+                                        <li><strong>Objective</strong>: Release the software to production for end
+                                            users.</li>
+                                        <li><strong>Activities</strong>:
+                                            <ul>
+                                                <li>Deploy the application to the live environment.</li>
+                                                <li>Conduct final validation (e.g., smoke testing).</li>
+                                                <li>Provide training and documentation to users.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Outcome</strong>: A fully operational software product accessible to
+                                            users.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Maintenance</strong>
+                                    <ul>
+                                        <li><strong>Objective</strong>: Ensure the software continues to function
+                                            effectively over time.</li>
+                                        <li><strong>Activities</strong>:
+                                            <ul>
+                                                <li>Address bugs and issues reported by users.</li>
+                                                <li>Implement updates, patches, and enhancements.</li>
+                                                <li>Monitor performance and security.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Outcome</strong>: A stable and reliable application that evolves
+                                            with user needs.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <h2 class="mt-5 mb-4">Popular SDLC Methodologies</h2>
+                            <ol>
+                                <li><strong>Waterfall Model</strong>
+                                    <ul>
+                                        <li><strong>Description</strong>: A linear, sequential approach where each phase
+                                            must be completed before moving to the next.</li>
+                                        <li><strong>Best For</strong>: Projects with well-defined requirements and
+                                            minimal changes.</li>
+                                        <li><strong>Pros</strong>: Simple, easy to manage, and predictable.</li>
+                                        <li><strong>Cons</strong>: Inflexible and unsuitable for projects with evolving
+                                            requirements.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Agile Model</strong>
+                                    <ul>
+                                        <li><strong>Description</strong>: An iterative and incremental approach that
+                                            emphasizes collaboration, flexibility, and continuous improvement.</li>
+                                        <li><strong>Best For</strong>: Projects requiring frequent updates and
+                                            adaptability.</li>
+                                        <li><strong>Pros</strong>: Faster delivery, improved communication, and higher
+                                            customer satisfaction.</li>
+                                        <li><strong>Cons</strong>: Requires strong team collaboration and may lack
+                                            detailed documentation.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Scrum</strong>
+                                    <ul>
+                                        <li><strong>Description</strong>: A subset of Agile that organizes work into
+                                            short iterations called sprints (usually 2–4 weeks).</li>
+                                        <li><strong>Best For</strong>: Teams focused on delivering incremental value
+                                            quickly.</li>
+                                        <li><strong>Pros</strong>: High transparency, adaptability, and accountability.
+                                        </li>
+                                        <li><strong>Cons</strong>: May face challenges with large or complex projects.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>DevOps</strong>
+                                    <ul>
+                                        <li><strong>Description</strong>: Combines development and operations to enable
+                                            continuous integration and delivery (CI/CD).</li>
+                                        <li><strong>Best For</strong>: Projects requiring rapid releases and seamless
+                                            collaboration between teams.</li>
+                                        <li><strong>Pros</strong>: Faster feedback loops, improved quality, and reduced
+                                            downtime.</li>
+                                        <li><strong>Cons</strong>: Requires significant investment in tools and culture
+                                            change.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Spiral Model</strong>
+                                    <ul>
+                                        <li><strong>Description</strong>: A risk-driven approach that combines elements
+                                            of Waterfall and iterative development.</li>
+                                        <li><strong>Best For</strong>: Large, complex projects with high uncertainty.
+                                        </li>
+                                        <li><strong>Pros</strong>: Focuses on risk management and allows for
+                                            flexibility.</li>
+                                        <li><strong>Cons</strong>: Can be costly and time-consuming.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>V-Model</strong>
+                                    <ul>
+                                        <li><strong>Description</strong>: A variation of the Waterfall model where
+                                            testing activities are mapped to corresponding development phases.</li>
+                                        <li><strong>Best For</strong>: Projects with strict quality requirements.</li>
+                                        <li><strong>Pros</strong>: Emphasizes testing and ensures defects are caught
+                                            early.</li>
+                                        <li><strong>Cons</strong>: Rigid and less adaptable to changes.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <h2 class="mt-5 mb-4">The Role of QA in the SDLC</h2>
+                            <p>Quality Assurance (QA) plays a critical role at every stage of the SDLC, ensuring that
+                                the software meets the highest standards of quality. Here's how QA contributes to each
+                                phase:</p>
+                            <ul>
+                                <li><strong>Requirement Analysis</strong>:
+                                    <ul>
+                                        <li>Validate that requirements are clear, complete, and testable.</li>
+                                        <li>Identify potential risks and ambiguities early.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Planning</strong>:
+                                    <ul>
+                                        <li>Develop a comprehensive test plan aligned with project goals.</li>
+                                        <li>Define testing scope, timelines, and resources.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Design</strong>:
+                                    <ul>
+                                        <li>Review design documents to ensure they meet requirements.</li>
+                                        <li>Plan test cases based on the system architecture.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Implementation</strong>:
+                                    <ul>
+                                        <li>Collaborate with developers to ensure code quality.</li>
+                                        <li>Perform unit testing and code reviews.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Testing</strong>:
+                                    <ul>
+                                        <li>Execute test cases to validate functionality, performance, and usability.
+                                        </li>
+                                        <li>Track and resolve defects systematically.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Deployment</strong>:
+                                    <ul>
+                                        <li>Conduct final validation to ensure the software is ready for production.
+                                        </li>
+                                        <li>Monitor the deployment process for any issues.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Maintenance</strong>:
+                                    <ul>
+                                        <li>Test updates, patches, and enhancements to ensure they don't introduce new
+                                            defects.</li>
+                                        <li>Continuously monitor the application for quality and performance.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h2 class="mt-5 mb-4">Benefits of Following the SDLC</h2>
+                            <ul>
+                                <li><strong>Improved Quality</strong>: Systematic testing and validation ensure the
+                                    software meets user expectations.</li>
+                                <li><strong>Cost Efficiency</strong>: Early detection of defects reduces rework and
+                                    associated costs.</li>
+                                <li><strong>Better Communication</strong>: Clear documentation and defined phases
+                                    enhance collaboration among teams.</li>
+                                <li><strong>Faster Delivery</strong>: Streamlined processes and iterative methodologies
+                                    accelerate time-to-market.</li>
+                                <li><strong>Risk Management</strong>: Identifying and addressing risks early minimizes
+                                    potential disruptions.</li>
+                                <li><strong>Scalability</strong>: A structured approach makes it easier to scale
+                                    projects as they grow in complexity.</li>
+                            </ul>
+                            <h2 class="mt-5 mb-4">Challenges in Implementing the SDLC</h2>
+                            <ul>
+                                <li><strong>Changing Requirements</strong>: Evolving needs can disrupt the planned
+                                    workflow, especially in rigid methodologies like Waterfall.</li>
+                                <li><strong>Resource Constraints</strong>: Limited budgets, time, or skilled personnel
+                                    can hinder progress.</li>
+                                <li><strong>Tool Integration</strong>: Selecting and integrating the right tools for
+                                    development, testing, and deployment can be challenging.</li>
+                                <li><strong>Balancing Speed and Quality</strong>: Meeting tight deadlines without
+                                    compromising quality requires careful planning.</li>
+                                <li><strong>Cultural Resistance</strong>: Transitioning to new methodologies (e.g.,
+                                    Agile or DevOps) may face resistance from teams accustomed to traditional
+                                    approaches.</li>
+                            </ul>
+                            <h2 class="mt-5 mb-4">Conclusion</h2>
+                            <p>The Software Development Life Cycle (SDLC) is a cornerstone of successful software
+                                development. By following a structured process, teams can deliver high-quality
+                                applications that meet user needs, adhere to timelines, and stay within budget.
+                                Understanding the phases, methodologies, and role of QA in the SDLC is essential for
+                                anyone involved in software development.</p>
+                            <p>Whether you're a developer, tester, or project manager, mastering the SDLC will empower
+                                you to contribute more effectively to your projects. Stay tuned to QA Engineer Notes for
+                                more insights, tutorials, and best practices on QA and software testing.</p>
+                        </div>
+
+                        <!-- Share Section -->
+                        <div class="share-section">
+                            <h3 class="h4 mb-3">Found this article helpful?</h3>
+                            <p class="mb-4">Share it with your network and help others understand SDLC better!</p>
+                            <div class="social-share">
+                                <button class="btn btn-primary" onclick="shareOnTwitter()">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="shareOnLinkedIn()">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="shareOnFacebook()">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="copyLink()">
+                                    <i class="fas fa-link"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Call to Action Section -->
+                        <div class="cta-section">
+                            <div class="cta-content">
+                                <h3>Join Our Community of QA Professionals</h3>
+                                <p>Get exclusive access to in-depth articles, testing strategies, and industry insights.
+                                    Stay ahead of the curve with our expert-curated content delivered straight to your
+                                    inbox.</p>
+
+                                <div class="cta-buttons">
+                                    <a href="#newsletter" class="btn btn-primary">Subscribe Now</a>
+                                    <a href="/blog" class="btn btn-outline">Explore More Articles</a>
+                                </div>
+
+                                <div class="cta-features">
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Weekly Updates</span>
+                                    </div>
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Expert Insights</span>
+                                    </div>
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Free Resources</span>
+                                    </div>
+                                </div>
+
+                                <div class="cta-signature">
+                                    <img src="../assets/images/profile.png" alt="Nikunj Mistri">
+                                    <div class="signature-text">
+                                        <p class="signature-name">Nikunj Mistri</p>
+                                        <p class="signature-title">Founder, QA Engineer Notes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Articles -->
+                        <div class="related-articles">
+                            <h3>Related Articles</h3>
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Getting Started with Test Automation</h4>
+                                            <p class="card-text">Learn the fundamentals of test automation and how to
+                                                implement it in your testing strategy.</p>
+                                            <a href="#" class="btn-link">Read More <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">The Future of Software Testing</h4>
+                                            <p class="card-text">Discover emerging trends and technologies shaping the
+                                                future of software testing.</p>
+                                            <a href="#" class="btn-link">Read More <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Author Bio -->
+                        <div class="blog-author-bio">
+                            <h3>About the Author</h3>
+                            <div class="author-info">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri" class="author-avatar">
+                                <div class="author-details">
+                                    <h4>Nikunj Mistri</h4>
+                                    <p class="author-title">Founder, QA Engineer Notes</p>
+                                    <p>Passionate about software testing and quality assurance, helping teams deliver
+                                        better software through innovative testing approaches. With years of experience
+                                        in the industry, I'm dedicated to sharing knowledge and best practices with the
+                                        QA community.</p>
+                                    <div class="author-social">
+                                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand-section">
+                    <h3 class="footer-brand">QA Engineer Notes</h3>
+                    <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
+                        and inspiration for QA professionals.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about" class="footer-link">About</a></li>
+                        <li><a href="/contact" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Random Blog Posts -->
+                <div class="footer-blogs-section">
+                    <h4 class="footer-title">You Might Also Like</h4>
+                    <div class="footer-blogs" id="footer-blogs" role="list">
+                        <!-- Loading State -->
+                        <div class="loading-state" aria-live="polite">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> QA Engineer Notes. Made with <i
+                        class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/footer-blogs.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/back-to-top.js"></script>
+    <script src="../assets/js/scroll-progress.js"></script>
+    <script src="../assets/js/mobile-menu.js"></script>
+
+    <!-- Additional Scripts for Blog -->
+    <script>
+        // Reading Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.reading-progress-bar').style.width = scrolled + '%';
+        });
+
+        // Social Share Functions
+        function shareOnTwitter() {
+            const text = encodeURIComponent('Check out this comprehensive guide to SDLC!');
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        }
+
+        // Smooth Scroll for Table of Contents
+        document.querySelectorAll('.blog-toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

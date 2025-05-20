@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Perform Effective Regression Testing - QA Engineer Notes</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="How to Perform Effective Regression Testing - A comprehensive guide to regression testing strategies and best practices">
+    <meta name="keywords"
+        content="regression testing, software testing, QA best practices, test automation, software quality assurance">
+    <meta name="author" content="Nikunj Mistri">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Perform Effective Regression Testing">
+    <meta property="og:description"
+        content="Learn comprehensive strategies and best practices for performing effective regression testing in software development.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://qaengineer.notes/blogs/effective-regression-testing">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Perform Effective Regression Testing">
+    <meta name="twitter:description"
+        content="Learn comprehensive strategies and best practices for performing effective regression testing in software development.">
+    <meta name="twitter:image" content="/assets/images/og-image.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Perform Effective Regression Testing",
+        "description": "Learn comprehensive strategies and best practices for performing effective regression testing in software development.",
+        "author": {
+            "@type": "Person",
+            "name": "Nikunj Mistri"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "QA Engineer Notes",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://qaengineer.notes/assets/images/logo.png"
+            }
+        },
+        "datePublished": "2025-05-25",
+        "dateModified": "2025-05-25"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="navbar" role="banner">
+        <div class="container-fluid px-4">
+            <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
+                <div class="navbar-section navbar-brand-section">
+                    <a href="/" class="navbar-brand" aria-label="QA Engineer Notes Home">QA Engineer Notes</a>
+                </div>
+                <div class="navbar-section nav-links-section">
+                    <div class="nav-links">
+                        <a href="/" class="nav-link">Home</a>
+                        <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
+                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-section navbar-search-section">
+                    <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper w-100">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search articles..."
+                            aria-label="Search articles">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close search"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results" role="region" aria-label="Search results">
+                        <!-- Search States -->
+                        <div id="searchLoading" class="search-state" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
+                            </div>
+                            <p>Searching articles...</p>
+                        </div>
+                        <div id="searchNoResults" class="search-state" style="display: none;">
+                            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+                            <p>No articles found matching your search.</p>
+                            <p class="text-muted">Try different keywords or browse our categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="menu-icon"></span>
+    </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Reading Progress Bar -->
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+
+        <!-- Blog Post -->
+        <article class="blog-post py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Blog Header -->
+                        <header class="blog-header mb-5">
+                            <div class="blog-meta mb-3">
+                                <span><i class="far fa-calendar"></i> May 25, 2025</span>
+                                <span><i class="far fa-folder"></i> Testing</span>
+                                <span><i class="far fa-clock"></i> 15 min read</span>
+                            </div>
+                            <h1 class="blog-title display-4 fw-bold mb-4">How to Perform Effective Regression Testing
+                            </h1>
+
+                            <!-- Featured Image -->
+                            <img src="https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1932&auto=format&fit=crop"
+                                alt="Regression Testing" class="featured-image">
+
+                            <div class="blog-author d-flex align-items-center">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri"
+                                    class="author-avatar rounded-circle me-3">
+                                <div>
+                                    <p class="author-name mb-1">Nikunj Mistri</p>
+                                    <p class="author-title text-muted mb-0">Founder, QA Engineer Notes</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Key Takeaways -->
+                        <div class="key-takeaways">
+                            <h3><i class="fas fa-lightbulb me-2"></i>Key Takeaways</h3>
+                            <ul>
+                                <li>Regression testing ensures existing functionality remains intact after code changes
+                                </li>
+                                <li>Strategic test case selection and prioritization are crucial for effective
+                                    regression testing</li>
+                                <li>Automation plays a vital role in maintaining regression test suites</li>
+                                <li>Regular maintenance and updates of test cases are essential for long-term success
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <div class="highlight-section">
+                                <p class="lead">In the fast-paced world of software development, where frequent updates
+                                    and new features are the norm, ensuring that existing functionality remains intact
+                                    is crucial. This is where regression testing comes into play. Regression testing
+                                    verifies that recent code changes—whether bug fixes, enhancements, or new
+                                    features—haven't introduced defects into previously working parts of the
+                                    application.</p>
+                                <p>However, performing regression testing effectively requires more than just rerunning
+                                    old test cases. It demands a strategic approach to maximize efficiency, minimize
+                                    effort, and ensure comprehensive coverage. In this blog post, we'll explore how to
+                                    perform effective regression testing step-by-step, along with best practices and
+                                    tools to streamline the process.</p>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">What is Regression Testing?</h2>
+                            <p>Regression testing is a type of software testing that ensures an application still
+                                functions correctly after changes have been made to its codebase. These changes could
+                                include:</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>Bug fixes</div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>New feature implementations</div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>Code refactoring</div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>Performance optimizations</div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>Configuration changes</div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>The primary goal of regression testing is to catch unintended side effects caused by
+                                these changes before they reach production.</p>
+
+                            <h2 class="mt-5 mb-4">Why is Regression Testing Important?</h2>
+                            <p>Regression testing plays a critical role in maintaining software quality. Here's why it's
+                                so important:</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-shield-check text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="h6 mb-1">Prevents Defect Leakage</h5>
+                                            <p class="small mb-0">Ensures that new code doesn't break existing
+                                                functionality.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="h6 mb-1">Builds Confidence</h5>
+                                            <p class="small mb-0">Provides assurance that the application behaves as
+                                                expected after updates.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-lightning-charge text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="h6 mb-1">Supports Agile and DevOps</h5>
+                                            <p class="small mb-0">Facilitates continuous integration and delivery
+                                                (CI/CD) by validating changes quickly.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-graph-down-arrow text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="h6 mb-1">Reduces Technical Debt</h5>
+                                            <p class="small mb-0">Identifies issues early, reducing the cost and effort
+                                                of fixing them later.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">Steps to Perform Effective Regression Testing</h2>
+                            <p>To ensure your regression testing is thorough and efficient, follow these steps:</p>
+
+                            <h3 class="mt-4 mb-3">1. Understand the Scope of Changes</h3>
+                            <p>Before diving into regression testing, understand the nature and impact of the changes
+                                made to the application. Ask yourself:</p>
+                            <ul>
+                                <li>What specific modules or functionalities were modified?</li>
+                                <li>Are there dependencies between the changed code and other parts of the system?</li>
+                                <li>What are the potential risks associated with these changes?</li>
+                            </ul>
+                            <p>Collaborate with developers, product owners, and stakeholders to gather this information.
+                                A clear understanding of the scope helps you prioritize which areas to test.</p>
+
+                            <h3 class="mt-4 mb-3">2. Identify Test Cases for Regression</h3>
+                            <p>Not all test cases need to be included in regression testing. Focus on those that are
+                                most relevant to the changes made. Use these criteria to identify test cases:</p>
+                            <ul>
+                                <li><strong>High-Priority Test Cases:</strong> Cover core functionalities like login,
+                                    payment processing, or data submission.</li>
+                                <li><strong>Impacted Areas:</strong> Include test cases related to the modules or
+                                    features affected by the changes.</li>
+                                <li><strong>Critical Paths:</strong> Test end-to-end workflows that are essential to the
+                                    user experience.</li>
+                                <li><strong>Frequently Used Features:</strong> Ensure commonly used functionalities
+                                    remain functional.</li>
+                            </ul>
+
+                            <h3 class="mt-4 mb-3">3. Prioritize Test Cases Based on Risk</h3>
+                            <p>Not all test cases are equally important. Prioritize them based on the risk they address
+                                and the criticality of the functionality being tested:</p>
+                            <ul>
+                                <li><strong>High Priority:</strong> Core functionalities that are critical to the
+                                    application.</li>
+                                <li><strong>Medium Priority:</strong> Secondary features that are important but not
+                                    mission-critical.</li>
+                                <li><strong>Low Priority:</strong> Non-essential features like UI elements or minor
+                                    enhancements.</li>
+                            </ul>
+
+                            <h3 class="mt-4 mb-3">4. Automate Repetitive Test Cases</h3>
+                            <p>Manual regression testing can be time-consuming and error-prone, especially for large
+                                applications. Automating repetitive and stable test cases can significantly improve
+                                efficiency. Use automation tools like:</p>
+                            <ul>
+                                <li><strong>Selenium:</strong> For web application testing.</li>
+                                <li><strong>Cypress:</strong> For modern JavaScript-based applications.</li>
+                                <li><strong>Playwright:</strong> For cross-browser testing.</li>
+                                <li><strong>TestComplete:</strong> For desktop, mobile, and web applications.</li>
+                            </ul>
+
+                            <h3 class="mt-4 mb-3">5. Execute Test Cases</h3>
+                            <p>Once you've identified and prioritized your test cases, execute them systematically.
+                                Follow these tips for effective execution:</p>
+                            <ul>
+                                <li>Run Smoke Tests First: Perform a quick sanity check to ensure the application is
+                                    stable.</li>
+                                <li>Use Parallel Execution: If possible, run test cases in parallel to save time.</li>
+                                <li>Document Results: Record the actual outcomes and compare them against expected
+                                    results.</li>
+                                <li>Track Defects: Log any issues found during testing and assign them to the
+                                    appropriate team.</li>
+                            </ul>
+
+                            <h3 class="mt-4 mb-3">6. Analyze and Report Results</h3>
+                            <p>After executing the test cases, analyze the results to determine whether the application
+                                passes or fails regression testing. Key points to consider:</p>
+                            <ul>
+                                <li>Pass/Fail Status: Identify which test cases passed and which failed.</li>
+                                <li>Root Cause Analysis: Investigate the reasons behind failed test cases.</li>
+                                <li>Impact Assessment: Evaluate the severity of the defects and their impact on the
+                                    application.</li>
+                            </ul>
+
+                            <h3 class="mt-4 mb-3">7. Maintain and Update Test Cases</h3>
+                            <p>Regression testing is an ongoing process, and test cases need regular maintenance to
+                                remain relevant. As the application evolves, update your test cases to reflect:</p>
+                            <ul>
+                                <li>New features or functionalities</li>
+                                <li>Changes in requirements</li>
+                                <li>Deprecated or removed features</li>
+                            </ul>
+
+                            <h2 class="mt-5 mb-4">Best Practices for Effective Regression Testing</h2>
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="h6 mb-1">Focus on High-Risk Areas</h5>
+                                            <p class="small mb-0">Prioritize testing for modules or features that are
+                                                prone to errors or have undergone significant changes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="h6 mb-1">Leverage Automation Strategically</h5>
+                                            <p class="small mb-0">Automate stable and frequently executed test cases,
+                                                but don't automate everything.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="h6 mb-1">Use Version Control</h5>
+                                            <p class="small mb-0">Store your test cases and scripts in a version control
+                                                system to track changes and collaborate effectively.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="h6 mb-1">Incorporate Exploratory Testing</h5>
+                                            <p class="small mb-0">Supplement automated and scripted tests with
+                                                exploratory testing to uncover unexpected issues.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">Challenges in Regression Testing</h2>
+                            <p>While regression testing is essential, it comes with its own set of challenges:</p>
+                            <ul>
+                                <li><strong>Time Constraints:</strong> Limited timeframes can make it difficult to
+                                    execute all test cases.</li>
+                                <li><strong>Maintenance Overhead:</strong> Keeping test cases and automation scripts
+                                    up-to-date can be resource-intensive.</li>
+                                <li><strong>Test Case Selection:</strong> Identifying the right test cases for
+                                    regression testing can be challenging, especially in large projects.</li>
+                                <li><strong>Tool Limitations:</strong> Not all automation tools are suitable for every
+                                    type of application or testing scenario.</li>
+                            </ul>
+
+                            <h2 class="mt-5 mb-4">Tools for Regression Testing</h2>
+                            <p>Several tools can help streamline and enhance your regression testing efforts. Here are
+                                some popular options:</p>
+                            <ul>
+                                <li><strong>Selenium:</strong> Open-source tool for automating web application testing.
+                                </li>
+                                <li><strong>Cypress:</strong> Modern JavaScript-based framework for front-end testing.
+                                </li>
+                                <li><strong>TestNG/JUnit:</strong> Frameworks for organizing and executing test cases in
+                                    Java.</li>
+                                <li><strong>Jenkins:</strong> CI/CD tool for integrating automated tests into the build
+                                    pipeline.</li>
+                                <li><strong>LambdaTest/Sauce Labs:</strong> Cloud-based platforms for cross-browser
+                                    testing.</li>
+                                <li><strong>Postman:</strong> Tool for API testing, useful for verifying backend
+                                    changes.</li>
+                            </ul>
+
+                            <h2 class="mt-5 mb-4">Conclusion</h2>
+                            <p>Performing effective regression testing is a cornerstone of delivering high-quality
+                                software. By understanding the scope of changes, prioritizing test cases, leveraging
+                                automation, and following best practices, you can ensure that your application remains
+                                robust and reliable even as it evolves.</p>
+                            <p>Remember, regression testing is not a one-time activity—it's an ongoing process that
+                                requires continuous effort and improvement. With the right strategies, tools, and
+                                mindset, you can master the art of regression testing and contribute to building better
+                                software.</p>
+                        </div>
+
+                        <!-- Share Section -->
+                        <div class="share-section">
+                            <h3 class="h4 mb-3">Found this article helpful?</h3>
+                            <p class="mb-4">Share it with your network and help others discover effective regression
+                                testing strategies!</p>
+                            <div class="social-share">
+                                <button class="btn btn-primary" onclick="shareOnTwitter()">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="shareOnLinkedIn()">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="shareOnFacebook()">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="copyLink()">
+                                    <i class="fas fa-link"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Call to Action Section -->
+                        <div class="cta-section">
+                            <div class="cta-content">
+                                <h3>Join Our Community of QA Professionals</h3>
+                                <p>Get exclusive access to in-depth articles, testing strategies, and industry insights.
+                                    Stay ahead of the curve with our expert-curated content delivered straight to your
+                                    inbox.</p>
+
+                                <div class="cta-buttons">
+                                    <a href="#newsletter" class="btn btn-primary">Subscribe Now</a>
+                                    <a href="/blog" class="btn btn-outline">Explore More Articles</a>
+                                </div>
+
+                                <div class="cta-features">
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Weekly Updates</span>
+                                    </div>
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Expert Insights</span>
+                                    </div>
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Free Resources</span>
+                                    </div>
+                                </div>
+
+                                <div class="cta-signature">
+                                    <img src="../assets/images/profile.png" alt="Nikunj Mistri">
+                                    <div class="signature-text">
+                                        <p class="signature-name">Nikunj Mistri</p>
+                                        <p class="signature-title">Founder, QA Engineer Notes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Articles -->
+                        <div class="related-articles">
+                            <h3>Related Articles</h3>
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Getting Started with Test Automation</h4>
+                                            <p class="card-text">Learn the fundamentals of test automation and how to
+                                                implement it in your testing strategy. Discover best practices and tools
+                                                for successful automation.</p>
+                                            <a href="#" class="btn-link">Read More <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">The Future of Software Testing</h4>
+                                            <p class="card-text">Discover emerging trends and technologies shaping the
+                                                future of software testing. Stay ahead of the curve with insights into
+                                                upcoming innovations.</p>
+                                            <a href="#" class="btn-link">Read More <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Author Bio -->
+                        <div class="blog-author-bio">
+                            <h3>About the Author</h3>
+                            <div class="author-info">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri" class="author-avatar">
+                                <div class="author-details">
+                                    <h4>Nikunj Mistri</h4>
+                                    <p class="author-title">Founder, QA Engineer Notes</p>
+                                    <p>Passionate about software testing and quality assurance, helping teams deliver
+                                        better software through innovative testing approaches. With years of experience
+                                        in the industry, I'm dedicated to sharing knowledge and best practices with the
+                                        QA community.</p>
+                                    <div class="author-social">
+                                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand-section">
+                    <h3 class="footer-brand">QA Engineer Notes</h3>
+                    <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
+                        and inspiration for QA professionals.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about" class="footer-link">About</a></li>
+                        <li><a href="/contact" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Random Blog Posts -->
+                <div class="footer-blogs-section">
+                    <h4 class="footer-title">You Might Also Like</h4>
+                    <div class="footer-blogs" id="footer-blogs" role="list">
+                        <!-- Loading State -->
+                        <div class="loading-state" aria-live="polite">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> QA Engineer Notes. Made with <i
+                        class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/footer-blogs.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/back-to-top.js"></script>
+    <script src="../assets/js/scroll-progress.js"></script>
+    <script src="../assets/js/mobile-menu.js"></script>
+
+    <!-- Additional Scripts for Blog -->
+    <script>
+        // Reading Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.reading-progress-bar').style.width = scrolled + '%';
+        });
+
+        // Social Share Functions
+        function shareOnTwitter() {
+            const text = encodeURIComponent('Check out this article about Effective Regression Testing!');
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        }
+
+        // Smooth Scroll for Table of Contents
+        document.querySelectorAll('.blog-toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

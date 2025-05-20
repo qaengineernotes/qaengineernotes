@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Testing Glossary - QA Engineer Notes</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Comprehensive glossary of software testing terms and definitions for QA professionals">
+    <meta name="keywords"
+        content="QA glossary, software testing terms, testing definitions, QA terminology, testing vocabulary">
+    <meta name="author" content="Nikunj Mistri">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="QA Testing Glossary - QA Engineer Notes">
+    <meta property="og:description"
+        content="A comprehensive guide to software testing terminology and definitions for QA professionals">
+    <meta property="og:image" content="../assets/images/qa-glossary-share.jpg">
+    <meta property="og:url" content="https://qaengineernote.com/blogs/qa-testing-glossary">
+    <meta property="article:published_time" content="2025-05-08">
+    <meta property="article:author" content="https://qaengineernote.com/about">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QA Testing Glossary - QA Engineer Notes">
+    <meta name="twitter:description"
+        content="A comprehensive guide to software testing terminology and definitions for QA professionals">
+    <meta name="twitter:image" content="../assets/images/qa-glossary-share.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "QA Testing Glossary",
+        "image": "https://qaengineernote.com/assets/images/qa-glossary-share.jpg",
+        "datePublished": "2025-05-08",
+        "dateModified": "2025-05-08",
+        "author": {
+            "@type": "Person",
+            "name": "Nikunj Mistri",
+            "url": "https://qaengineernote.com/about"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "QA Engineer Notes",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://qaengineernote.com/assets/images/logo.png"
+            }
+        },
+        "description": "A comprehensive guide to software testing terminology and definitions for QA professionals",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://qaengineernote.com/blogs/qa-testing-glossary"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="navbar" role="banner">
+        <div class="container-fluid px-4">
+            <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
+                <div class="navbar-section navbar-brand-section">
+                    <a href="/" class="navbar-brand" aria-label="QA Engineer Notes Home">QA Engineer Notes</a>
+                </div>
+                <div class="navbar-section nav-links-section">
+                    <div class="nav-links">
+                        <a href="/" class="nav-link">Home</a>
+                        <a href="/blog.html" class="nav-link active" aria-current="page">Blog</a>
+                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-section navbar-search-section">
+                    <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper w-100">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search articles..."
+                            aria-label="Search articles">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close search"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results" role="region" aria-label="Search results">
+                        <!-- Search States -->
+                        <div id="searchLoading" class="search-state" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
+                            </div>
+                            <p>Searching articles...</p>
+                        </div>
+                        <div id="searchNoResults" class="search-state" style="display: none;">
+                            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+                            <p>No articles found matching your search.</p>
+                            <p class="text-muted">Try different keywords or browse our categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="menu-icon"></span>
+    </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="pt-5">
+        <!-- Reading Progress Bar -->
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+
+        <!-- Blog Post -->
+        <article class="blog-post py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Blog Header -->
+                        <header class="blog-header mb-5">
+                            <div class="blog-meta mb-3">
+                                <span><i class="far fa-calendar"></i> May 8, 2025</span>
+                                <span><i class="far fa-folder"></i> QA Resources</span>
+                                <span><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h1 class="blog-title display-4 fw-bold mb-4">QA Testing Glossary</h1>
+
+                            <!-- Featured Image -->
+                            <img src="../assets/images/qa-glossary-share.jpg" alt="QA Testing Glossary"
+                                class="featured-image">
+
+                            <div class="blog-author d-flex align-items-center">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri"
+                                    class="author-avatar rounded-circle me-3">
+                                <div>
+                                    <p class="author-name mb-1">Nikunj Mistri</p>
+                                    <p class="author-title text-muted mb-0">Founder, QA Engineer Notes</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Key Takeaways -->
+                        <div class="key-takeaways">
+                            <h3><i class="fas fa-lightbulb me-2"></i>Key Takeaways</h3>
+                            <ul>
+                                <li>Comprehensive collection of essential QA and testing terminology</li>
+                                <li>Clear definitions and explanations for both beginners and professionals</li>
+                                <li>Organized alphabetically for easy reference</li>
+                                <li>Includes modern testing concepts and methodologies</li>
+                            </ul>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <p class="lead">In the world of software quality assurance (QA) and testing, understanding
+                                key terminology is essential for effective communication and collaboration. Whether
+                                you're a beginner or an experienced QA professional, having a clear grasp of common
+                                QA/testing terms will help you navigate discussions, planning, and execution with
+                                confidence.</p>
+
+                            <p>In this blog post, we'll define and explain some of the most frequently used terms in QA
+                                and software testing. This glossary will serve as a handy reference for testers,
+                                developers, and stakeholders alike.</p>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">1. Quality Assurance (QA)</h3>
+                                <p><strong>Definition:</strong> Quality Assurance refers to the systematic process of
+                                    ensuring that a product meets specified requirements and standards before it reaches
+                                    the end user. It focuses on preventing defects through process improvements rather
+                                    than just finding them.</p>
+                                <p><strong>Key Point:</strong> QA is about building quality into the development
+                                    process, not just testing for bugs after the fact.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">2. Software Testing</h3>
+                                <p><strong>Definition:</strong> Software testing is the process of evaluating a software
+                                    application to ensure it behaves as expected, meets user requirements, and is free
+                                    of defects.</p>
+                                <p><strong>Key Point:</strong> Testing can be manual or automated and includes
+                                    functional, non-functional, and regression testing.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">3. Test Case</h3>
+                                <p><strong>Definition:</strong> A test case is a set of conditions or variables under
+                                    which a tester determines whether a system satisfies requirements or works
+                                    correctly.</p>
+                                <p><strong>Example:</strong> A test case for login functionality might include steps
+                                    like entering valid credentials and verifying redirection to the dashboard.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">4. Test Plan</h3>
+                                <p><strong>Definition:</strong> A test plan is a document that outlines the scope,
+                                    objectives, resources, schedule, and approach for testing activities.</p>
+                                <p><strong>Key Components:</strong></p>
+                                <ul>
+                                    <li>Scope of testing</li>
+                                    <li>Test objectives</li>
+                                    <li>Test deliverables</li>
+                                    <li>Risks and mitigation strategies</li>
+                                </ul>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">5. Test Scenario</h3>
+                                <p><strong>Definition:</strong> A test scenario is a high-level description of what
+                                    needs to be tested. It represents a specific situation or use case that the tester
+                                    will validate.</p>
+                                <p><strong>Example:</strong> "Verify that users can reset their password using the
+                                    'Forgot Password' feature."</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">6. Test Script</h3>
+                                <p><strong>Definition:</strong> A test script is a set of instructions written in a
+                                    programming language to automate the execution of test cases.</p>
+                                <p><strong>Key Point:</strong> Test scripts are commonly used in automation testing
+                                    tools like Selenium or Cypress.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">7. Defect/Bug</h3>
+                                <p><strong>Definition:</strong> A defect (or bug) is any deviation from the expected
+                                    behavior of the software. It occurs when the actual result does not match the
+                                    expected result.</p>
+                                <p><strong>Severity Levels:</strong></p>
+                                <ul>
+                                    <li>Critical: Blocks core functionality.</li>
+                                    <li>High: Affects major features but doesn't block usage.</li>
+                                    <li>Medium: Minor impact on usability.</li>
+                                    <li>Low: Cosmetic issues like typos or UI inconsistencies.</li>
+                                </ul>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">8. Regression Testing</h3>
+                                <p><strong>Definition:</strong> Regression testing ensures that recent code changes—such
+                                    as bug fixes, enhancements, or new features—haven't introduced defects into
+                                    previously working parts of the application.</p>
+                                <p><strong>Key Point:</strong> It's often automated to save time and improve efficiency.
+                                </p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">9. Smoke Testing</h3>
+                                <p><strong>Definition:</strong> Smoke testing is a quick, shallow check to verify that
+                                    the most critical functionalities of an application work after a new build.</p>
+                                <p><strong>Analogy:</strong> Think of it as a "sanity check" to ensure the application
+                                    isn't completely broken.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">10. Sanity Testing</h3>
+                                <p><strong>Definition:</strong> Sanity testing is a focused check performed after minor
+                                    changes to confirm that specific functionalities work as expected.</p>
+                                <p><strong>Difference from Smoke Testing:</strong> Smoke testing is broader, while
+                                    sanity testing is more targeted.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">11. Exploratory Testing</h3>
+                                <p><strong>Definition:</strong> Exploratory testing is an unscripted approach where
+                                    testers explore the application dynamically to uncover unexpected issues.</p>
+                                <p><strong>Key Point:</strong> It relies on the tester's creativity and intuition rather
+                                    than predefined test cases.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">12. Acceptance Testing</h3>
+                                <p><strong>Definition:</strong> Acceptance testing is performed to determine whether the
+                                    software meets business requirements and is ready for release.</p>
+                                <p><strong>Types:</strong></p>
+                                <ul>
+                                    <li>User Acceptance Testing (UAT): Conducted by end-users.</li>
+                                    <li>Alpha Testing: Performed internally before release.</li>
+                                    <li>Beta Testing: Conducted by a limited group of external users.</li>
+                                </ul>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">13. Black Box Testing</h3>
+                                <p><strong>Definition:</strong> Black box testing evaluates the functionality of an
+                                    application without knowing its internal code structure.</p>
+                                <p><strong>Key Point:</strong> The tester focuses only on inputs and outputs, not how
+                                    the application processes them.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">14. White Box Testing</h3>
+                                <p><strong>Definition:</strong> White box testing examines the internal structure,
+                                    logic, and code of an application.</p>
+                                <p><strong>Key Point:</strong> It requires programming knowledge and is often performed
+                                    by developers.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">15. Gray Box Testing</h3>
+                                <p><strong>Definition:</strong> Gray box testing combines elements of both black box and
+                                    white box testing. The tester has partial knowledge of the internal workings of the
+                                    application.</p>
+                                <p><strong>Use Case:</strong> Often used in integration testing to validate interactions
+                                    between components.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">16. Unit Testing</h3>
+                                <p><strong>Definition:</strong> Unit testing verifies individual units or components of
+                                    the code in isolation to ensure they function correctly.</p>
+                                <p><strong>Key Point:</strong> Developers typically perform unit tests during the coding
+                                    phase.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">17. Integration Testing</h3>
+                                <p><strong>Definition:</strong> Integration testing ensures that different modules or
+                                    components of an application work together as expected.</p>
+                                <p><strong>Approaches:</strong></p>
+                                <ul>
+                                    <li>Top-down</li>
+                                    <li>Bottom-up</li>
+                                    <li>Big Bang</li>
+                                </ul>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">18. System Testing</h3>
+                                <p><strong>Definition:</strong> System testing evaluates the complete and integrated
+                                    software system to ensure it meets specified requirements.</p>
+                                <p><strong>Key Point:</strong> It's performed after integration testing and before
+                                    acceptance testing.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">19. Performance Testing</h3>
+                                <p><strong>Definition:</strong> Performance testing evaluates how an application
+                                    performs under various conditions, such as load, stress, and scalability.</p>
+                                <p><strong>Types:</strong></p>
+                                <ul>
+                                    <li>Load Testing</li>
+                                    <li>Stress Testing</li>
+                                    <li>Spike Testing</li>
+                                    <li>Endurance Testing</li>
+                                </ul>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">20. API Testing</h3>
+                                <p><strong>Definition:</strong> API testing validates the functionality, reliability,
+                                    and security of APIs (Application Programming Interfaces).</p>
+                                <p><strong>Tools:</strong> Postman, SoapUI, RestAssured.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">21. Cross-Browser Testing</h3>
+                                <p><strong>Definition:</strong> Cross-browser testing ensures that an application works
+                                    consistently across different browsers (e.g., Chrome, Firefox, Safari).</p>
+                                <p><strong>Key Point:</strong> It's crucial for web applications to provide a uniform
+                                    user experience.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">22. Traceability Matrix</h3>
+                                <p><strong>Definition:</strong> A traceability matrix maps requirements to test cases to
+                                    ensure complete coverage.</p>
+                                <p><strong>Purpose:</strong> Helps track whether all requirements have been tested.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">23. Automation Testing</h3>
+                                <p><strong>Definition:</strong> Automation testing uses scripts and tools to execute
+                                    test cases automatically, reducing manual effort and increasing efficiency.</p>
+                                <p><strong>Tools:</strong> Selenium, Cypress, Appium, TestComplete.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">24. Continuous Integration (CI)</h3>
+                                <p><strong>Definition:</strong> Continuous Integration integrates automated tests into
+                                    the development pipeline to validate code changes continuously.</p>
+                                <p><strong>Benefits:</strong> Reduces integration issues and accelerates feedback loops.
+                                </p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">25. Shift-Left Testing</h3>
+                                <p><strong>Definition:</strong> Shift-left testing involves starting testing earlier in
+                                    the development lifecycle to identify issues sooner.</p>
+                                <p><strong>Advantage:</strong> Reduces costs and improves quality by catching defects
+                                    early.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">26. Test Environment</h3>
+                                <p><strong>Definition:</strong> A test environment is a setup that mimics the production
+                                    environment for executing tests.</p>
+                                <p><strong>Components:</strong> Hardware, software, network configurations, and test
+                                    data.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">27. Boundary Value Analysis</h3>
+                                <p><strong>Definition:</strong> Boundary value analysis tests input values at the edges
+                                    of acceptable ranges to catch potential errors.</p>
+                                <p><strong>Example:</strong> If a field accepts values between 1 and 100, test with 0,
+                                    1, 99, and 100.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">28. Equivalence Partitioning</h3>
+                                <p><strong>Definition:</strong> Equivalence partitioning divides inputs into groups that
+                                    are expected to behave similarly, reducing the number of test cases.</p>
+                                <p><strong>Example:</strong> For a field accepting ages 18–60, test with one value from
+                                    each group: below 18, 18–60, and above 60.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">29. Test Automation Framework</h3>
+                                <p><strong>Definition:</strong> A test automation framework is a set of guidelines,
+                                    tools, and libraries used to design and execute automated tests efficiently.</p>
+                                <p><strong>Examples:</strong> Data-driven, keyword-driven, and hybrid frameworks.</p>
+                            </div>
+
+                            <div class="glossary-term mb-5">
+                                <h3 class="h4">30. Risk-Based Testing</h3>
+                                <p><strong>Definition:</strong> Risk-based testing prioritizes testing efforts based on
+                                    the likelihood and impact of risks.</p>
+                                <p><strong>Goal:</strong> Maximize test coverage while minimizing resource usage.</p>
+                            </div>
+
+                            <div class="conclusion-section mt-5">
+                                <h3>Conclusion</h3>
+                                <p>Understanding these common QA/testing terms is crucial for anyone involved in
+                                    software development and testing. By familiarizing yourself with this vocabulary,
+                                    you'll be better equipped to communicate effectively, plan testing activities, and
+                                    contribute to delivering high-quality software.</p>
+                                <p>Are there any other terms you'd like us to define? Let us know in the comments below!
+                                </p>
+                            </div>
+
+                            <!-- Share Section -->
+                            <div class="share-section">
+                                <h3 class="h4 mb-3">Found this glossary helpful?</h3>
+                                <p class="mb-4">Share it with your network and help others learn about QA testing
+                                    terminology!</p>
+                                <div class="social-share">
+                                    <button class="btn btn-primary" onclick="shareOnTwitter()">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="shareOnLinkedIn()">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="shareOnFacebook()">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="copyLink()">
+                                        <i class="fas fa-link"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Call to Action Section -->
+                            <div class="cta-section">
+                                <div class="cta-content">
+                                    <h3>Join Our Community of QA Professionals</h3>
+                                    <p>Get exclusive access to in-depth articles, testing strategies, and industry
+                                        insights. Stay ahead of the curve with our expert-curated content delivered
+                                        straight to your inbox.</p>
+
+                                    <div class="cta-buttons">
+                                        <a href="#newsletter" class="btn btn-primary">Subscribe Now</a>
+                                        <a href="/blog" class="btn btn-outline">Explore More Articles</a>
+                                    </div>
+
+                                    <div class="cta-features">
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Weekly Updates</span>
+                                        </div>
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Expert Insights</span>
+                                        </div>
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Free Resources</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cta-signature">
+                                        <img src="../assets/images/profile.png" alt="Nikunj Mistri">
+                                        <div class="signature-text">
+                                            <p class="signature-name">Nikunj Mistri</p>
+                                            <p class="signature-title">Founder, QA Engineer Notes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Related Articles -->
+                            <div class="related-articles">
+                                <h3>Related Articles</h3>
+                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Getting Started with Test Automation</h4>
+                                                <p class="card-text">Learn the fundamentals of test automation and how
+                                                    to implement it in your testing strategy. Discover best practices
+                                                    and tools for successful automation.</p>
+                                                <a href="#" class="btn-link">Read More <i
+                                                        class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">The Future of Software Testing</h4>
+                                                <p class="card-text">Discover emerging trends and technologies shaping
+                                                    the future of software testing. Stay ahead of the curve with
+                                                    insights into upcoming innovations.</p>
+                                                <a href="#" class="btn-link">Read More <i
+                                                        class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-author-bio">
+                                <h3>About the Author</h3>
+                                <div class="author-info">
+                                    <img src="../assets/images/profile.png" alt="Nikunj Mistri" class="author-avatar">
+                                    <div class="author-details">
+                                        <h4>Nikunj Mistri</h4>
+                                        <p class="author-title">Founder, QA Engineer Notes</p>
+                                        <p>Passionate about software testing and quality assurance, helping teams
+                                            deliver better software through innovative testing approaches. With years of
+                                            experience in the industry, I'm dedicated to sharing knowledge and best
+                                            practices with the QA community.</p>
+                                        <div class="author-social">
+                                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                            <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand-section">
+                    <h3 class="footer-brand">QA Engineer Notes</h3>
+                    <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
+                        and inspiration for QA professionals.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about" class="footer-link">About</a></li>
+                        <li><a href="/contact" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Random Blog Posts -->
+                <div class="footer-blogs-section">
+                    <h4 class="footer-title">You Might Also Like</h4>
+                    <div class="footer-blogs" id="footer-blogs" role="list">
+                        <!-- Loading State -->
+                        <div class="loading-state" aria-live="polite">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> QA Engineer Notes. Made with <i
+                        class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/footer-blogs.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/back-to-top.js"></script>
+    <script src="../assets/js/scroll-progress.js"></script>
+    <script src="../assets/js/mobile-menu.js"></script>
+
+    <!-- Additional Scripts for Blog -->
+    <script>
+        // Reading Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.reading-progress-bar').style.width = scrolled + '%';
+        });
+
+        // Social Share Functions
+        function shareOnTwitter() {
+            const text = encodeURIComponent('Check out this comprehensive QA Testing Glossary!');
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        }
+
+        // Smooth Scroll for Table of Contents
+        document.querySelectorAll('.blog-toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

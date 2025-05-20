@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>QA Engineer Notes Blog</title>
+    <link>https://qaengineernotes.com/</link>
+    <description>Latest blog posts and resources for QA engineers and software testers.</description>
+    <language>en-us</language>
+    <generator>Custom Script</generator>
+    <copyright>2025 QA Engineer Notes</copyright>
+
+    <item>
+      <title>Best Practices for Writing Test Cases</title>
+      <link>https://qaengineernotes.com/blogs/best-practices-test-cases.html</link>
+      <description>Learn essential guidelines and techniques for creating effective test cases that ensure software quality and reliability.</description>
+      <author>Nikunj Mistri</author>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://qaengineernotes.com/blogs/best-practices-test-cases.html</guid>
+    </item>
+    <item>
+      <title>Introduction to AI in Software Testing</title>
+      <link>https://qaengineernotes.com/blogs/intro-ai-software-testing.html</link>
+      <description>Explore how artificial intelligence is revolutionizing software quality assurance. Learn about AI-driven testing, defect prediction, and more.</description>
+      <author>Nikunj Mistri</author>
+      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://qaengineernotes.com/blogs/intro-ai-software-testing.html</guid>
+    </item>
+    <item>
+      <title>Introduction to JMeter for Performance Testing</title>
+      <link>https://qaengineernotes.com/blogs/jmeter-performance-testing.html</link>
+      <description>A comprehensive guide to setting up and using Apache JMeter for effective performance testing</description>
+      <author>Nikunj Mistri</author>
+      <pubDate>Wed, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://qaengineernotes.com/blogs/jmeter-performance-testing.html</guid>
+    </item>
+    <item>
+      <title>How to Write a Great Test Case</title>
+      <link>https://qaengineernotes.com/blogs/how-to-write-great-test-case.html</link>
+      <description>Master the art of creating effective and efficient test cases for software testing. Learn proven techniques and best practices.</description>
+      <author>Nikunj Mistri</author>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://qaengineernotes.com/blogs/how-to-write-great-test-case.html</guid>
+    </item>
+    <item>
+      <title>How to Perform Effective Regression Testing</title>
+      <link>https://qaengineernotes.com/blogs/effective-regression-testing.html</link>
+      <description>Learn comprehensive strategies and best practices for performing effective regression testing in software development.</description>
+      <author>Nikunj Mistri</author>
+      <pubDate>Sun, 25 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://qaengineernotes.com/blogs/effective-regression-testing.html</guid>
+    </item>
+    <item>
+      <title>Essential QA Testing Glossary: Key Terms Explained</title>
+      <link>https://qaengineernotes.com/blogs/qa-testing-glossary.html</link>
+      <description>A comprehensive glossary of QA testing terminology, helping both beginners and experienced testers understand important concepts and jargon.</description>
+      <author>Nikunj Mistri</author>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://qaengineernotes.com/blogs/qa-testing-glossary.html</guid>
+    </item>
+  </channel>
+</rss> 
