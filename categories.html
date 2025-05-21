@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QA Engineer Notes - Modern Software Testing Resources</title>
+    <title>Categories - QA Engineer Notes</title>
 
     <!-- Meta Tags -->
     <meta name="description"
-        content="A comprehensive resource for software testing professionals from beginner to advanced levels">
+        content="Browse our comprehensive collection of software testing and QA articles organized by categories">
     <meta name="keywords"
-        content="software testing, QA engineer, test automation, testing resources, quality assurance">
+        content="software testing categories, QA categories, testing topics, quality assurance topics">
     <meta name="author" content="Nikunj Mistri">
 
     <!-- Favicon -->
@@ -19,29 +19,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="QA Engineer Notes - Modern Software Testing Resources">
-    <meta property="og:description"
-        content="A comprehensive resource for software testing professionals from beginner to advanced levels">
-    <meta property="og:image" content="/assets/images/og-image.jpg">
-    <meta property="og:url" content="https://qaengineer.notes">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="QA Engineer Notes - Modern Software Testing Resources">
-    <meta name="twitter:description"
-        content="A comprehensive resource for software testing professionals from beginner to advanced levels">
-    <meta name="twitter:image" content="/assets/images/og-image.jpg">
-
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        as="style">
-    <link rel="preload" href="assets/css/style.css" as="style">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,21 +35,6 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "QA Engineer Notes",
-        "url": "https://qaengineer.notes",
-        "description": "A comprehensive resource for software testing professionals from beginner to advanced levels",
-        "author": {
-            "@type": "Person",
-            "name": "Nikunj Mistri"
-        }
-    }
-    </script>
 </head>
 
 <body>
@@ -88,9 +50,9 @@
                 </div>
                 <div class="navbar-section nav-links-section">
                     <div class="nav-links">
-                        <a href="/" class="nav-link" aria-current="page">Home</a>
+                        <a href="/" class="nav-link">Home</a>
                         <a href="/blog.html" class="nav-link">Blog</a>
-                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/categories.html" class="nav-link" aria-current="page">Categories</a>
                         <a href="/about.html" class="nav-link">About</a>
                         <a href="/contact.html" class="nav-link">Contact</a>
                     </div>
@@ -148,71 +110,113 @@
     </div>
 
     <!-- Main Content -->
-    <main id="main-content" class="pt-5">
+    <main id="main-content">
         <!-- Hero Section -->
-        <section class="hero-section py-5 bg-light" aria-labelledby="hero-title">
+        <section class="hero-section" aria-labelledby="hero-title">
             <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-8">
-                        <span class="badge bg-primary mb-3 px-3 py-2">Welcome to QA Engineer Notes</span>
-                        <h1 id="hero-title" class="display-4 fw-bold mb-4">Master Software Testing with Expert Insights
-                        </h1>
-                        <p class="lead mb-5">Your comprehensive resource for software testing knowledge, from
-                            fundamentals to advanced automation techniques.</p>
-                        <div class="d-flex gap-3 justify-content-center">
-                            <a href="/blog" class="btn btn-primary btn-lg px-4">Explore Articles</a>
-                            <a href="#newsletter" class="btn btn-primary btn-lg px-4">Subscribe to Newsletter</a>
-                        </div>
-                    </div>
+                <div class="hero-content text-center">
+                    <span class="hero-badge">Categories</span>
+                    <h1 id="hero-title" class="hero-title">Explore Our Topics</h1>
+                    <p class="hero-description">Browse our comprehensive collection of articles organized by categories
+                        to find exactly what you're looking for.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Recent Blogs Section -->
-        <section class="recent-blogs py-5" aria-labelledby="recent-posts-title">
+        <!-- Categories Grid -->
+        <section class="categories-section py-5">
             <div class="container">
-                <h2 id="recent-posts-title" class="text-center mb-5">Recent Articles</h2>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="recent-posts-grid" role="list">
-                    <!-- Loading State -->
-                    <div class="col-12 text-center" aria-live="polite">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section id="newsletter" class="newsletter-section py-5 bg-light" aria-labelledby="newsletter-title">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 id="newsletter-title" class="mb-4">Stay Updated</h2>
-                        <p class="text-muted mb-4">Subscribe to our newsletter for the latest articles, testing tips,
-                            and industry insights.</p>
-                        <form id="newsletterForm" class="newsletter-form needs-validation" novalidate>
-                            <div class="row g-3 justify-content-center">
-                                <div class="col-md-8">
-                                    <div class="input-group">
-                                        <input type="email" id="newsletterEmail" class="form-control form-control-lg"
-                                            placeholder="Enter your email" required aria-label="Email address">
-                                        <button type="submit" class="btn btn-primary btn-lg">
-                                            <span class="btn-text">Subscribe</span>
-                                            <span class="btn-loader d-none">
-                                                <span class="spinner-border spinner-border-sm" role="status"
-                                                    aria-hidden="true"></span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div class="invalid-feedback">Please enter a valid email address.</div>
-                                </div>
+                <div class="row g-4">
+                    <!-- Manual Testing Category -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="category-card h-100">
+                            <div class="category-icon">
+                                <i class="fas fa-clipboard-check"></i>
                             </div>
-                        </form>
-                        <p class="newsletter-privacy mt-3 text-muted small">By subscribing, you agree to our <a
-                                href="/privacy" class="text-decoration-none">Privacy Policy</a> and consent to receive
-                            updates from our company.</p>
+                            <h3>Manual Testing</h3>
+                            <p>Learn about test case design, execution strategies, and best practices in manual testing.
+                            </p>
+                            <a href="/blog.html?category=manual-testing" class="btn btn-outline-primary">View
+                                Articles</a>
+                        </div>
                     </div>
+
+                    <!-- Automation Testing Category -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="category-card h-100">
+                            <div class="category-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Automation Testing</h3>
+                            <p>Explore test automation frameworks, tools, and implementation strategies.</p>
+                            <a href="/blog.html?category=automation" class="btn btn-outline-primary">View Articles</a>
+                        </div>
+                    </div>
+
+                    <!-- Performance Testing Category -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="category-card h-100">
+                            <div class="category-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <h3>Performance Testing</h3>
+                            <p>Discover techniques for load testing, stress testing, and performance optimization.</p>
+                            <a href="/blog.html?category=performance" class="btn btn-outline-primary">View Articles</a>
+                        </div>
+                    </div>
+
+                    <!-- API Testing Category -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="category-card h-100">
+                            <div class="category-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h3>API Testing</h3>
+                            <p>Learn about API testing methodologies, tools, and best practices.</p>
+                            <a href="/blog.html?category=api" class="btn btn-outline-primary">View Articles</a>
+                        </div>
+                    </div>
+
+                    <!-- Security Testing Category -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="category-card h-100">
+                            <div class="category-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Security Testing</h3>
+                            <p>Explore security testing techniques, vulnerabilities, and prevention strategies.</p>
+                            <a href="/blog.html?category=security" class="btn btn-outline-primary">View Articles</a>
+                        </div>
+                    </div>
+
+                    <!-- Career Development Category -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="category-card h-100">
+                            <div class="category-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Career Development</h3>
+                            <p>Tips and insights for advancing your career in software testing and QA.</p>
+                            <a href="/blog.html?category=career" class="btn btn-outline-primary">View Articles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Tags Section -->
+        <section class="tags-section py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-4">Popular Tags</h2>
+                <div class="tags-cloud text-center">
+                    <a href="/blog.html?tag=selenium" class="tag">Selenium</a>
+                    <a href="/blog.html?tag=python" class="tag">Python</a>
+                    <a href="/blog.html?tag=test-automation" class="tag">Test Automation</a>
+                    <a href="/blog.html?tag=api-testing" class="tag">API Testing</a>
+                    <a href="/blog.html?tag=performance" class="tag">Performance</a>
+                    <a href="/blog.html?tag=security" class="tag">Security</a>
+                    <a href="/blog.html?tag=best-practices" class="tag">Best Practices</a>
+                    <a href="/blog.html?tag=career" class="tag">Career</a>
                 </div>
             </div>
         </section>
@@ -243,10 +247,10 @@
                 <div class="footer-links-section">
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="/about" class="footer-link">About</a></li>
-                        <li><a href="/contact" class="footer-link">Contact</a></li>
-                        <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="/terms" class="footer-link">Terms of Service</a></li>
+                        <li><a href="/about.html" class="footer-link">About</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
                     </ul>
                 </div>
 
@@ -276,7 +280,7 @@
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- Scripts -->
