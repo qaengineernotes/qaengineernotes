@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /*.js$
+Disallow: /*.py$
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://qablogs.com/sitemap.xml 
