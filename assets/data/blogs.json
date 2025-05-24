@@ -23,17 +23,6 @@
             "readTime": "10 min read"
         },
         {
-            "id": "jmeter-performance-testing",
-            "title": "Introduction to JMeter for Performance Testing",
-            "date": "2024-03-05",
-            "author": "Nikunj Mistri",
-            "category": "Performance",
-            "description": "A comprehensive guide to setting up and using Apache JMeter for effective performance testing",
-            "path": "blogs/jmeter-performance-testing.html",
-            "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop",
-            "readTime": "12 min read"
-        },
-        {
             "id": "how-to-write-great-test-case",
             "title": "How to Write a Great Test Case",
             "date": "2025-05-20",
@@ -108,6 +97,17 @@
             "description": "An in-depth exploration of the Software Testing Life Cycle (STLC), covering all phases from requirement analysis to test closure, and best practices for each stage.",
             "path": "blogs/software-testing-life-cycle.html",
             "image": "../assets/images/software-testing-life-cycle.jpg",
+            "readTime": "12 min read"
+        },
+        {
+            "id": "beyond-manual-ai-testing",
+            "title": "Beyond Manual AI Testing: The Future of Software Testing",
+            "date": "2025-03-21",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Explore how Artificial Intelligence is transforming the role of software testers, from automation to strategic quality assurance. Learn about AI testing tools, automation, and future of QA.",
+            "path": "blogs/beyond-manual-ai-testing.html",
+            "image": "../assets/images/beyond-manual-ai-testing.jpg",
             "readTime": "12 min read"
         }
     ],

@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Test Scenarios: A Comprehensive Guide - QA Engineer Notes</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Explore comprehensive general test scenarios that every QA engineer should consider when testing web or mobile applications.">
+    <meta name="keywords"
+        content="test scenarios, software testing, QA testing, test cases, quality assurance, software quality">
+    <meta name="author" content="Nikunj Mistri">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="General Test Scenarios: A Comprehensive Guide">
+    <meta property="og:description"
+        content="Explore comprehensive general test scenarios that every QA engineer should consider when testing web or mobile applications.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://qaengineernotes.com/blogs/general-test-scenarios">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="General Test Scenarios: A Comprehensive Guide">
+    <meta name="twitter:description"
+        content="Explore comprehensive general test scenarios that every QA engineer should consider when testing web or mobile applications.">
+    <meta name="twitter:image" content="/assets/images/og-image.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "General Test Scenarios: A Comprehensive Guide",
+        "description": "Explore comprehensive general test scenarios that every QA engineer should consider when testing web or mobile applications.",
+        "author": {
+            "@type": "Person",
+            "name": "Nikunj Mistri"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "QA Engineer Notes",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://qaengineernotes.com/assets/images/logo.png"
+            }
+        },
+        "datePublished": "2024-03-21",
+        "dateModified": "2024-03-21"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="navbar" role="banner">
+        <div class="container-fluid px-4">
+            <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
+                <div class="navbar-section navbar-brand-section">
+                    <a href="/" class="navbar-brand" aria-label="QA Engineer Notes Home">QA Engineer Notes</a>
+                </div>
+                <div class="navbar-section nav-links-section">
+                    <div class="nav-links">
+                        <a href="/" class="nav-link">Home</a>
+                        <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
+                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-section navbar-search-section">
+                    <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper w-100">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search articles..."
+                            aria-label="Search articles">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close search"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results" role="region" aria-label="Search results">
+                        <!-- Search States -->
+                        <div id="searchLoading" class="search-state" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
+                            </div>
+                            <p>Searching articles...</p>
+                        </div>
+                        <div id="searchNoResults" class="search-state" style="display: none;">
+                            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+                            <p>No articles found matching your search.</p>
+                            <p class="text-muted">Try different keywords or browse our categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="menu-icon"></span>
+    </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="pt-5">
+        <!-- Reading Progress Bar -->
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+
+        <!-- Blog Post -->
+        <article class="blog-post py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Blog Header -->
+                        <header class="blog-header mb-5">
+                            <div class="blog-meta mb-3">
+                                <span><i class="far fa-calendar"></i> March 21, 2024</span>
+                                <span><i class="far fa-folder"></i> Testing</span>
+                                <span><i class="far fa-clock"></i> 12 min read</span>
+                            </div>
+                            <h1 class="blog-title display-4 fw-bold mb-4">General Test Scenarios: A Comprehensive Guide
+                            </h1>
+
+                            <!-- Featured Image -->
+                            <img src="../assets/images/general-test-scenarios.jpg" alt="General Test Scenarios"
+                                class="featured-image">
+
+                            <div class="blog-author d-flex align-items-center">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri"
+                                    class="author-avatar rounded-circle me-3">
+                                <div>
+                                    <p class="author-name mb-1">Nikunj Mistri</p>
+                                    <p class="author-title text-muted mb-0">Founder, QA Engineer Notes</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Key Takeaways -->
+                        <div class="key-takeaways">
+                            <h3><i class="fas fa-lightbulb me-2"></i>Key Takeaways</h3>
+                            <ul>
+                                <li>General test scenarios are essential for ensuring application quality and
+                                    reliability</li>
+                                <li>These scenarios cover common functionalities and edge cases that testers should
+                                    validate</li>
+                                <li>Proper test scenarios help identify potential issues early in the development cycle
+                                </li>
+                                <li>Following a structured approach to testing improves efficiency and coverage</li>
+                            </ul>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <p class="lead">In software testing, general test scenarios play a critical role in ensuring
+                                that an application meets functional, usability, and performance standards. These
+                                scenarios cover a wide range of common functionalities and edge cases that testers
+                                should validate to ensure the software is robust, user-friendly, and error-free.</p>
+
+                            <p>In this blog post, we'll explore general test scenarios that every QA engineer should
+                                consider when testing web or mobile applications. These scenarios are designed to
+                                address common issues, enhance user experience, and prevent potential bugs. We'll also
+                                include additional test cases to provide a more comprehensive guide.</p>
+
+                            <!-- Text Formatted Test Scenarios -->
+                            <div class="text-formatted-scenarios mb-5">
+                                <h2>Detailed Test Scenarios</h2>
+
+                                <section id="validation-scenarios" class="mb-4">
+                                    <h3>Validation Scenarios</h3>
+                                    <div class="scenario">
+                                        <h4>Mandatory Field Validation</h4>
+                                        <p><strong>Description:</strong> All mandatory fields should be validated and
+                                            indicated by an asterisk (*) symbol.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Open the form page</li>
+                                            <li>Identify all mandatory fields</li>
+                                            <li>Leave mandatory fields blank</li>
+                                            <li>Submit the form</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Error messages are displayed for all
+                                            mandatory fields, and fields with errors are highlighted.</p>
+                                    </div>
+
+                                    <div class="scenario">
+                                        <h4>Error Message Positioning</h4>
+                                        <p><strong>Description:</strong> Validation error messages should be displayed
+                                            properly at a correct position.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Open the form page</li>
+                                            <li>Enter invalid data in a field</li>
+                                            <li>Submit the form</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Error message appears next to the invalid
+                                            field and provides meaningful feedback.</p>
+                                    </div>
+                                </section>
+
+                                <section id="ui-consistency" class="mb-4">
+                                    <h3>UI Consistency</h3>
+                                    <div class="scenario">
+                                        <h4>Error Message Styling</h4>
+                                        <p><strong>Description:</strong> All error messages should be displayed in the
+                                            same CSS style (e.g., red color).</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Trigger multiple validation errors on a page</li>
+                                            <li>Observe the styling of error messages</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> All error messages are styled consistently
+                                            (e.g., red color, bold font).</p>
+                                    </div>
+
+                                    <div class="scenario">
+                                        <h4>Confirmation Message Styling</h4>
+                                        <p><strong>Description:</strong> General confirmation messages should be
+                                            displayed using CSS style other than error messages style.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Perform an action that triggers a confirmation message</li>
+                                            <li>Observe the styling of the confirmation message</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Confirmation message is styled differently
+                                            (e.g., green color) and visually distinct from error messages.</p>
+                                    </div>
+                                </section>
+
+                                <section id="tooltips" class="mb-4">
+                                    <h3>Tooltips</h3>
+                                    <div class="scenario">
+                                        <h4>Tooltip Content</h4>
+                                        <p><strong>Description:</strong> Tooltips text should be meaningful.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Hover over fields or buttons with tooltips</li>
+                                            <li>Observe the tooltip text</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Tooltip displays clear and concise
+                                            information related to the field or button.</p>
+                                    </div>
+                                </section>
+
+                                <section id="dropdown-fields" class="mb-4">
+                                    <h3>Dropdown Fields</h3>
+                                    <div class="scenario">
+                                        <h4>Default Selection</h4>
+                                        <p><strong>Description:</strong> Drop-down fields should have the first entry as
+                                            blank or text like 'Select'.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Open a form with dropdown fields</li>
+                                            <li>Observe the default value of each dropdown</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The dropdown's first entry is blank or
+                                            displays placeholder text like 'Select'.</p>
+                                    </div>
+                                </section>
+
+                                <section id="delete-functionality" class="mb-4">
+                                    <h3>Delete Functionality</h3>
+                                    <div class="scenario">
+                                        <h4>Delete Confirmation</h4>
+                                        <p><strong>Description:</strong> 'Delete functionality' for any record should
+                                            ask for confirmation.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Navigate to a page with records</li>
+                                            <li>Click the delete button for a record</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> A confirmation dialog appears before
+                                            deleting the record.</p>
+                                    </div>
+                                </section>
+
+                                <section id="bulk-operations" class="mb-4">
+                                    <h3>Bulk Operations</h3>
+                                    <div class="scenario">
+                                        <h4>Select All Functionality</h4>
+                                        <p><strong>Description:</strong> Select/deselect all records option should be
+                                            provided for bulk operations.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Navigate to a page with records</li>
+                                            <li>Check for 'Select/Deselect All' checkbox</li>
+                                            <li>Test select/deselect functionality</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The 'Select/Deselect All' checkbox works
+                                            correctly and applies actions to all selected records.</p>
+                                    </div>
+                                </section>
+
+                                <section id="currency-formatting" class="mb-4">
+                                    <h3>Currency Formatting</h3>
+                                    <div class="scenario">
+                                        <h4>Currency Display</h4>
+                                        <p><strong>Description:</strong> Amount values should be displayed with correct
+                                            currency symbols.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Navigate to a page displaying amount fields</li>
+                                            <li>Observe the formatting of amount values</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Amount is displayed as "$1,000.00" with the
+                                            correct currency symbol.</p>
+                                    </div>
+                                </section>
+
+                                <section id="sorting" class="mb-4">
+                                    <h3>Sorting</h3>
+                                    <div class="scenario">
+                                        <h4>Default Sorting</h4>
+                                        <p><strong>Description:</strong> Default page sorting should be provided.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Open a page with sortable data</li>
+                                            <li>Observe the initial sorting order</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The page loads with data sorted by the
+                                            default column in ascending order.</p>
+                                    </div>
+                                </section>
+
+                                <section id="reset-button" class="mb-4">
+                                    <h3>Reset Button</h3>
+                                    <div class="scenario">
+                                        <h4>Form Reset</h4>
+                                        <p><strong>Description:</strong> Reset button functionality should set default
+                                            values for all fields.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Open a form page</li>
+                                            <li>Fill in some fields</li>
+                                            <li>Click the reset button</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> All fields are cleared, and default values
+                                            are restored.</p>
+                                    </div>
+                                </section>
+
+                                <section id="numeric-formatting" class="mb-4">
+                                    <h3>Numeric Formatting</h3>
+                                    <div class="scenario">
+                                        <h4>Number Display</h4>
+                                        <p><strong>Description:</strong> All numeric values should be formatted
+                                            properly.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Navigate to a page displaying numeric values</li>
+                                            <li>Observe the formatting of numbers</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Number is displayed as "1,000,000" with
+                                            proper formatting.</p>
+                                    </div>
+                                </section>
+
+                                <section id="max-field-value" class="mb-4">
+                                    <h3>Max Field Value</h3>
+                                    <div class="scenario">
+                                        <h4>Field Limit Validation</h4>
+                                        <p><strong>Description:</strong> Input fields should be checked for the max
+                                            field value.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Enter a value exceeding the max limit</li>
+                                            <li>Submit the form</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The input is rejected, and an error message
+                                            is displayed.</p>
+                                    </div>
+                                </section>
+
+                                <section id="special-characters" class="mb-4">
+                                    <h3>Special Characters</h3>
+                                    <div class="scenario">
+                                        <h4>Character Validation</h4>
+                                        <p><strong>Description:</strong> Check all input fields for special characters.
+                                        </p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Enter special characters in various fields</li>
+                                            <li>Submit the form</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Special characters are rejected or
+                                            sanitized, and an appropriate validation message is displayed.</p>
+                                    </div>
+                                </section>
+
+                                <section id="field-labels" class="mb-4">
+                                    <h3>Field Labels</h3>
+                                    <div class="scenario">
+                                        <h4>Label Standards</h4>
+                                        <p><strong>Description:</strong> Field labels should be standard and
+                                            descriptive.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Open a form page</li>
+                                            <li>Review field labels</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Field labels are descriptive and consistent
+                                            across the application.</p>
+                                    </div>
+                                </section>
+
+                                <section id="sorting-after-crud" class="mb-4">
+                                    <h3>Sorting After CRUD</h3>
+                                    <div class="scenario">
+                                        <h4>Sort Persistence</h4>
+                                        <p><strong>Description:</strong> Check page sorting functionality after
+                                            add/edit/delete operations.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Add, edit, or delete a record</li>
+                                            <li>Observe the sorting behavior</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Sorting remains consistent after adding,
+                                            editing, or deleting records.</p>
+                                    </div>
+                                </section>
+
+                                <section id="timeout" class="mb-4">
+                                    <h3>Timeout</h3>
+                                    <div class="scenario">
+                                        <h4>Session Timeout</h4>
+                                        <p><strong>Description:</strong> Check for timeout functionality.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Log in to the application</li>
+                                            <li>Wait for the session timeout period</li>
+                                            <li>Attempt to perform an action</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Application redirects to the login page or
+                                            displays a timeout message.</p>
+                                    </div>
+                                </section>
+
+                                <section id="cookies" class="mb-4">
+                                    <h3>Cookies</h3>
+                                    <div class="scenario">
+                                        <h4>Cookie Management</h4>
+                                        <p><strong>Description:</strong> Check cookies used in an application.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Open the application</li>
+                                            <li>Verify the presence of cookies</li>
+                                            <li>Check cookie expiration</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Cookies are secure, encrypted, and expire
+                                            after the specified duration.</p>
+                                    </div>
+                                </section>
+
+                                <section id="downloadable-files" class="mb-4">
+                                    <h3>Downloadable Files</h3>
+                                    <div class="scenario">
+                                        <h4>File Download</h4>
+                                        <p><strong>Description:</strong> Check if downloadable files are pointing to the
+                                            correct file paths.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Click on a download link</li>
+                                            <li>Verify the file opens/downloads correctly</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The file downloads successfully and matches
+                                            the expected content.</p>
+                                    </div>
+                                </section>
+
+                                <section id="resource-keys" class="mb-4">
+                                    <h3>Resource Keys</h3>
+                                    <div class="scenario">
+                                        <h4>External Configuration</h4>
+                                        <p><strong>Description:</strong> All resource keys should be configurable in
+                                            config files or databases.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Open the application</li>
+                                            <li>Verify that text strings are stored externally</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Text strings are retrieved dynamically from
+                                            external sources.</p>
+                                    </div>
+                                </section>
+
+                                <section id="naming-conventions" class="mb-4">
+                                    <h3>Naming Conventions</h3>
+                                    <div class="scenario">
+                                        <h4>Key Naming</h4>
+                                        <p><strong>Description:</strong> Standard conventions should be followed for
+                                            naming resource keys.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Review resource keys in config files</li>
+                                            <li>Verify adherence to naming standards</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Resource keys follow a consistent naming
+                                            convention.</p>
+                                    </div>
+                                </section>
+
+                                <section id="html-css-validation" class="mb-4">
+                                    <h3>HTML/CSS Validation</h3>
+                                    <div class="scenario">
+                                        <h4>Markup Validation</h4>
+                                        <p><strong>Description:</strong> Validate markup for all web pages.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Use tools like W3C Validator</li>
+                                            <li>Check for syntax errors</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> No syntax errors are found in HTML and CSS.
+                                        </p>
+                                    </div>
+                                </section>
+
+                                <section id="error-redirection" class="mb-4">
+                                    <h3>Error Redirection</h3>
+                                    <div class="scenario">
+                                        <h4>Error Page Handling</h4>
+                                        <p><strong>Description:</strong> Application crash or unavailable pages should
+                                            be redirected to an error page.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Simulate a crash or access an unavailable page</li>
+                                            <li>Observe redirection behavior</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The user is redirected to a custom error
+                                            page with a friendly message.</p>
+                                    </div>
+                                </section>
+
+                                <section id="spelling-grammar" class="mb-4">
+                                    <h3>Spelling/Grammar</h3>
+                                    <div class="scenario">
+                                        <h4>Text Accuracy</h4>
+                                        <p><strong>Description:</strong> Check text on all pages for spelling and
+                                            grammatical errors.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Review all visible text on the application pages</li>
+                                            <li>Proofread for accuracy</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Text is free of spelling and grammatical
+                                            errors.</p>
+                                    </div>
+                                </section>
+
+                                <section id="numeric-input" class="mb-4">
+                                    <h3>Numeric Input</h3>
+                                    <div class="scenario">
+                                        <h4>Character Input Validation</h4>
+                                        <p><strong>Description:</strong> Check numeric input fields with character input
+                                            values.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Enter alphabetic characters in a numeric field</li>
+                                            <li>Submit the form</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> An error message is displayed for
+                                            non-numeric input.</p>
+                                    </div>
+                                </section>
+
+                                <section id="negative-numbers" class="mb-4">
+                                    <h3>Negative Numbers</h3>
+                                    <div class="scenario">
+                                        <h4>Negative Value Handling</h4>
+                                        <p><strong>Description:</strong> Check for negative numbers if allowed for
+                                            numeric fields.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Enter a negative number in a numeric field</li>
+                                            <li>Submit the form</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> If allowed, the value is accepted;
+                                            otherwise, an error message is displayed.</p>
+                                    </div>
+                                </section>
+
+                                <section id="decimal-numbers" class="mb-4">
+                                    <h3>Decimal Numbers</h3>
+                                    <div class="scenario">
+                                        <h4>Decimal Value Handling</h4>
+                                        <p><strong>Description:</strong> Check amount fields with decimal number values.
+                                        </p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Enter a decimal number in an amount field</li>
+                                            <li>Submit the form</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The value is accepted and displayed with
+                                            proper formatting.</p>
+                                    </div>
+                                </section>
+
+                                <section id="button-functionality" class="mb-4">
+                                    <h3>Button Functionality</h3>
+                                    <div class="scenario">
+                                        <h4>Button Actions</h4>
+                                        <p><strong>Description:</strong> Check functionality of buttons available on all
+                                            pages.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Click all buttons on the page</li>
+                                            <li>Observe their actions</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The button performs its intended action.
+                                        </p>
+                                    </div>
+                                </section>
+
+                                <section id="double-submission" class="mb-4">
+                                    <h3>Double Submission</h3>
+                                    <div class="scenario">
+                                        <h4>Multiple Submissions</h4>
+                                        <p><strong>Description:</strong> The user should not be able to submit a page
+                                            twice by pressing the submit button in quick succession.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Rapidly click the submit button multiple times</li>
+                                            <li>Observe the result</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> The form is submitted only once, and
+                                            subsequent clicks are ignored.</p>
+                                    </div>
+                                </section>
+
+                                <section id="divide-by-zero" class="mb-4">
+                                    <h3>Divide by Zero</h3>
+                                    <div class="scenario">
+                                        <h4>Division Error Handling</h4>
+                                        <p><strong>Description:</strong> Divide by zero errors should be handled for any
+                                            calculations.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Perform a calculation involving division by zero</li>
+                                            <li>Observe the application behavior</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> An appropriate error message is displayed.
+                                        </p>
+                                    </div>
+                                </section>
+
+                                <section id="leading-trailing-blanks" class="mb-4">
+                                    <h3>Leading/Trailing Blanks</h3>
+                                    <div class="scenario">
+                                        <h4>Space Handling</h4>
+                                        <p><strong>Description:</strong> Input data with the first and last position
+                                            blank should be handled correctly.</p>
+                                        <p><strong>Test Steps:</strong></p>
+                                        <ul>
+                                            <li>Enter values with leading/trailing spaces</li>
+                                            <li>Submit the form</li>
+                                        </ul>
+                                        <p><strong>Expected Result:</strong> Spaces are trimmed, and the value is
+                                            processed correctly.</p>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Test Scenarios Table -->
+                            <div class="mt-5" style="width: 100%; display: flex; justify-content: center;">
+                                <table class="table table-bordered table-striped"
+                                    style="width: 1128px; font-size: 0.9rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                    <thead>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <th
+                                                style="font-size: 0.95rem; padding: 12px; border-bottom: 2px solid #dee2e6;">
+                                                Category</th>
+                                            <th
+                                                style="font-size: 0.95rem; padding: 12px; border-bottom: 2px solid #dee2e6;">
+                                                Description</th>
+                                            <th
+                                                style="font-size: 0.95rem; padding: 12px; border-bottom: 2px solid #dee2e6;">
+                                                Test Steps</th>
+                                            <th
+                                                style="font-size: 0.95rem; padding: 12px; border-bottom: 2px solid #dee2e6;">
+                                                Condition</th>
+                                            <th
+                                                style="font-size: 0.95rem; padding: 12px; border-bottom: 2px solid #dee2e6;">
+                                                Test Data</th>
+                                            <th
+                                                style="font-size: 0.95rem; padding: 12px; border-bottom: 2px solid #dee2e6;">
+                                                Expected Result</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Validation</td>
+                                            <td style="padding: 12px; vertical-align: top;">All mandatory fields should
+                                                be validated and indicated by an asterisk (*) symbol.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Open the form page.<br>2.
+                                                Identify all mandatory fields.<br>3. Leave mandatory fields blank.<br>4.
+                                                Submit the form.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Mandatory fields must have
+                                                an asterisk (*) symbol next to them.</td>
+                                            <td style="padding: 12px; vertical-align: top;">N/A</td>
+                                            <td style="padding: 12px; vertical-align: top;">Error messages are displayed
+                                                for all mandatory fields, and fields with errors are highlighted.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Validation</td>
+                                            <td style="padding: 12px; vertical-align: top;">Validation error messages
+                                                should be displayed properly at a correct position.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Open the form page.<br>2.
+                                                Enter invalid data in a field.<br>3. Submit the form.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Error messages should appear
+                                                near the relevant fields.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Invalid data: "abc" in
+                                                numeric field</td>
+                                            <td style="padding: 12px; vertical-align: top;">Error message appears next
+                                                to the invalid field and provides meaningful feedback.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">UI Consistency</td>
+                                            <td style="padding: 12px; vertical-align: top;">All error messages should be
+                                                displayed in the same CSS style (e.g., red color).</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Trigger multiple
+                                                validation errors on a page.<br>2. Observe the styling of error
+                                                messages.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Error messages should follow
+                                                consistent styling.</td>
+                                            <td style="padding: 12px; vertical-align: top;">N/A</td>
+                                            <td style="padding: 12px; vertical-align: top;">All error messages are
+                                                styled consistently (e.g., red color, bold font).</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">UI Consistency</td>
+                                            <td style="padding: 12px; vertical-align: top;">General confirmation
+                                                messages should be displayed using CSS style other than error messages
+                                                style.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Perform an action that
+                                                triggers a confirmation message.<br>2. Observe the styling of the
+                                                confirmation message.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Confirmation messages should
+                                                differ from error messages.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Success message: "Record
+                                                saved successfully."</td>
+                                            <td style="padding: 12px; vertical-align: top;">Confirmation message is
+                                                styled differently (e.g., green color) and visually distinct from error
+                                                messages.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Tooltips</td>
+                                            <td style="padding: 12px; vertical-align: top;">Tooltips text should be
+                                                meaningful.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Hover over fields or
+                                                buttons with tooltips.<br>2. Observe the tooltip text.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Tooltip text must provide
+                                                meaningful information.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Tooltip text: "Enter your
+                                                first name here."</td>
+                                            <td style="padding: 12px; vertical-align: top;">Tooltip displays clear and
+                                                concise information related to the field or button.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Dropdown Fields</td>
+                                            <td style="padding: 12px; vertical-align: top;">Drop-down fields should have
+                                                the first entry as blank or text like 'Select'.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Open a form with dropdown
+                                                fields.<br>2. Observe the default value of each dropdown.</td>
+                                            <td style="padding: 12px; vertical-align: top;">The first entry should be
+                                                blank or display placeholder text.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Dropdown options: ['Select',
+                                                'Option 1', 'Option 2']</td>
+                                            <td style="padding: 12px; vertical-align: top;">The dropdown's first entry
+                                                is blank or displays placeholder text like 'Select'.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Delete Functionality</td>
+                                            <td style="padding: 12px; vertical-align: top;">'Delete functionality' for
+                                                any record should ask for confirmation.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Navigate to a page with
+                                                records.<br>2. Click the delete button for a record.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Delete operation must
+                                                trigger a confirmation dialog.</td>
+                                            <td style="padding: 12px; vertical-align: top;">N/A</td>
+                                            <td style="padding: 12px; vertical-align: top;">A confirmation dialog
+                                                appears before deleting the record.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Bulk Operations</td>
+                                            <td style="padding: 12px; vertical-align: top;">Select/deselect all records
+                                                option should be provided for bulk operations.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Navigate to a page with
+                                                records.<br>2. Check for 'Select/Deselect All' checkbox.<br>3. Test
+                                                select/deselect functionality.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Page supports bulk
+                                                operations.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Checkbox: Select All</td>
+                                            <td style="padding: 12px; vertical-align: top;">The 'Select/Deselect All'
+                                                checkbox works correctly and applies actions to all selected records.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Currency Formatting</td>
+                                            <td style="padding: 12px; vertical-align: top;">Amount values should be
+                                                displayed with correct currency symbols.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Navigate to a page
+                                                displaying amount fields.<br>2. Observe the formatting of amount values.
+                                            </td>
+                                            <td style="padding: 12px; vertical-align: top;">Amount fields should include
+                                                appropriate currency symbol.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Amount: 1000, Currency: USD
+                                            </td>
+                                            <td style="padding: 12px; vertical-align: top;">Amount is displayed as
+                                                "$1,000.00" with the correct currency symbol.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Sorting</td>
+                                            <td style="padding: 12px; vertical-align: top;">Default page sorting should
+                                                be provided.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Open a page with sortable
+                                                data.<br>2. Observe the initial sorting order.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Sorting should be applied to
+                                                a specific column.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Default sort column: Date
+                                            </td>
+                                            <td style="padding: 12px; vertical-align: top;">The page loads with data
+                                                sorted by the default column in ascending order.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Reset Button</td>
+                                            <td style="padding: 12px; vertical-align: top;">Reset button functionality
+                                                should set default values for all fields.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Open a form page.<br>2.
+                                                Fill in some fields.<br>3. Click the reset button.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Reset button should clear
+                                                all fields.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Default value: First Name =
+                                                "", Age = 0</td>
+                                            <td style="padding: 12px; vertical-align: top;">All fields are cleared, and
+                                                default values are restored.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Numeric Formatting</td>
+                                            <td style="padding: 12px; vertical-align: top;">All numeric values should be
+                                                formatted properly.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Navigate to a page
+                                                displaying numeric values.<br>2. Observe the formatting of numbers.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Numbers should be formatted
+                                                with commas for thousands.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Numeric value: 1000000</td>
+                                            <td style="padding: 12px; vertical-align: top;">Number is displayed as
+                                                "1,000,000" with proper formatting.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Max Field Value</td>
+                                            <td style="padding: 12px; vertical-align: top;">Input fields should be
+                                                checked for the max field value.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Enter a value exceeding
+                                                the max limit.<br>2. Submit the form.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Max limit: 100</td>
+                                            <td style="padding: 12px; vertical-align: top;">Value: 150</td>
+                                            <td style="padding: 12px; vertical-align: top;">The input is rejected, and
+                                                an error message is displayed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Special Characters</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check all input fields for
+                                                special characters.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Enter special characters
+                                                in various fields.<br>2. Submit the form.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Special characters should be
+                                                handled appropriately.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Input: "user@name"</td>
+                                            <td style="padding: 12px; vertical-align: top;">Special characters are
+                                                rejected or sanitized, and an appropriate validation message is
+                                                displayed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Field Labels</td>
+                                            <td style="padding: 12px; vertical-align: top;">Field labels should be
+                                                standard and descriptive.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Open a form page.<br>2.
+                                                Review field labels.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Field labels must be
+                                                descriptive and consistent.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Label: First Name</td>
+                                            <td style="padding: 12px; vertical-align: top;">Field labels are descriptive
+                                                and consistent across the application.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Sorting After CRUD</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check page sorting
+                                                functionality after add/edit/delete operations.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Add, edit, or delete a
+                                                record.<br>2. Observe the sorting behavior.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Sorting should remain intact
+                                                after CRUD operations.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Record added: New User</td>
+                                            <td style="padding: 12px; vertical-align: top;">Sorting remains consistent
+                                                after adding, editing, or deleting records.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Timeout</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check for timeout
+                                                functionality.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Log in to the
+                                                application.<br>2. Wait for the session timeout period.<br>3. Attempt to
+                                                perform an action.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Timeout value: 30 minutes
+                                            </td>
+                                            <td style="padding: 12px; vertical-align: top;">N/A</td>
+                                            <td style="padding: 12px; vertical-align: top;">Application redirects to the
+                                                login page or displays a timeout message.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Cookies</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check cookies used in an
+                                                application.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Open the
+                                                application.<br>2. Verify the presence of cookies.<br>3. Check cookie
+                                                expiration.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Cookies should be secure and
+                                                encrypted.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Cookie name: SessionID,
+                                                Expiry: 1 hour</td>
+                                            <td style="padding: 12px; vertical-align: top;">Cookies are secure,
+                                                encrypted, and expire after the specified duration.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Downloadable Files</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check if downloadable files
+                                                are pointing to the correct file paths.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Click on a download
+                                                link.<br>2. Verify the file opens/downloads correctly.</td>
+                                            <td style="padding: 12px; vertical-align: top;">File path must be valid.
+                                            </td>
+                                            <td style="padding: 12px; vertical-align: top;">Download link:
+                                                https://example.com/files/report.pdf</td>
+                                            <td style="padding: 12px; vertical-align: top;">The file downloads
+                                                successfully and matches the expected content.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Resource Keys</td>
+                                            <td style="padding: 12px; vertical-align: top;">All resource keys should be
+                                                configurable in config files or databases.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Open the
+                                                application.<br>2. Verify that text strings are stored externally.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Resource keys must be stored
+                                                externally.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Key: WelcomeMessage, Value:
+                                                "Welcome to the application!"</td>
+                                            <td style="padding: 12px; vertical-align: top;">Text strings are retrieved
+                                                dynamically from external sources.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Naming Conventions</td>
+                                            <td style="padding: 12px; vertical-align: top;">Standard conventions should
+                                                be followed for naming resource keys.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Review resource keys in
+                                                config files.<br>2. Verify adherence to naming standards.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Naming conventions must be
+                                                consistent.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Key: welcome_message</td>
+                                            <td style="padding: 12px; vertical-align: top;">Resource keys follow a
+                                                consistent naming convention.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">HTML/CSS Validation</td>
+                                            <td style="padding: 12px; vertical-align: top;">Validate markup for all web
+                                                pages.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Use tools like W3C
+                                                Validator.<br>2. Check for syntax errors.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Markup must comply with W3C
+                                                standards.</td>
+                                            <td style="padding: 12px; vertical-align: top;">N/A</td>
+                                            <td style="padding: 12px; vertical-align: top;">No syntax errors are found
+                                                in HTML and CSS.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Error Redirection</td>
+                                            <td style="padding: 12px; vertical-align: top;">Application crash or
+                                                unavailable pages should be redirected to an error page.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Simulate a crash or
+                                                access an unavailable page.<br>2. Observe redirection behavior.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Custom error page must
+                                                exist.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Error page URL: /error</td>
+                                            <td style="padding: 12px; vertical-align: top;">The user is redirected to a
+                                                custom error page with a friendly message.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Spelling/Grammar</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check text on all pages for
+                                                spelling and grammatical errors.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Review all visible text
+                                                on the application pages.<br>2. Proofread for accuracy.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Text must be free of errors.
+                                            </td>
+                                            <td style="padding: 12px; vertical-align: top;">Visible text: "Submit you
+                                                form here."</td>
+                                            <td style="padding: 12px; vertical-align: top;">Text is corrected to "Submit
+                                                your form here."</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Numeric Input</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check numeric input fields
+                                                with character input values.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Enter alphabetic
+                                                characters in a numeric field.<br>2. Submit the form.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Numeric fields should reject
+                                                non-numeric input.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Input: "abc"</td>
+                                            <td style="padding: 12px; vertical-align: top;">An error message is
+                                                displayed for non-numeric input.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Negative Numbers</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check for negative numbers
+                                                if allowed for numeric fields.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Enter a negative number
+                                                in a numeric field.<br>2. Submit the form.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Negative numbers may or may
+                                                not be allowed.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Input: -10</td>
+                                            <td style="padding: 12px; vertical-align: top;">If allowed, the value is
+                                                accepted; otherwise, an error message is displayed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Decimal Numbers</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check amount fields with
+                                                decimal number values.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Enter a decimal number in
+                                                an amount field.<br>2. Submit the form.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Decimal numbers should be
+                                                handled correctly.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Input: 10.5</td>
+                                            <td style="padding: 12px; vertical-align: top;">The value is accepted and
+                                                displayed with proper formatting.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Button Functionality</td>
+                                            <td style="padding: 12px; vertical-align: top;">Check functionality of
+                                                buttons available on all pages.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Click all buttons on the
+                                                page.<br>2. Observe their actions.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Buttons should perform their
+                                                intended actions.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Button: Submit</td>
+                                            <td style="padding: 12px; vertical-align: top;">The button performs its
+                                                intended action.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Double Submission</td>
+                                            <td style="padding: 12px; vertical-align: top;">The user should not be able
+                                                to submit a page twice by pressing the submit button in quick
+                                                succession.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Rapidly click the submit
+                                                button multiple times.<br>2. Observe the result.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Only one action should occur
+                                                per submission.</td>
+                                            <td style="padding: 12px; vertical-align: top;">N/A</td>
+                                            <td style="padding: 12px; vertical-align: top;">The form is submitted only
+                                                once, and subsequent clicks are ignored.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Divide by Zero</td>
+                                            <td style="padding: 12px; vertical-align: top;">Divide by zero errors should
+                                                be handled for any calculations.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Perform a calculation
+                                                involving division by zero.<br>2. Observe the application behavior.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Divide by zero errors should
+                                                be gracefully handled.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Input: 10 ÷ 0</td>
+                                            <td style="padding: 12px; vertical-align: top;">An appropriate error message
+                                                is displayed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; vertical-align: top;">Leading/Trailing Blanks</td>
+                                            <td style="padding: 12px; vertical-align: top;">Input data with the first
+                                                and last position blank should be handled correctly.</td>
+                                            <td style="padding: 12px; vertical-align: top;">1. Enter values with
+                                                leading/trailing spaces.<br>2. Submit the form.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Leading/trailing spaces
+                                                should be handled appropriately.</td>
+                                            <td style="padding: 12px; vertical-align: top;">Input: " John Doe "</td>
+                                            <td style="padding: 12px; vertical-align: top;">Spaces are trimmed, and the
+                                                value is processed correctly.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 class="mt-5 mb-4">Conclusion</h2>
+                            <p>These general test scenarios form the foundation of effective software testing. By
+                                validating these common functionalities, you can identify potential issues early,
+                                improve user experience, and deliver high-quality software. While this list is
+                                comprehensive, always tailor your test cases to the specific requirements of your
+                                application.</p>
+
+                            <p>Are there any other general test scenarios you'd like us to cover? Share your thoughts in
+                                the comments below!</p>
+
+                            <!-- Share Section -->
+                            <div class="share-section">
+                                <h3 class="h4 mb-3">Found this article helpful?</h3>
+                                <p class="mb-4">Share it with your network and help others discover the power of general
+                                    test scenarios!</p>
+                                <div class="social-share">
+                                    <button class="btn btn-primary" onclick="shareOnTwitter()">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="shareOnLinkedIn()">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="shareOnFacebook()">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="copyLink()">
+                                        <i class="fas fa-link"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Call to Action Section -->
+                            <div class="cta-section">
+                                <div class="cta-content">
+                                    <h3>Join Our Community of QA Professionals</h3>
+                                    <p>Get exclusive access to in-depth articles, testing strategies, and industry
+                                        insights. Stay ahead of the curve with our expert-curated content delivered
+                                        straight to your inbox.</p>
+
+                                    <div class="cta-buttons">
+                                        <a href="#newsletter" class="btn btn-primary">Subscribe Now</a>
+                                        <a href="/blog" class="btn btn-outline">Explore More Articles</a>
+                                    </div>
+
+                                    <div class="cta-features">
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Weekly Updates</span>
+                                        </div>
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Expert Insights</span>
+                                        </div>
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Free Resources</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cta-signature">
+                                        <img src="../assets/images/profile.png" alt="Nikunj Mistri">
+                                        <div class="signature-text">
+                                            <p class="signature-name">Nikunj Mistri</p>
+                                            <p class="signature-title">Founder, QA Engineer Notes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Related Articles -->
+                            <div class="related-articles">
+                                <h3>Related Articles</h3>
+                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Getting Started with Test Automation</h4>
+                                                <p class="card-text">Learn the fundamentals of test automation and how
+                                                    to implement it in your testing strategy. Discover best practices
+                                                    and tools for successful automation.</p>
+                                                <a href="#" class="btn-link">Read More <i
+                                                        class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">The Future of Software Testing</h4>
+                                                <p class="card-text">Discover emerging trends and technologies shaping
+                                                    the future of software testing. Stay ahead of the curve with
+                                                    insights into upcoming innovations.</p>
+                                                <a href="#" class="btn-link">Read More <i
+                                                        class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-author-bio">
+                                <h3>About the Author</h3>
+                                <div class="author-info">
+                                    <img src="../assets/images/profile.png" alt="Nikunj Mistri" class="author-avatar">
+                                    <div class="author-details">
+                                        <h4>Nikunj Mistri</h4>
+                                        <p class="author-title">Founder, QA Engineer Notes</p>
+                                        <p>Passionate about software testing and quality assurance, helping teams
+                                            deliver better software through innovative testing approaches. With years of
+                                            experience in the industry, I'm dedicated to sharing knowledge and best
+                                            practices with the QA community.</p>
+                                        <div class="author-social">
+                                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                            <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand-section">
+                    <h3 class="footer-brand">QA Engineer Notes</h3>
+                    <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
+                        and inspiration for QA professionals.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about" class="footer-link">About</a></li>
+                        <li><a href="/contact" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Random Blog Posts -->
+                <div class="footer-blogs-section">
+                    <h4 class="footer-title">You Might Also Like</h4>
+                    <div class="footer-blogs" id="footer-blogs" role="list">
+                        <!-- Loading State -->
+                        <div class="loading-state" aria-live="polite">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> QA Engineer Notes. Made with <i
+                        class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/footer-blogs.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/back-to-top.js"></script>
+    <script src="../assets/js/scroll-progress.js"></script>
+    <script src="../assets/js/mobile-menu.js"></script>
+
+    <!-- Additional Scripts for Blog -->
+    <script>
+        // Reading Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.reading-progress-bar').style.width = scrolled + '%';
+        });
+
+        // Social Share Functions
+        function shareOnTwitter() {
+            const text = encodeURIComponent('Check out this article about General Test Scenarios!');
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        }
+
+        // Smooth Scroll for Table of Contents
+        document.querySelectorAll('.blog-toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
