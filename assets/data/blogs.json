@@ -109,6 +109,28 @@
             "path": "blogs/beyond-manual-ai-testing.html",
             "image": "../assets/images/beyond-manual-ai-testing.jpg",
             "readTime": "12 min read"
+        },
+        {
+            "id": "general-test-scenarios",
+            "title": "General Test Scenarios: A Comprehensive Guide",
+            "date": "2025-03-21",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "Learn about the importance of general test scenarios in software testing. Discover how to create effective test cases for different types of software.",
+            "path": "blogs/general-test-scenarios.html",
+            "image": "../assets/images/general-test-scenarios.jpg",
+            "readTime": "12 min read"
+        },
+        {
+            "id": "razers-ai-qa-copilot",
+            "title": "Razer's AI QA Copilot: Revolutionizing Game Testing",
+            "date": "2025-05-25",
+            "author": "Nikunj Mistri",
+            "category": "AI & Gaming",
+            "description": "Discover how Razer's AI QA Copilot is revolutionizing game testing. Learn about the benefits of AI in game testing and how it improves testing efficiency.",
+            "path": "blogs/razers-ai-qa-copilot.html",
+            "image": "../assets/images/razers-ai-qa-copilot.jpg",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {

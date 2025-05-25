@@ -3,10 +3,14 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Log the request method and headers for debugging
+error_log("Request Method: " . $_SERVER['REQUEST_METHOD']);
+error_log("Request Headers: " . print_r(getallheaders(), true));
+
 // Set headers for CORS and security
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
 header('Content-Type: application/json');
 
 // Handle preflight OPTIONS request
@@ -23,13 +27,16 @@ function sanitize_input($data) {
     return $data;
 }
 
-// Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Check if the request is POST or if it's coming through Cloudflare
+if ($_SERVER['REQUEST_METHOD'] == 'POST' || isset($_SERVER['HTTP_CF_RAY'])) {
     // Get and sanitize form data
     $name = sanitize_input($_POST['name'] ?? '');
     $email = sanitize_input($_POST['email'] ?? '');
     $subject = sanitize_input($_POST['subject'] ?? '');
     $message = sanitize_input($_POST['message'] ?? '');
+    
+    // Log the received data
+    error_log("Received form data: " . print_r($_POST, true));
     
     // Validate required fields
     if (empty($name) || empty($email) || empty($subject) || empty($message)) {
