@@ -15,199 +15,278 @@
     <meta name="theme-color" content="#ffffff">
     <!-- End Favicon -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page not found - QA Engineer Notes">
+    <meta name="description" content="Page not found - QA Blogs">
     <meta name="keywords" content="404, not found, error">
     <meta name="author" content="Nikunj Mistri">
     <meta name="robots" content="noindex, nofollow">
-    <title>404 - Page Not Found - QA Engineer Notes</title>
+    <title>404 - Page Not Found - QA Blogs</title>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
-    <!-- Sticky Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <h1 class="h4 mb-0">QA Engineer Notes</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarMain">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="categories.html">CATEGORIES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">BLOG</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">CONTACT</a>
-                    </li>
-                </ul>
-                <div class="nav-search">
-                    <button class="btn btn-link text-dark p-0" data-bs-toggle="modal" data-bs-target="#searchModal">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-search" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="navbar" role="banner">
+        <div class="container-fluid px-4">
+            <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
+                <div class="navbar-section navbar-brand-section">
+                    <a href="/" class="navbar-brand" aria-label="QA Blogs Home">QA Blogs</a>
+                </div>
+                <div class="navbar-section nav-links-section">
+                    <div class="nav-links">
+                        <a href="/" class="nav-link">Home</a>
+                        <a href="/blog.html" class="nav-link">Blog</a>
+                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-section navbar-search-section">
+                    <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
                     </button>
                 </div>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Search Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
-                    <button type="button" class="btn-close position-absolute end-0 top-0 m-4"
-                        data-bs-dismiss="modal"></button>
-                    <div class="text-center mb-4">
-                        <small class="">Search for:</small>
-                        <h2 class="display-6 mb-3">Type Keywords</h2>
+                <div class="modal-header">
+                    <div class="search-input-wrapper w-100">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search articles..."
+                            aria-label="Search articles">
                     </div>
-                    <form class="search-form w-75 max-width-800" id="searchForm">
-                        <div class="input-group">
-                            <input type="text" class="form-control form-control-lg border-0 border-bottom rounded-0"
-                                id="searchInput" placeholder="">
-                        </div>
-                    </form>
-                    <small class=" mt-3">Press Enter to begin your search</small>
-                    <div id="searchResults" class="mt-5 w-75"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close search"></button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 404 Content -->
-    <div class="container py-5 mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <div class="error-container">
-                    <div class="error-illustration">
-                        <!-- 404 Themed SVG: Magnifying glass and document -->
-                        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="35" y="40" width="80" height="100" rx="10" fill="#f4f6fa" stroke="#3565f2" stroke-width="3"/>
-                          <rect x="50" y="60" width="50" height="10" rx="3" fill="#dbeafe"/>
-                          <rect x="50" y="80" width="40" height="8" rx="2" fill="#dbeafe"/>
-                          <rect x="50" y="95" width="30" height="8" rx="2" fill="#dbeafe"/>
-                          <text x="75" y="130" text-anchor="middle" font-size="28" font-family="Nunito Sans, Arial, sans-serif" fill="#3565f2" font-weight="bold">404</text>
-                          <g>
-                            <circle cx="120" cy="120" r="22" fill="#fff" stroke="#3565f2" stroke-width="4"/>
-                            <circle cx="120" cy="120" r="10" fill="#dbeafe"/>
-                            <rect x="135" y="135" width="18" height="6" rx="3" transform="rotate(45 135 135)" fill="#3565f2"/>
-                          </g>
-                        </svg>
-                    </div>
-                    <div class="error-code">404</div>
-                    <h2 class="error-title">Oops! Page Not Found</h2>
-                    <p class="error-text">The page you're looking for doesn't exist or has been moved. Let's help you find what you need.</p>
-                    
-                    <!-- Search Box -->
-                    <div class="search-box">
-                        <form class="d-flex" action="search.html" method="GET">
-                            <input type="text" class="form-control" name="q" placeholder="Search for articles, guides, or topics...">
-                            <button type="submit" class="btn btn-primary ms-2">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="mt-4">
-                        <a href="index.html" class="btn btn-primary me-3">Go Home</a>
-                        <a href="blog.html" class="btn btn-outline-primary">View Blog Posts</a>
-                    </div>
-
-                    <!-- Helpful Links -->
-                    <div class="helpful-links">
-                        <h3>Popular Resources</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="list-group">
-                                    <a href="blogs/effective-regression-testing.html" class="list-group-item list-group-item-action">
-                                        <i class="bi bi-file-text me-2"></i>Effective Regression Testing
-                                    </a>
-                                    <a href="blogs/qa-testing-glossary.html" class="list-group-item list-group-item-action">
-                                        <i class="bi bi-book me-2"></i>QA Testing Glossary
-                                    </a>
-                                    <a href="faqs.html" class="list-group-item list-group-item-action">
-                                        <i class="bi bi-question-circle me-2"></i>Frequently Asked Questions
-                                    </a>
-                                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results" role="region" aria-label="Search results">
+                        <!-- Search States -->
+                        <div id="searchLoading" class="search-state" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
                             </div>
-                            <div class="col-md-6">
-                                <div class="list-group">
-                                    <a href="categories.html" class="list-group-item list-group-item-action">
-                                        <i class="bi bi-grid me-2"></i>Browse Categories
-                                    </a>
-                                    <a href="about.html" class="list-group-item list-group-item-action">
-                                        <i class="bi bi-info-circle me-2"></i>About Us
-                                    </a>
-                                    <a href="contact.html" class="list-group-item list-group-item-action">
-                                        <i class="bi bi-envelope me-2"></i>Contact Support
-                                    </a>
-                                </div>
-                            </div>
+                            <p>Searching articles...</p>
+                        </div>
+                        <div id="searchNoResults" class="search-state" style="display: none;">
+                            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+                            <p>No articles found matching your search.</p>
+                            <p class="text-muted">Try different keywords or browse our categories.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="menu-icon"></span>
+    </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow-1 pt-5">
+        <!-- 404 Content -->
+        <section class="error-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <div class="error-container">
+                            <div class="error-illustration mb-4">
+                                <!-- 404 Themed SVG: Magnifying glass and document -->
+                                <svg width="180" height="180" viewBox="0 0 180 180" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="35" y="40" width="80" height="100" rx="10" fill="#f4f6fa" stroke="#3565f2"
+                                        stroke-width="3" />
+                                    <rect x="50" y="60" width="50" height="10" rx="3" fill="#dbeafe" />
+                                    <rect x="50" y="80" width="40" height="8" rx="2" fill="#dbeafe" />
+                                    <rect x="50" y="95" width="30" height="8" rx="2" fill="#dbeafe" />
+                                    <text x="75" y="130" text-anchor="middle" font-size="28"
+                                        font-family="Nunito Sans, Arial, sans-serif" fill="#3565f2"
+                                        font-weight="bold">404</text>
+                                    <g>
+                                        <circle cx="120" cy="120" r="22" fill="#fff" stroke="#3565f2"
+                                            stroke-width="4" />
+                                        <circle cx="120" cy="120" r="10" fill="#dbeafe" />
+                                        <rect x="135" y="135" width="18" height="6" rx="3"
+                                            transform="rotate(45 135 135)" fill="#3565f2" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h1 class="error-title display-4 fw-bold mb-3">Oops! Page Not Found</h1>
+                            <p class="error-text lead mb-4">The page you're looking for doesn't exist or has been moved.
+                                Let's help you
+                                find what you need.</p>
+
+                            <!-- Search Box -->
+                            <div class="search-box mb-5">
+                                <form class="d-flex justify-content-center" id="mainSearchForm">
+                                    <div class="input-group" style="max-width: 500px;">
+                                        <input type="text" class="form-control form-control-lg" id="mainSearchInput"
+                                            placeholder="Search for articles, guides, or topics...">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <script>
+                                document.getElementById('mainSearchForm').addEventListener('submit', function (e) {
+                                    e.preventDefault();
+                                    const searchTerm = document.getElementById('mainSearchInput').value;
+                                    if (searchTerm.trim()) {
+                                        // Open the search modal
+                                        const searchModal = new bootstrap.Modal(document.getElementById('searchModal'));
+                                        searchModal.show();
+
+                                        // Set the search term in the modal's input
+                                        document.getElementById('searchInput').value = searchTerm;
+
+                                        // Trigger the search
+                                        document.getElementById('searchInput').dispatchEvent(new Event('input'));
+                                    }
+                                });
+                            </script>
+
+                            <div class="action-buttons mb-5">
+                                <a href="index.html" class="btn btn-primary btn-lg me-3">Go Home</a>
+                                <a href="blog.html" class="btn btn-outline-primary btn-lg">View Blog Posts</a>
+                            </div>
+
+                            <!-- Helpful Links -->
+                            <div class="helpful-links">
+                                <h2 class="h3 mb-4">Popular Resources</h2>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="list-group">
+                                            <a href="blogs/effective-regression-testing.html"
+                                                class="list-group-item list-group-item-action d-flex align-items-center">
+                                                <i class="fas fa-file-alt me-3 text-primary"></i>
+                                                <span>Effective Regression Testing</span>
+                                            </a>
+                                            <a href="blogs/qa-testing-glossary.html"
+                                                class="list-group-item list-group-item-action d-flex align-items-center">
+                                                <i class="fas fa-book me-3 text-primary"></i>
+                                                <span>QA Testing Glossary</span>
+                                            </a>
+                                            <a href="faqs.html"
+                                                class="list-group-item list-group-item-action d-flex align-items-center">
+                                                <i class="fas fa-question-circle me-3 text-primary"></i>
+                                                <span>Frequently Asked Questions</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="list-group">
+                                            <a href="categories.html"
+                                                class="list-group-item list-group-item-action d-flex align-items-center">
+                                                <i class="fas fa-th-large me-3 text-primary"></i>
+                                                <span>Browse Categories</span>
+                                            </a>
+                                            <a href="about.html"
+                                                class="list-group-item list-group-item-action d-flex align-items-center">
+                                                <i class="fas fa-info-circle me-3 text-primary"></i>
+                                                <span>About Us</span>
+                                            </a>
+                                            <a href="contact.html"
+                                                class="list-group-item list-group-item-action d-flex align-items-center">
+                                                <i class="fas fa-envelope me-3 text-primary"></i>
+                                                <span>Contact Support</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-4" style="background-color: #3565f2;">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="text-white">About QA Engineer Notes</h5>
-                    <p class="text-white">Your go-to resource for software testing knowledge and best practices.</p>
-                    <div class="social-icons mt-4">
-                        <a href="#" class="me-3 text-white"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="me-3 text-white"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="me-3 text-white"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="me-3 text-white"><i class="bi bi-linkedin"></i></a>
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand-section">
+                    <h3 class="footer-brand">QA Blogs</h3>
+                    <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
+                        and inspiration for QA professionals.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <h5 class="text-white">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">Home</a></li>
-                        <li><a href="blog.html" class="text-white">Blog</a></li>
-                        <li><a href="about.html" class="text-white">About</a></li>
-                        <li><a href="contact.html" class="text-white">Contact</a></li>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about" class="footer-link">About</a></li>
+                        <li><a href="/contact" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms" class="footer-link">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h5 class="text-white">Contact Us</h5>
-                    <ul class="list-unstyled">
-                        <li class="text-white"><i class="bi bi-envelope me-2"></i>contact@qaengineernote.com</li>
-                        <li class="text-white"><i class="bi bi-phone me-2"></i>+1 (555) 123-4567</li>
-                        <li class="text-white"><i class="bi bi-geo-alt me-2"></i>123 Testing Street, Test City, QC</li>
-                    </ul>
+
+                <!-- Random Blog Posts -->
+                <div class="footer-blogs-section">
+                    <h4 class="footer-title">You Might Also Like</h4>
+                    <div class="footer-blogs" id="footer-blogs" role="list">
+                        <!-- Loading State -->
+                        <div class="loading-state" aria-live="polite">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <hr class="mt-4 mb-3" style="border-color: rgba(255,255,255,0.1);">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-0 text-white">&copy; 2025 QA Engineer Notes. All rights reserved.</p>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> QA Blogs. Made with <i
+                        class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
+                </p>
             </div>
         </div>
     </footer>
@@ -216,6 +295,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Search JS -->
     <script src="assets/js/search.js"></script>
+    <script src="assets/js/copyright.js"></script>
+    <script src="assets/js/footer-blogs.js"></script>
 </body>
 
 </html>

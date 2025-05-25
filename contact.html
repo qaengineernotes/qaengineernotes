@@ -16,27 +16,27 @@
     <!-- End Favicon -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Get in touch with QA Engineer Notes. Have questions about software testing? We'd love to hear from you!">
+        content="Get in touch with QA Blogs. Have questions about software testing? We'd love to hear from you!">
     <meta name="keywords" content="contact, software testing, QA engineer, get in touch">
     <meta name="author" content="Nikunj Mistri">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
-    <meta name="copyright" content="QA Engineer Notes">
+    <meta name="copyright" content="QA Blogs">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qaengineernote.com/contact">
-    <meta property="og:title" content="Contact - QA Engineer Notes">
+    <meta property="og:title" content="Contact - QA Blogs">
     <meta property="og:description"
-        content="Get in touch with QA Engineer Notes. Have questions about software testing? We'd love to hear from you!">
+        content="Get in touch with QA Blogs. Have questions about software testing? We'd love to hear from you!">
     <meta property="og:image" content="https://qaengineernote.com/assets/images/contact-share.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://qaengineernote.com/contact">
-    <meta name="twitter:title" content="Contact - QA Engineer Notes">
+    <meta name="twitter:title" content="Contact - QA Blogs">
     <meta name="twitter:description"
-        content="Get in touch with QA Engineer Notes. Have questions about software testing? We'd love to hear from you!">
+        content="Get in touch with QA Blogs. Have questions about software testing? We'd love to hear from you!">
     <meta name="twitter:image" content="https://qaengineernote.com/assets/images/contact-share.jpg">
 
     <!-- Schema.org markup -->
@@ -44,13 +44,13 @@
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
-      "name": "Contact - QA Engineer Notes",
-      "description": "Get in touch with QA Engineer Notes. Have questions about software testing? We'd love to hear from you!",
+      "name": "Contact - QA Blogs",
+      "description": "Get in touch with QA Blogs. Have questions about software testing? We'd love to hear from you!",
       "image": "https://qaengineernote.com/assets/images/contact-share.jpg",
       "url": "https://qaengineernote.com/contact",
       "publisher": {
         "@type": "Organization",
-        "name": "QA Engineer Notes",
+        "name": "QA Blogs",
         "logo": {
           "@type": "ImageObject",
           "url": "https://qaengineernote.com/assets/images/logo.png"
@@ -58,7 +58,7 @@
       }
     }
     </script>
-    <title>Contact - QA Engineer Notes</title>
+    <title>Contact - QA Blogs</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +87,7 @@
         <div class="container-fluid px-4">
             <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
                 <div class="navbar-section navbar-brand-section">
-                    <a href="index.html" class="navbar-brand" aria-label="QA Engineer Notes Home">QA Engineer Notes</a>
+                    <a href="index.html" class="navbar-brand" aria-label="QA Blogs Home">QA Blogs</a>
                 </div>
                 <div class="navbar-section nav-links-section">
                     <div class="nav-links">
@@ -173,7 +173,8 @@
                         <div class="card border-0 shadow-lg h-100">
                             <div class="card-body p-4 p-md-5">
                                 <h2 class="h3 mb-4">Send Me a Message</h2>
-                                <form id="contactForm" class="needs-validation" novalidate>
+                                <form id="contactForm" class="needs-validation" novalidate action="send.php"
+                                    method="POST">
                                     <div class="row g-4">
                                         <div class="col-md-6">
                                             <div class="form-floating">
@@ -218,8 +219,13 @@
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-primary btn-lg w-100">Send
-                                                Message</button>
+                                            <button type="submit" class="btn btn-primary btn-lg w-100" id="submitBtn">
+                                                <span class="btn-text">Send Message</span>
+                                                <span class="btn-loader d-none">
+                                                    <span class="spinner-border spinner-border-sm" role="status"
+                                                        aria-hidden="true"></span>
+                                                </span>
+                                            </button>
                                         </div>
                                     </div>
                                 </form>
@@ -293,7 +299,7 @@
             <div class="footer-grid">
                 <!-- Brand Column -->
                 <div class="footer-brand-section">
-                    <h3 class="footer-brand">QA Engineer Notes</h3>
+                    <h3 class="footer-brand">QA Blogs</h3>
                     <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
                         and inspiration for QA professionals.</p>
                     <div class="footer-social">
@@ -336,7 +342,7 @@
             <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <p>&copy;
-                    <script>document.write(new Date().getFullYear())</script> QA Engineer Notes. Made with <i
+                    <script>document.write(new Date().getFullYear())</script> QA Blogs. Made with <i
                         class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
                 </p>
             </div>
@@ -358,6 +364,88 @@
     <script src="assets/js/scroll-progress.js"></script>
     <script src="assets/js/newsletter.js"></script>
     <script src="assets/js/mobile-menu.js"></script>
+    <script>
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            // Get form elements
+            const form = this;
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoader = submitBtn.querySelector('.btn-loader');
+
+            // Validate form
+            if (!form.checkValidity()) {
+                e.stopPropagation();
+                form.classList.add('was-validated');
+                return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoader.classList.remove('d-none');
+
+            try {
+                // Get form data
+                const formData = new FormData(form);
+
+                // Send form data
+                const response = await fetch('send.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    // Show success message
+                    showNotification(result.message, 'success');
+                    form.reset();
+                    form.classList.remove('was-validated');
+                } else {
+                    // Show error message
+                    showNotification(result.message, 'error');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                showNotification('Failed to send message. Please try again later.', 'error');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline-block';
+                btnLoader.classList.add('d-none');
+            }
+        });
+
+        // Notification function
+        function showNotification(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast align-items-center text-white bg-${type === 'success' ? 'success' : 'danger'} border-0 position-fixed bottom-0 end-0 m-3`;
+            toast.setAttribute('role', 'alert');
+            toast.setAttribute('aria-live', 'assertive');
+            toast.setAttribute('aria-atomic', 'true');
+
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            `;
+
+            document.body.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+
+            // Remove toast after it's hidden
+            toast.addEventListener('hidden.bs.toast', () => {
+                document.body.removeChild(toast);
+            });
+        }
+    </script>
 </body>
 
 </html>

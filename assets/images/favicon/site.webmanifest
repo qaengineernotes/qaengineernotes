@@ -1,5 +1,5 @@
 {
-    "name": "QA Engineer Notes",
+    "name": "QA Blogs",
     "short_name": "QA Notes",
     "description": "A comprehensive resource for software testing professionals from beginner to advanced levels",
     "icons": [
@@ -22,7 +22,11 @@
     "start_url": "/",
     "orientation": "portrait",
     "scope": "/",
-    "categories": ["education", "productivity", "technology"],
+    "categories": [
+        "education",
+        "productivity",
+        "technology"
+    ],
     "lang": "en-US",
     "dir": "ltr"
-} 
+}

@@ -1,4 +1,4 @@
-# QA Engineer Notes 📝
+# QA Blogs 📝
 
 A comprehensive collection of resources, guides, and insights for Quality Assurance Engineers and Software Testers.
 
