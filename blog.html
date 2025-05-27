@@ -27,14 +27,14 @@
     <meta property="og:url" content="https://qaengineernote.com/blog">
     <meta property="og:title" content="Blog - QA Blogs">
     <meta property="og:description" content="QA Blogs Blog - Latest articles on software testing and automation">
-    <meta property="og:image" content="https://qaengineernote.com/assets/images/blog-share.jpg">
+    <meta property="og:image" content="https://qablogs.com/assets/images/blog-share.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://qaengineernote.com/blog">
     <meta name="twitter:title" content="Blog - QA Blogs">
     <meta name="twitter:description" content="QA Blogs Blog - Latest articles on software testing and automation">
-    <meta name="twitter:image" content="https://qaengineernote.com/assets/images/blog-share.jpg">
+    <meta name="twitter:image" content="https://qablogs.com/assets/images/blog-share.jpg">
 
     <!-- Schema.org markup -->
     <script type="application/ld+json">
@@ -72,6 +72,34 @@
 
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://qablogs.com/"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://qablogs.com/blog.html"
+        }]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EV2406R3X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7EV2406R3X');
+    </script>
 </head>
 
 <body>
