@@ -37,10 +37,13 @@ async function renderRecentPosts() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        
+
+        // Sort posts by date in descending order (latest first)
+        const sortedPosts = data.blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+
         // Get the first 20 posts
-        const postsToShow = data.blogs.slice(0, 20);
-        
+        const postsToShow = sortedPosts.slice(0, 20);
+
         // Create and append blog cards
         const blogCards = postsToShow.map(post => createBlogCard(post)).join('');
         recentPostsGrid.innerHTML = blogCards;

@@ -1,0 +1,55 @@
+name: Scheduled Blog Merge
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
+    # Uncomment the line below if you want weekly merges instead
+    # - cron: '0 0 * * 0'  # Runs at 00:00 UTC every Sunday
+
+jobs:
+  merge-branches:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      - name: Get all blog branches
+        id: get-branches
+        run: |
+          # Get all branches that start with 'blog/'
+          BRANCHES=$(git branch -r | grep 'origin/blog/' | sed 's/origin\///')
+          echo "branches<<EOF" >> $GITHUB_OUTPUT
+          echo "$BRANCHES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Merge blog branches
+        run: |
+          git checkout main
+          git pull origin main
+          
+          # Read branches from output
+          BRANCHES="${{ steps.get-branches.outputs.branches }}"
+          
+          # Merge each blog branch
+          for branch in $BRANCHES; do
+            echo "Attempting to merge $branch"
+            if git merge --no-ff $branch -m "Merge blog post: $branch"; then
+              echo "Successfully merged $branch"
+            else
+              echo "Failed to merge $branch"
+              git merge --abort
+            fi
+          done
+          
+          # Push changes if any merges were successful
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git push origin main
+          fi 

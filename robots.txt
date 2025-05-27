@@ -5,6 +5,7 @@ Allow: /security.txt
 Allow: /manifest.json
 Allow: /sitemap.xml
 Allow: /rss.xml
+Allow: /assets/images/favicon/site.webmanifest
 Disallow: /*.js$
 Disallow: /*.py$
 Disallow: /*.json$
