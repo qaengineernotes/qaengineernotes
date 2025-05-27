@@ -131,6 +131,28 @@
             "path": "blogs/razers-ai-qa-copilot.html",
             "image": "../assets/images/razers-ai-qa-copilot.jpg",
             "readTime": "15 min read"
+        },
+        {
+            "id": "spur-ai-agents-web-testing",
+            "title": "Spur AI Agents: Revolutionizing Web Testing",
+            "date": "2025-05-27",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn how Spur AI Agents are revolutionizing web testing. Discover the benefits of AI agents in web testing and how they improve testing efficiency.",
+            "path": "blogs/spur-ai-agents-web-testing.html",
+            "image": "../assets/images/spur-ai-testing.jpg",
+            "readTime": "15 min read"
+        },
+        {
+            "id": "google-jules-qa-engineers",
+            "title": "Introducing Google Jules: What QA Engineers Need to Know",
+            "date": "2025-05-27",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn about Google Jules, a new AI-powered testing tool that is changing the way QA engineers test web applications.",
+            "path": "blogs/google-jules-qa-engineers.html",
+            "image": "../assets/images/google-jules-testing.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
