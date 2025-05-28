@@ -153,6 +153,28 @@
             "path": "blogs/google-jules-qa-engineers.html",
             "image": "../assets/images/google-jules-testing.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "google-jules-test-case-generation",
+            "title": "Google Jules Test Case Generation: A Comprehensive Guide",
+            "date": "2025-05-28",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn about Google Jules, a new AI-powered testing tool that is changing the way QA engineers test web applications.",
+            "path": "blogs/google-jules-test-case-generation.html",
+            "image": "../assets/images/google-jules-testcase-generation.png",
+            "readTime": "15 min read"
+        },
+        {
+            "id": "can-google-jules-replace-qa-engineers",
+            "title": "Can Google Jules Replace QA Engineers?",
+            "date": "2025-05-28",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn about Google Jules, a new AI-powered testing tool that is changing the way QA engineers test web applications.",
+            "path": "blogs/can-google-jules-replace-qa-engineers.html",
+            "image": "../assets/images/google-jules-qa-engineers.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {

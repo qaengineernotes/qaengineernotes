@@ -1,72 +1,55 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const shareButtons = document.querySelectorAll('.share-button');
-    
-    shareButtons.forEach(button => {
-        const menu = document.createElement('div');
-        menu.className = 'share-menu';
-        menu.innerHTML = `
-            <a href="#" data-platform="twitter">
-                <i class="fab fa-twitter"></i>
-                <span>Twitter</span>
-            </a>
-            <a href="#" data-platform="facebook">
-                <i class="fab fa-facebook"></i>
-                <span>Facebook</span>
-            </a>
-            <a href="#" data-platform="linkedin">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-            <a href="#" data-platform="copy">
-                <i class="fas fa-link"></i>
-                <span>Copy Link</span>
-            </a>
-        `;
-        
-        button.appendChild(menu);
-        
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            menu.classList.toggle('active');
+// Share functionality
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to get the current page's title and description
+    function getPageMetadata() {
+        const title = document.querySelector('meta[property="og:title"]')?.content || document.title;
+        const description = document.querySelector('meta[property="og:description"]')?.content ||
+            document.querySelector('meta[name="description"]')?.content || '';
+        return { title, description };
+    }
+
+    // Function to share on Twitter
+    window.shareOnTwitter = function () {
+        const { title } = getPageMetadata();
+        // Keep it short and engaging for Twitter's character limit
+        const text = encodeURIComponent(`Check out: ${title}`);
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'width=600,height=400');
+    };
+
+    // Function to share on LinkedIn
+    window.shareOnLinkedIn = function () {
+        const { title, description } = getPageMetadata();
+        const url = encodeURIComponent(window.location.href);
+        // Using LinkedIn's sharing URL format with proper parameters
+        const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+        window.open(linkedInUrl, '_blank', 'width=600,height=400');
+    };
+
+    // Function to share on Facebook
+    window.shareOnFacebook = function () {
+        const url = encodeURIComponent(window.location.href);
+        // Using Facebook's sharing URL format with proper parameters
+        const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        window.open(facebookUrl, '_blank', 'width=600,height=400');
+    };
+
+    // Function to copy link
+    window.copyLink = function () {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            // Create and show a toast notification
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.textContent = 'Link copied to clipboard!';
+            document.body.appendChild(toast);
+
+            // Remove the toast after 3 seconds
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }).catch(() => {
+            alert('Failed to copy link. Please try again.');
         });
-        
-        menu.addEventListener('click', function(e) {
-            e.preventDefault();
-            const platform = e.target.closest('a')?.dataset.platform;
-            if (!platform) return;
-            
-            const url = window.location.href;
-            const title = document.title;
-            
-            switch (platform) {
-                case 'twitter':
-                    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, '_blank');
-                    break;
-                case 'facebook':
-                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
-                    break;
-                case 'linkedin':
-                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
-                    break;
-                case 'copy':
-                    navigator.clipboard.writeText(url).then(() => {
-                        showNotification('Link copied to clipboard!', 'success');
-                    }).catch(() => {
-                        showNotification('Failed to copy link', 'error');
-                    });
-                    break;
-            }
-            
-            menu.classList.remove('active');
-        });
-    });
-    
-    // Close share menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.share-button')) {
-            document.querySelectorAll('.share-menu').forEach(menu => {
-                menu.classList.remove('active');
-            });
-        }
-    });
+    };
 }); 

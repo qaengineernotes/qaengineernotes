@@ -1,82 +1,169 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+// Main JavaScript file combining all functionality
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize all features
 
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-    });
+    initializeBackToTop();
+    initializeScrollProgress();
+    initializeMobileMenu();
+    initializeFooterBlogs();
+});
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.main-nav')) {
-            navMenu.classList.remove('active');
+// Back to top button
+function initializeBackToTop() {
+    const backToTopButton = document.getElementById('backToTop');
+    if (!backToTopButton) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
         }
     });
 
-    // Handle window resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            navMenu.classList.remove('active');
-        }
-    });
-});
-
-// Back to Top Button
-const backToTopButton = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopButton.classList.add('visible');
-    } else {
-        backToTopButton.classList.remove('visible');
-    }
-});
-
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Newsletter Form Handling
-const newsletterForm = document.getElementById('newsletterForm');
-
-if (newsletterForm) {
-    newsletterForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        
-        try {
-            // Here you would typically send the data to your backend
-            // For now, we'll just show a success message
-            const modal = bootstrap.Modal.getInstance(document.getElementById('subscribeModal'));
-            modal.hide();
-            
-            // Show success message
-            const toast = new bootstrap.Toast(document.createElement('div'));
-            toast._element.classList.add('toast', 'bg-success', 'text-white');
-            toast._element.innerHTML = `
-                <div class="toast-body">
-                    Thank you for subscribing, ${name}! We'll keep you updated with the latest articles.
-                </div>
-            `;
-            document.body.appendChild(toast._element);
-            toast.show();
-            
-            // Clear form
-            newsletterForm.reset();
-            
-            // Remove toast after it's hidden
-            toast._element.addEventListener('hidden.bs.toast', () => {
-                document.body.removeChild(toast._element);
-            });
-        } catch (error) {
-            console.error('Error submitting newsletter form:', error);
-            // Show error message
-            alert('There was an error subscribing to the newsletter. Please try again later.');
-        }
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 }
+
+// Scroll progress
+function initializeScrollProgress() {
+    const scrollProgress = document.querySelector('.scroll-progress');
+    const scrollProgressBar = document.querySelector('.scroll-progress-bar');
+    const readingProgressBar = document.querySelector('.reading-progress-bar');
+
+    if (scrollProgressBar) {
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgressBar.style.width = scrolled + '%';
+            if (scrollProgress) {
+                scrollProgress.setAttribute('aria-valuenow', Math.round(scrolled));
+            }
+        });
+    }
+
+    if (readingProgressBar) {
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            readingProgressBar.style.width = scrolled + '%';
+        });
+    }
+}
+
+// Mobile menu
+function initializeMobileMenu() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (!menuToggle || !navLinks) return;
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.nav-links') && !event.target.closest('.mobile-menu-toggle')) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('show');
+        }
+    });
+
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('show');
+        });
+    });
+}
+
+// Footer blogs
+async function initializeFooterBlogs() {
+    const footerBlogs = document.getElementById('footer-blogs');
+    if (!footerBlogs) return;
+
+    try {
+        const response = await fetch('/assets/data/blogs.json');
+        const data = await response.json();
+
+        const randomPosts = getRandomPosts(data.blogs, 3);
+        const blogCards = randomPosts.map(post => createFooterBlogCard(post)).join('');
+        footerBlogs.innerHTML = blogCards;
+    } catch (error) {
+        console.error('Error loading random blog posts:', error);
+        footerBlogs.innerHTML = '<p class="error-message">Unable to load related posts.</p>';
+    }
+}
+
+// Utility functions
+function getRandomPosts(posts, count) {
+    const shuffled = [...posts].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
+
+function createFooterBlogCard(post) {
+    return `
+        <a href="/${post.path}" class="footer-blog-card">
+            <img src="${post.image}" alt="${post.title}" class="footer-blog-image">
+            <div class="footer-blog-content">
+                <h5 class="footer-blog-title">${post.title}</h5>
+                <div class="footer-blog-meta">
+                    <span>${post.author}</span>
+                    <span>•</span>
+                    <span>${new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                </div>
+            </div>
+        </a>
+    `;
+}
+
+function createSearchResult(blog) {
+    return `
+        <div class="search-result">
+            <a href="/${blog.path}" class="search-result-link">
+                <h4 class="search-result-title">${blog.title}</h4>
+                <p class="search-result-description">${blog.description}</p>
+            </a>
+        </div>
+    `;
+}
+
+// Social Share Functions
+function shareOnTwitter() {
+    const text = encodeURIComponent('Check out this article!');
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+
+function shareOnLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+}
+
+function shareOnFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Link copied to clipboard!');
+    });
+}
+
+// Smooth Scroll for Table of Contents
+document.querySelectorAll('.blog-toc a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+}); 

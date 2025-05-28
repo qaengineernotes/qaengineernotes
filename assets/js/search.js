@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Search through blog content
             for (const blog of data.blogs) {
                 try {
-                    // Remove leading slash if present and ensure correct path
-                    const blogPath = blog.path.replace(/^\//, '');
+                    // Ensure the path starts with a forward slash
+                    const blogPath = blog.path.startsWith('/') ? blog.path : '/' + blog.path;
                     const response = await fetch(blogPath);
                     if (!response.ok) {
                         console.warn(`Failed to fetch ${blogPath}: ${response.status}`);
