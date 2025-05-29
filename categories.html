@@ -156,79 +156,13 @@
         <!-- Categories Grid -->
         <section class="categories-section py-5">
             <div class="container">
-                <div class="row g-4">
-                    <!-- Manual Testing Category -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="category-card h-100">
-                            <div class="category-icon">
-                                <i class="fas fa-clipboard-check"></i>
-                            </div>
-                            <h3>Manual Testing</h3>
-                            <p>Learn about test case design, execution strategies, and best practices in manual testing.
-                            </p>
-                            <a href="/blog.html?category=manual-testing" class="btn btn-outline-primary">View
-                                Articles</a>
+                <div class="row g-4" id="categoriesGrid">
+                    <!-- Categories will be dynamically inserted here -->
+                    <div class="loading-state text-center py-5" aria-live="polite">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading categories...</span>
                         </div>
-                    </div>
-
-                    <!-- Automation Testing Category -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="category-card h-100">
-                            <div class="category-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h3>Automation Testing</h3>
-                            <p>Explore test automation frameworks, tools, and implementation strategies.</p>
-                            <a href="/blog.html?category=automation" class="btn btn-outline-primary">View Articles</a>
-                        </div>
-                    </div>
-
-                    <!-- Performance Testing Category -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="category-card h-100">
-                            <div class="category-icon">
-                                <i class="fas fa-tachometer-alt"></i>
-                            </div>
-                            <h3>Performance Testing</h3>
-                            <p>Discover techniques for load testing, stress testing, and performance optimization.</p>
-                            <a href="/blog.html?category=performance" class="btn btn-outline-primary">View Articles</a>
-                        </div>
-                    </div>
-
-                    <!-- API Testing Category -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="category-card h-100">
-                            <div class="category-icon">
-                                <i class="fas fa-plug"></i>
-                            </div>
-                            <h3>API Testing</h3>
-                            <p>Learn about API testing methodologies, tools, and best practices.</p>
-                            <a href="/blog.html?category=api" class="btn btn-outline-primary">View Articles</a>
-                        </div>
-                    </div>
-
-                    <!-- Security Testing Category -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="category-card h-100">
-                            <div class="category-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h3>Security Testing</h3>
-                            <p>Explore security testing techniques, vulnerabilities, and prevention strategies.</p>
-                            <a href="/blog.html?category=security" class="btn btn-outline-primary">View Articles</a>
-                        </div>
-                    </div>
-
-                    <!-- Career Development Category -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="category-card h-100">
-                            <div class="category-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <h3>Career Development</h3>
-                            <p>Tips and insights for advancing your career in software testing and QA.</p>
-                            <a href="/blog.html?category=career" class="btn btn-outline-primary">View Articles</a>
-                        </div>
+                        <p class="mt-3">Loading categories...</p>
                     </div>
                 </div>
             </div>
@@ -320,6 +254,7 @@
     <script src="assets/js/newsletter.js"></script>
     <script src="assets/js/copyright.js"></script>
     <script src="assets/js/search.js"></script>
+    <script src="assets/js/categories.js"></script>
 </body>
 
 </html>

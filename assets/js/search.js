@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function getTextContent(html) {
         const temp = document.createElement('div');
         temp.innerHTML = html;
+        // Remove script and style elements
+        const scripts = temp.getElementsByTagName('script');
+        const styles = temp.getElementsByTagName('style');
+        while (scripts.length > 0) scripts[0].remove();
+        while (styles.length > 0) styles[0].remove();
         return temp.textContent || temp.innerText || '';
     }
 
@@ -81,21 +86,29 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             const data = await response.json();
             const results = new Map(); // Use Map to store unique results per file
+            let fetchErrors = 0;
 
             // Search through blog content
             for (const blog of data.blogs) {
                 try {
-                    // Ensure the path starts with a forward slash
+                    // Ensure the path starts with a forward slash and is relative to the root
                     const blogPath = blog.path.startsWith('/') ? blog.path : '/' + blog.path;
                     const response = await fetch(blogPath);
+
                     if (!response.ok) {
                         console.warn(`Failed to fetch ${blogPath}: ${response.status}`);
+                        fetchErrors++;
                         continue;
                     }
+
                     const html = await response.text();
                     const content = getTextContent(html);
 
-                    if (content.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    // Search in both title and content
+                    if (content.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        blog.description.toLowerCase().includes(searchTerm.toLowerCase())) {
+
                         // Only add one result per file
                         if (!results.has(blogPath)) {
                             const title = blog.title;
@@ -111,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 } catch (error) {
                     console.warn(`Error fetching ${blog.path}:`, error);
+                    fetchErrors++;
                     continue;
                 }
             }
@@ -127,11 +141,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     ));
                 });
             } else {
+                let errorMessage = '';
+                if (fetchErrors > 0) {
+                    errorMessage = `<p class="text-muted">Some articles could not be searched. Please try again later.</p>`;
+                }
+
                 searchResults.innerHTML = `
                     <div class="text-center">
                         <i class="fas fa-search fa-3x text-muted mb-3"></i>
                         <h3>No Results Found</h3>
                         <p class="text-muted">Try different keywords or browse our categories.</p>
+                        ${errorMessage}
                     </div>
                 `;
             }

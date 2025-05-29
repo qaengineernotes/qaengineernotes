@@ -175,6 +175,28 @@
             "path": "blogs/can-google-jules-replace-qa-engineers.html",
             "image": "../assets/images/google-jules-qa-engineers.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "tech-landscape-2025",
+            "title": "The Tech Landscape in Mid-2025: Emerging Technologies Reshaping Software Development and QA",
+            "date": "2025-05-29",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Explore the most impactful emerging technologies of 2025 and how they're transforming software development and QA. Learn about AI, quantum computing, blockchain, and more.",
+            "path": "blogs/tech-landscape-2025.html",
+            "image": "../assets/images/tech-landscape-2025.png",
+            "readTime": "15 min read"
+        },
+        {
+            "id": "testing-quantum-computing-pqc-qa",
+            "title": "Testing in the Quantum Age: Preparing QA for Post-Quantum Cryptography",
+            "date": "2025-05-29",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Explore how quantum computing is reshaping software testing and security. Learn about post-quantum cryptography, its impact on QA, and how to prepare your team for the quantum age.",
+            "path": "blogs/testing-quantum-computing-pqc-qa.html",
+            "image": "../assets/images/testing-quantum-computing-pqc-qa.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
