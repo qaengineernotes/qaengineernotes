@@ -197,6 +197,17 @@
             "path": "blogs/testing-quantum-computing-pqc-qa.html",
             "image": "../assets/images/testing-quantum-computing-pqc-qa.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "google-jules-bug-detection",
+            "title": "Leveraging Jules for Smarter Bug Detection and Fixing",
+            "date": "2025-05-29",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn how Google Jules is revolutionizing bug detection and fixing with AI-powered testing. Discover the benefits of AI in bug detection and how it improves testing efficiency.",
+            "path": "blogs/google-jules-bug-detection.html",
+            "image": "../assets/images/google-jules-bug-detection.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
