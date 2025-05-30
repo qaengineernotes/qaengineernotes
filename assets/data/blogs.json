@@ -228,7 +228,7 @@
             "category": "AI & Automation",
             "description": "Learn about the challenges of testing AI applications and how to overcome them. Discover the benefits of AI in testing and how it improves testing efficiency.",
             "path": "blogs/testing-ai-applications-challenges.html",
-            "image": "../assets/images/testing-ai-applications.png",
+            "image": "../assets/images/testing-ai-applications-challenges.png",
             "readTime": "15 min read"
         }
     ],
