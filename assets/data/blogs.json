@@ -219,10 +219,21 @@
             "path": "blogs/qa-role-ai-driven-development.html",
             "image": "../assets/images/qa-role-ai-driven-development.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "testing-ai-applications-challenges",
+            "title": "Testing AI Applications: Challenges and Solutions",
+            "date": "2025-05-30",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn about the challenges of testing AI applications and how to overcome them. Discover the benefits of AI in testing and how it improves testing efficiency.",
+            "path": "blogs/testing-ai-applications-challenges.html",
+            "image": "../assets/images/testing-ai-applications-challenges.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
         "itemsPerPage": 6,
-        "totalPages": 1
+        "totalPages": 4
     }
 }
