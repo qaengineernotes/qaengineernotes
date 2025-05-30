@@ -208,6 +208,17 @@
             "path": "blogs/google-jules-bug-detection.html",
             "image": "../assets/images/google-jules-bug-detection.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "qa-role-ai-driven-development",
+            "title": "The QA Role in AI-Driven Development: Evolving Responsibilities and Skills",
+            "date": "2025-05-30",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn how AI is transforming the role of QA engineers. Discover the benefits of AI in QA and how it improves testing efficiency.",
+            "path": "blogs/qa-role-ai-driven-development.html",
+            "image": "../assets/images/qa-role-ai-driven-development.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
