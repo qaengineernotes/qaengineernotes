@@ -298,10 +298,12 @@ mark {
 
 /* Hero Section */
 .hero-section {
-    background-color: var(--gray-50);
-    padding: 6rem 0 3rem;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid var(--gray-200);
+    padding-top: calc(var(--space-16) * 2);
+    padding-bottom: var(--space-16);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    margin-top: 72px;
+    /* Height of navbar */
 }
 
 .hero-section .container {
@@ -312,8 +314,29 @@ mark {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 2.5rem;
-    color: var(--gray-900);
+
     margin-bottom: 1rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: var(--space-4);
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-6);
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
 }
 
 .hero-section .lead {
@@ -330,9 +353,11 @@ mark {
 
 /* Privacy and Terms Content Styles */
 .privacy-content,
-.terms-content {
+.terms-content,
+.hero-content {
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
     padding: 2rem 1rem;
 }
 
