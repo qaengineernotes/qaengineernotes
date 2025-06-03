@@ -241,6 +241,17 @@
             "path": "blogs/reviewing-jules-generated-tests.html",
             "image": "../assets/images/reviewing-jules-tests.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "continuous-learning-qa-2025",
+            "title": "Continuous Learning in QA: Staying Relevant in 2025",
+            "date": "2025-06-03",
+            "author": "Nikunj Mistri",
+            "category": "Career Development",
+            "description": "Discover why continuous learning is crucial for QA professionals in 2025. Learn about edge computing, privacy-first testing, and automation trends to stay ahead in your QA career.",
+            "path": "blogs/continuous-learning-qa-2025.html",
+            "image": "../assets/images/continuous-learning-qa-2025.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {

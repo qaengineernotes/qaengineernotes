@@ -44,6 +44,12 @@
     </url>
     <!-- Blog Posts -->
     <url>
+        <loc>https://qablogs.com/blogs/continuous-learning-qa-2025.html</loc>
+        <lastmod>2025-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://qablogs.com/blogs/reviewing-jules-generated-tests.html</loc>
         <lastmod>2025-06-02</lastmod>
         <changefreq>monthly</changefreq>
