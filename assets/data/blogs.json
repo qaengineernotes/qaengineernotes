@@ -252,6 +252,17 @@
             "path": "blogs/continuous-learning-qa-2025.html",
             "image": "../assets/images/continuous-learning-qa-2025.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "qa-testing-terms-glossary",
+            "title": "QA Testing Terms Glossary: A Comprehensive Guide",
+            "date": "2025-06-04",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "Master 10 essential QA/testing terms with our beginner-friendly glossary. Learn about bugs, test cases, regression testing, and more to kickstart your QA career in 2025.",
+            "path": "blogs/qa-testing-terms-glossary.html",
+            "image": "../assets/images/qa-testing-terms-glossary.png",
+            "readTime": "10 min read"
         }
     ],
     "pagination": {
