@@ -263,6 +263,17 @@
             "path": "blogs/qa-testing-terms-glossary.html",
             "image": "../assets/images/qa-testing-terms-glossary.png",
             "readTime": "10 min read"
+        },
+        {
+            "id": "ai-deterministic-testing",
+            "title": "AI and Deterministic Testing: Bridging the Gap for Reliable QA",
+            "date": "2025-06-06",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn how to combine AI's probabilistic nature with deterministic testing approaches. Discover practical strategies and best practices for reliable QA in AI-driven applications.",
+            "path": "blogs/ai-deterministic-testing-reliable-qa.html",
+            "image": "../assets/images/ai-deterministic-testing.png",
+            "readTime": "18 min read"
         }
     ],
     "pagination": {
