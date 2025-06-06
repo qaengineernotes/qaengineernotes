@@ -274,6 +274,17 @@
             "path": "blogs/ai-deterministic-testing-reliable-qa.html",
             "image": "../assets/images/ai-deterministic-testing.png",
             "readTime": "18 min read"
+        },
+        {
+            "id": "qa-sre-transforming-quality-assurance-2025",
+            "title": "From QA to SRE: How Site Reliability Engineering is Transforming Quality Assurance in 2025",
+            "date": "2025-06-06",
+            "author": "Nikunj Mistri",
+            "category": "DevOps & SRE",
+            "description": "Learn how Site Reliability Engineering (SRE) is transforming Quality Assurance (QA) in 2025. Discover the benefits of SRE in QA and how it improves testing efficiency.",
+            "path": "blogs/qa-sre-transforming-quality-assurance-2025.html",
+            "image": "../assets/images/qa-sre-transformation.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
