@@ -7,7 +7,7 @@ function getRandomPosts(posts, count) {
 // Function to create a footer blog card
 function createFooterBlogCard(post) {
     return `
-        <a href="/${post.path}" class="footer-blog-card">
+        <a href="/${post.path.endsWith('.html') ? post.path : post.path + '.html'}" class="footer-blog-card">
             <img src="${post.image}" alt="${post.title}" class="footer-blog-image">
             <div class="footer-blog-content">
                 <h5 class="footer-blog-title">${post.title}</h5>
@@ -33,10 +33,10 @@ async function renderFooterBlogs() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        
+
         // Get 3 random posts
         const randomPosts = getRandomPosts(data.blogs, 3);
-        
+
         // Create and append footer blog cards
         const blogCards = randomPosts.map(post => createFooterBlogCard(post)).join('');
         footerBlogs.innerHTML = blogCards;

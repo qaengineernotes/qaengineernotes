@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <span class="blog-read-time">${blog.readTime}</span>
                     </div>
                     <h2 class="blog-card-title">
-                        <a href="${blog.path}">${blog.title}</a>
+                        <a href="${blog.path.endsWith('.html') ? blog.path : blog.path + '.html'}">${blog.title}</a>
                     </h2>
                     <p class="blog-card-description">${blog.description}</p>
                     <div class="blog-card-footer">

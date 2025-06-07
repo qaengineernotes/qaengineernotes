@@ -7,7 +7,7 @@ function createBlogCard(post) {
                 <div class="card-body">
                     <span class="badge bg-primary mb-2">${post.category}</span>
                     <h3 class="card-title h5 mb-3">
-                        <a href="/${post.path}" class="text-decoration-none text-dark">${post.title}</a>
+                        <a href="/${post.path.endsWith('.html') ? post.path : post.path + '.html'}" class="text-decoration-none text-dark">${post.title}</a>
                     </h3>
                     <p class="card-text text-muted">${post.description}</p>
                 </div>
@@ -17,7 +17,7 @@ function createBlogCard(post) {
                             <i class="far fa-calendar-alt me-1"></i>
                             ${new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                         </small>
-                        <a href="/${post.path}" class="btn btn-sm btn-outline-primary">Read More</a>
+                        <a href="/${post.path.endsWith('.html') ? post.path : post.path + '.html'}" class="btn btn-sm btn-outline-primary">Read More</a>
                     </div>
                 </div>
             </article>
