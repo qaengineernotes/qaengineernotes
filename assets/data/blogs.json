@@ -296,6 +296,17 @@
             "path": "blogs/shift-left-testing-financial-services-qa-2025.html",
             "image": "../assets/images/shift-left-testing.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "shift-left-testing-early-sdlc-qa",
+            "title": "Shift-Left Testing: Embedding Test Cases Early in the SDLC",
+            "date": "2025-06-10",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "Learn about shift-left testing and how it's embedding test cases early in the SDLC.",
+            "path": "blogs/shift-left-testing-early-sdlc-qa.html",
+            "image": "../assets/images/shift-left-testing-early-sdlc-qa.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
