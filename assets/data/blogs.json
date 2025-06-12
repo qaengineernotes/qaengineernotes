@@ -307,6 +307,17 @@
             "path": "blogs/shift-left-testing-early-sdlc-qa.html",
             "image": "../assets/images/shift-left-testing-early-sdlc-qa.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "european-accessibility-act-qa-guide-2025",
+            "title": "European Accessibility Act QA Guide: A Comprehensive Guide for QA Engineers",
+            "date": "2025-06-12",
+            "author": "Nikunj Mistri",
+            "category": "Accessibility & Compliance",
+            "description": "Learn about the European Accessibility Act and how it's impacting QA engineers.",
+            "path": "blogs/european-accessibility-act-qa-guide-2025.html",
+            "image": "../assets/images/european-accessibility-act-qa-guide-2025.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
