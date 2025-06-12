@@ -318,6 +318,17 @@
             "path": "blogs/european-accessibility-act-qa-guide-2025.html",
             "image": "../assets/images/european-accessibility-act-qa-guide-2025.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "testrail-2025-report-qa-trends-automation",
+            "title": "TestRail's 2025 Report: Key Takeaways for Modern QA Teams",
+            "date": "2025-06-12",
+            "author": "Nikunj Mistri",
+            "category": "QA Trends & Reports",
+            "description": "Discover TestRail's 2025 QA Report insights on automation's impact on release cycles and quality. Learn key trends, challenges, and actionable strategies for modern QA teams.",
+            "path": "blogs/testrail-2025-report-qa-trends-automation.html",
+            "image": "../assets/images/testrail-2025-report.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {

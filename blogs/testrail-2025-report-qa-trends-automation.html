@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestRail's 2025 Report: Key Takeaways for Modern QA Teams | QA Blogs</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Discover TestRail's 2025 QA Report insights on automation's impact on release cycles and quality. Learn key trends, challenges, and actionable strategies for modern QA teams.">
+    <meta name="keywords"
+        content="TestRail report, QA automation, software testing, quality assurance, QA trends 2025, test automation, QA Blog, QA Blogs, QA Blog Posts, Best QA Blogs">
+    <meta name="author" content="Nikunj Mistri">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="copyright" content="QA Blogs">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://qablogs.com/blogs/testrail-2025-report-qa-trends-automation.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="TestRail's 2025 Report: Key Takeaways for Modern QA Teams">
+    <meta property="og:description"
+        content="Discover TestRail's 2025 QA Report insights on automation's impact on release cycles and quality. Learn key trends, challenges, and actionable strategies for modern QA teams.">
+    <meta property="og:image" content="https://qablogs.com/assets/images/testrail-2025-report.png">
+    <meta property="og:url" content="https://qablogs.com/blogs/testrail-2025-report-qa-trends-automation">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TestRail's 2025 Report: Key Takeaways for Modern QA Teams">
+    <meta name="twitter:description"
+        content="Discover TestRail's 2025 QA Report insights on automation's impact on release cycles and quality. Learn key trends, challenges, and actionable strategies for modern QA teams.">
+    <meta name="twitter:image" content="https://qablogs.com/assets/images/testrail-2025-report.png">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://qablogs.com/"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://qablogs.com/blog.html"
+        }, {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "TestRail's 2025 Report",
+            "item": "https://qablogs.com/blogs/testrail-2025-report-qa-trends-automation.html"
+        }]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EV2406R3X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7EV2406R3X');
+    </script>
+</head>
+
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="navbar" role="banner">
+        <div class="container-fluid px-4">
+            <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
+                <div class="navbar-section navbar-brand-section">
+                    <a href="/" class="navbar-brand" aria-label="QA Blogs Home">QA Blogs</a>
+                </div>
+                <div class="navbar-section nav-links-section">
+                    <div class="nav-links">
+                        <a href="/" class="nav-link">Home</a>
+                        <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
+                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-section navbar-search-section">
+                    <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Reading Progress Bar -->
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+
+        <!-- Blog Post -->
+        <article class="blog-post py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Blog Header -->
+                        <header class="blog-header mb-5">
+                            <div class="blog-meta mb-3">
+                                <span><i class="far fa-calendar"></i> June 12, 2025</span>
+                                <span><i class="far fa-folder"></i> QA Trends & Reports</span>
+                                <span><i class="far fa-clock"></i> 15 min read</span>
+                            </div>
+                            <h1 class="blog-title display-4 fw-bold mb-4">TestRail's 2025 Report: Key Takeaways for
+                                Modern QA Teams</h1>
+
+                            <!-- Featured Image -->
+                            <img src="../assets/images/testrail-2025-report.png" alt="TestRail 2025 Report Insights"
+                                class="featured-image">
+
+                            <div class="blog-author d-flex align-items-center">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri"
+                                    class="author-avatar rounded-circle me-3">
+                                <div>
+                                    <p class="author-name mb-1">Nikunj Mistri</p>
+                                    <p class="author-title text-muted mb-0">Founder, QA Blogs</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Key Takeaways -->
+                        <div class="key-takeaways">
+                            <h3><i class="fas fa-lightbulb me-2"></i>Key Takeaways</h3>
+                            <ul>
+                                <li>43% of QA teams prioritize increased test automation for faster releases</li>
+                                <li>39% of teams are adopting shift-left practices for early defect detection</li>
+                                <li>35% focus on better testing environments and reusable test data</li>
+                                <li>Automation challenges include fragile test suites and skill gaps</li>
+                            </ul>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <p class="lead">TestRail's Fourth Edition Software Testing & Quality Report, released on
+                                June 5, 2025, provides critical insights into the evolving landscape of Quality
+                                Assurance (QA), drawing from a survey of thousands of QA professionals worldwide. The
+                                report highlights how automation is driving faster release cycles and improving software
+                                quality, while also identifying persistent challenges for modern QA teams. This blog on
+                                QA Blogs summarizes the key findings, focusing on automation's role in enabling
+                                efficiency and quality, and offers actionable takeaways for QA teams in 2025—all
+                                optimized for SEO to reach QA professionals seeking to modernize their testing
+                                strategies.</p>
+
+                            <h2 id="overview" class="mt-5 mb-4">Overview of TestRail's 2025 Report</h2>
+                            <p>The TestRail 2025 Software Testing & Quality Report captures the state of QA amidst
+                                accelerating development cycles, rising expectations, and an expanding tool ecosystem.
+                                Key areas of focus include test automation, shift-left practices, and the need for
+                                better environments and metrics. The report underscores QA's strategic role in balancing
+                                speed and quality, with automation emerging as a pivotal enabler for faster releases and
+                                higher quality software.</p>
+
+                            <h2 id="key-findings" class="mt-5 mb-4">Key Findings: Automation's Role in Faster Release
+                                Cycles and Better Quality</h2>
+
+                            <h3 class="mt-4 mb-3">1. Automation as a Top Priority for Speed</h3>
+                            <p>Automation remains a top objective for QA teams in 2025, with 43% of respondents
+                                prioritizing increased test automation to support faster release cycles.</p>
+
+                            <p><strong>Why It Matters:</strong> Faster release cycles are a hallmark of modern
+                                development, with many teams deploying bi-weekly or even daily updates. Automation
+                                reduces manual testing bottlenecks, enabling teams to keep pace with Agile and DevOps
+                                demands.</p>
+
+                            <p><strong>Impact on Release Cycles:</strong> Automated tests, such as AI-driven and
+                                self-healing tests, minimize maintenance overhead and provide quicker feedback loops.
+                                This allows developers to address issues early, reducing delays in the release pipeline.
+                            </p>
+
+                            <p><strong>Example:</strong> A team automating 40% of their regression tests can now execute
+                                them in hours instead of days, supporting bi-weekly deployments without compromising
+                                coverage.</p>
+
+                            <h3 class="mt-4 mb-3">2. Automation Driving Better Quality</h3>
+                            <p>The report highlights that automation not only speeds up testing but also enhances
+                                software quality by catching defects earlier and improving test coverage.</p>
+
+                            <p><strong>Early Defect Detection:</strong> 39% of teams are adopting shift-left practices,
+                                using automation to test during development rather than post-development. This reduces
+                                production bugs, a top QA goal in 2025, by identifying issues before they reach users.
+                            </p>
+
+                            <p><strong>Comprehensive Coverage:</strong> Automation enables broader test coverage, a key
+                                objective tied with automation in the report. Automated suites can run thousands of test
+                                cases across different environments, ensuring consistent quality.</p>
+
+                            <p><strong>Example:</strong> Automated API tests can validate a payment gateway's
+                                functionality across multiple scenarios, ensuring reliability before it reaches
+                                production, thus improving overall quality.</p>
+
+                            <h3 class="mt-4 mb-3">3. Challenges in Scaling Automation</h3>
+                            <p>Despite its benefits, automation remains a significant challenge for 43% of QA teams,
+                                hindering their ability to fully realize faster releases and better quality.</p>
+
+                            <ul class="blog-list">
+                                <li><strong>Fragile Test Suites:</strong> Teams report issues with unstable automated
+                                    tests that fail inconsistently, slowing down release cycles and eroding confidence
+                                    in results.</li>
+                                <li><strong>Skill Gaps and Tooling Issues:</strong> A lack of skilled personnel and
+                                    inconsistent tooling (e.g., disjointed systems) complicates automation efforts.</li>
+                                <li><strong>Late Involvement:</strong> 32% of QA professionals feel disconnected from
+                                    early-stage development, making it harder to automate tests proactively and
+                                    impacting quality.</li>
+                            </ul>
+
+                            <h3 class="mt-4 mb-3">4. Better Environments and Test Data for Efficiency</h3>
+                            <p>35% of teams are prioritizing better testing environments and reusable test data to
+                                support automation, directly contributing to faster releases and improved quality.</p>
+
+                            <p><strong>Why It Matters:</strong> Unreliable environments slow down test execution, while
+                                poor test data leads to incomplete coverage. Stable environments and quality data ensure
+                                automated tests run smoothly and accurately.</p>
+
+                            <p><strong>Impact on Quality:</strong> Reusable test data allows teams to simulate
+                                real-world scenarios, catching edge cases early and improving software reliability.</p>
+
+                            <p><strong>Example:</strong> A financial app team using reusable test data for payment
+                                transactions can automate tests across different user scenarios, ensuring consistent
+                                quality in production.</p>
+
+                            <h3 class="mt-4 mb-3">5. Metrics for Quality and ROI</h3>
+                            <p>QA teams are tracking automation metrics like the number of automated tests created (43%)
+                                and test execution rates (42%), but struggle to measure ROI, which limits their ability
+                                to justify automation investments.</p>
+
+                            <p><strong>Why It Matters:</strong> Without clear ROI, teams face challenges in securing
+                                resources for automation, slowing down adoption and impacting release speed.</p>
+
+                            <p><strong>Desired Metrics:</strong> Teams want metrics that tie QA efforts to business
+                                impact, such as customer satisfaction or revenue growth, to better demonstrate
+                                automation's value in improving quality.</p>
+
+                            <p><strong>Example:</strong> A team automating 50% of their tests might track defect escape
+                                rates to show how automation reduces production bugs, directly linking to quality
+                                improvements.</p>
+
+                            <h2 id="actionable-takeaways" class="mt-5 mb-4">Actionable Takeaways for QA Teams in 2025
+                            </h2>
+                            <p>Based on the report's findings, here are practical steps for QA teams to leverage
+                                automation for faster release cycles and better quality:</p>
+
+                            <ul class="blog-list">
+                                <li><strong>Invest in Automation Skills:</strong> Train your team on automation tools
+                                    like Selenium, Cypress, or Playwright, which support faster test execution and
+                                    broader coverage.</li>
+                                <li><strong>Adopt Shift-Left Practices:</strong> Collaborate with developers early to
+                                    automate tests during coding, catching defects before they reach production and
+                                    improving quality.</li>
+                                <li><strong>Prioritize Stable Environments:</strong> Use containerized environments
+                                    (e.g., Docker) to ensure consistency in test execution, enabling faster and more
+                                    reliable automated tests.</li>
+                                <li><strong>Leverage Reusable Test Data:</strong> Create a repository of reusable test
+                                    data to simulate diverse scenarios, enhancing coverage and quality without slowing
+                                    down releases.</li>
+                                <li><strong>Track Meaningful Metrics:</strong> Beyond test execution rates, measure
+                                    defect escape rates or user satisfaction to demonstrate automation's impact on
+                                    quality and justify investments.</li>
+                                <li><strong>Integrate with CI/CD Pipelines:</strong> Automate test execution within
+                                    CI/CD tools like Jenkins or GitHub Actions to provide real-time feedback, supporting
+                                    faster release cycles.</li>
+                            </ul>
+
+                            <h2 id="qa-trends" class="mt-5 mb-4">How These Findings Align with 2025 QA Trends</h2>
+                            <p>The TestRail 2025 Report aligns with broader QA trends in 2025, as seen in previous QA
+                                Blogs posts:</p>
+
+                            <ul class="blog-list">
+                                <li><strong>Shift-Left Testing:</strong> As discussed in "Shift-Left Testing: Embedding
+                                    Test Cases Early in the SDLC," early testing complements automation by catching
+                                    defects sooner, improving quality.</li>
+                                <li><strong>Accessibility Compliance:</strong> From "Navigating the European
+                                    Accessibility Act," automation can help scale accessibility testing, ensuring
+                                    compliance without slowing down releases.</li>
+                                <li><strong>API Testing:</strong> As noted in upcoming topics like "Designing Effective
+                                    Test Cases for Privacy-First Financial APIs," automation is critical for validating
+                                    APIs, supporting faster and higher-quality releases.</li>
+                            </ul>
+
+                            <h2 id="conclusion" class="mt-5 mb-4">Conclusion</h2>
+                            <p>TestRail's 2025 Software Testing & Quality Report underscores automation's pivotal role
+                                in enabling faster release cycles and better quality for modern QA teams. By increasing
+                                automation (43% priority), adopting shift-left practices (39%), and improving
+                                environments and test data (35%), teams are accelerating releases while reducing
+                                production bugs. However, challenges like fragile test suites, skill gaps, and late
+                                involvement highlight the need for strategic investments in skills, tools, and
+                                processes. QA teams that act on these findings—by automating early, optimizing
+                                environments, and tracking meaningful metrics—can deliver high-quality software at the
+                                speed modern development demands.</p>
+
+                            <p>Ready to modernize your QA process with automation? Share your automation strategies in
+                                the comments, and explore more QA insights on QA Blogs!</p>
+
+                            <!-- Share Section -->
+                            <div class="share-section">
+                                <h3 class="h4 mb-3">Found this article helpful?</h3>
+                                <p class="mb-4">Share it with your network and help others discover the latest QA
+                                    trends!</p>
+                                <div class="social-share">
+                                    <button class="btn btn-primary" onclick="shareOnTwitter()">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="shareOnLinkedIn()">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="shareOnFacebook()">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </button>
+                                    <button class="btn btn-primary" onclick="copyLink()">
+                                        <i class="fas fa-link"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Call to Action Section -->
+                            <div class="cta-section">
+                                <div class="cta-content">
+                                    <h3>Join Our Community of QA Professionals</h3>
+                                    <p>Get exclusive access to in-depth articles, testing strategies, and industry
+                                        insights. Stay ahead of the curve with our expert-curated content delivered
+                                        straight to your inbox.</p>
+
+                                    <div class="cta-buttons">
+                                        <a href="#newsletter" class="btn btn-primary">Subscribe Now</a>
+                                        <a href="/blog" class="btn btn-outline">Explore More Articles</a>
+                                    </div>
+
+                                    <div class="cta-features">
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Weekly Updates</span>
+                                        </div>
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Expert Insights</span>
+                                        </div>
+                                        <div class="cta-feature">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Free Resources</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cta-signature">
+                                        <img src="../assets/images/profile.png" alt="Nikunj Mistri">
+                                        <div class="signature-text">
+                                            <p class="signature-name">Nikunj Mistri</p>
+                                            <p class="signature-title">Founder, QA Blogs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Related Articles -->
+                            <div class="related-articles">
+                                <h3>Related Articles</h3>
+                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Shift-Left Testing: Embedding Test Cases Early in
+                                                    the SDLC</h4>
+                                                <p class="card-text">Learn how to implement shift-left testing practices
+                                                    to catch defects earlier and improve software quality.</p>
+                                                <a href="/blogs/shift-left-testing-sdlc.html" class="btn-link">Read More
+                                                    <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Navigating the European Accessibility Act</h4>
+                                                <p class="card-text">Discover how to ensure your software meets
+                                                    accessibility standards while maintaining efficient testing
+                                                    processes.</p>
+                                                <a href="/blogs/european-accessibility-act.html" class="btn-link">Read
+                                                    More <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Author Bio -->
+                            <div class="blog-author-bio">
+                                <h3>About the Author</h3>
+                                <div class="author-info">
+                                    <img src="../assets/images/profile.png" alt="Nikunj Mistri" class="author-avatar">
+                                    <div class="author-details">
+                                        <h4>Nikunj Mistri</h4>
+                                        <p class="author-title">Founder, QA Blogs</p>
+                                        <p>Passionate about software testing and quality assurance, helping teams
+                                            deliver better software through innovative testing approaches. With years of
+                                            experience in the industry, I'm dedicated to sharing knowledge and best
+                                            practices with the QA community.</p>
+                                        <div class="author-social">
+                                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                            <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand-section">
+                    <h3 class="footer-brand">QA Blogs</h3>
+                    <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
+                        and inspiration for QA professionals.</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/qa_blogs_com" class="social-link" aria-label="Twitter"><i
+                                class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/qablogs/" class="social-link" aria-label="Instagram"><i
+                                class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about.html" class="footer-link">About</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Random Blog Posts -->
+                <div class="footer-blogs-section">
+                    <h4 class="footer-title">You Might Also Like</h4>
+                    <div class="footer-blogs" id="footer-blogs" role="list">
+                        <!-- Loading State -->
+                        <div class="loading-state" aria-live="polite">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> QA Blogs. Made with <i
+                        class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/share.js"></script>
+</body>
+
+</html>
