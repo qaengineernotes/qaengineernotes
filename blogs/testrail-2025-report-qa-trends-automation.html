@@ -129,6 +129,38 @@
         </div>
     </header>
 
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper w-100">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search articles..."
+                            aria-label="Search articles">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close search"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results" role="region" aria-label="Search results">
+                        <!-- Search States -->
+                        <div id="searchLoading" class="search-state" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
+                            </div>
+                            <p>Searching articles...</p>
+                        </div>
+                        <div id="searchNoResults" class="search-state" style="display: none;">
+                            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+                            <p>No articles found matching your search.</p>
+                            <p class="text-muted">Try different keywords or browse our categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main id="main-content">
         <!-- Reading Progress Bar -->
