@@ -329,6 +329,17 @@
             "path": "blogs/testrail-2025-report-qa-trends-automation.html",
             "image": "../assets/images/testrail-2025-report.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "browserstack-playwright-ios-safari-testing",
+            "title": "BrowserStack Enables Playwright Testing on Real iOS Devices with Safari: A Game-Changer for QA Teams in 2025",
+            "date": "2025-06-13",
+            "author": "Nikunj Mistri",
+            "category": "Mobile Testing",
+            "description": "Learn about BrowserStack's new feature that enables Playwright testing on real iOS devices with Safari. Discover the benefits of this new capability for QA teams in 2025.",
+            "path": "blogs/browserstack-playwright-ios-safari-testing.html",
+            "image": "../assets/images/browserstack-playwright-ios.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
