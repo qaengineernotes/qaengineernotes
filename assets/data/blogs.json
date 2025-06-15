@@ -351,10 +351,21 @@
             "path": "blogs/weekly-software-testing-trends-june-2025.html",
             "image": "../assets/images/testing-trends-2025.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "fellou-ai-agentic-browser-qa-automation",
+            "title": "Fellou AI: Revolutionizing QA with Agentic Browser Testing",
+            "date": "2025-06-15",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Learn about Fellou AI's agentic browser and how it's revolutionizing QA with automated testing workflows. Discover the benefits of this new technology for QA teams in 2025.",
+            "path": "blogs/fellou-ai-agentic-browser-qa-automation.html",
+            "image": "../assets/images/fellou-ai-agentic-browser.png",
+            "readTime": "18 min read"
         }
     ],
     "pagination": {
         "itemsPerPage": 6,
-        "totalPages": 4
+        "totalPages": 5
     }
 }
