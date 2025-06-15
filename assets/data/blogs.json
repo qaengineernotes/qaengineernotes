@@ -340,6 +340,17 @@
             "path": "blogs/browserstack-playwright-ios-safari-testing.html",
             "image": "../assets/images/browserstack-playwright-ios.png",
             "readTime": "15 min read"
+        },
+        {
+            "id": "weekly-software-testing-trends-june-2025",
+            "title": "Weekly Recap: Top 5 Software Testing Innovations & Trends (June 2025)",
+            "date": "2025-06-15",
+            "author": "Nikunj Mistri",
+            "category": "Testing Trends",
+            "description": "Discover the top 5 software testing innovations of June 2025, including Playwright on iOS, shift-right testing, AI self-healing, cybersecurity, and low-code platforms.",
+            "path": "blogs/weekly-software-testing-trends-june-2025.html",
+            "image": "../assets/images/testing-trends-2025.png",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
