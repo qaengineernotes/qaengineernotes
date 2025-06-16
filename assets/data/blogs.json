@@ -373,6 +373,17 @@
             "path": "blogs/fellou-ai-agentic-browser-qa-automation.html",
             "image": "../assets/images/fellou-ai-agentic-browser.png",
             "readTime": "18 min read"
+        },
+        {
+            "id": "master-chrome-qa-testing-guide",
+            "title": "Mastering Chrome for QA Testing: A Comprehensive Guide",
+            "date": "2025-06-16",
+            "author": "Nikunj Mistri",
+            "category": "Testing Tools",
+            "description": "Unlock the full potential of Chrome for your QA testing needs. This guide covers essential developer tools, extensions, and techniques for efficient web application testing.",
+            "path": "blogs/mastering-chrome-qa-testing-guide.html",
+            "image": "../assets/images/mastering-chrome-qa-testing.png",
+            "readTime": "20 min read"
         }
         
     ],
