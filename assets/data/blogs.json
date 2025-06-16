@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "zentester-ai-e2e-software-testing-2025",
+            "title": "Zentester Unveiled: How AI is Redefining End-to-End Software Testing in 2025",
+            "date": "2025-06-16",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Explore Zentester, Zencoder's AI agent, revolutionizing end-to-end software testing in 2025. Learn its features, benefits, and impact on QA automation.",
+            "path": "blogs/zentester-ai-e2e-software-testing-2025.html",
+            "image": "../assets/images/zentester-ai-e2e-testing.png",
+            "readTime": "16 min read"
+        },
+        {
             "id": "best-practices-test-cases",
             "title": "Best Practices for Writing Test Cases",
             "date": "2025-05-15",
@@ -363,9 +374,10 @@
             "image": "../assets/images/fellou-ai-agentic-browser.png",
             "readTime": "18 min read"
         }
+        
     ],
     "pagination": {
         "itemsPerPage": 6,
-        "totalPages": 5
+        "totalPages": 6
     }
 }
