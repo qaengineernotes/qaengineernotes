@@ -395,10 +395,21 @@
             "path": "blogs/zentester-vs-traditional-qa-ai-accelerating-testing-2025.html",
             "image": "../assets/images/zentester-vs-traditional-qa.png",
             "readTime": "17 min read"
+        },
+        {
+            "id": "securing-software-2025-microsoft-patch-tuesday-lessons",
+            "title": "Securing Software in 2025: Lessons from Microsoft’s June Patch Tuesday",
+            "date": "2025-06-17",
+            "author": "Nikunj Mistri",
+            "category": "Software Security",
+            "description": "Explore key lessons from Microsoft's June 2025 Patch Tuesday for securing software. Learn about zero-day exploits, shift-left testing, AI tools, and API security to enhance your QA strategy in 2025.",
+            "path": "blogs/securing-software-2025-microsoft-patch-tuesday-lessons.html",
+            "image": "../assets/images/securing-software-2025.png",
+            "readTime": "18 min read"
         }
     ],
     "pagination": {
         "itemsPerPage": 6,
-        "totalPages": 6
+        "totalPages": 7
     }
 }
