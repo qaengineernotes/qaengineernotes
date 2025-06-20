@@ -406,6 +406,28 @@
             "path": "blogs/securing-software-2025-microsoft-patch-tuesday-lessons.html",
             "image": "../assets/images/securing-software-2025.png",
             "readTime": "18 min read"
+        },
+        {
+            "id": "dia-browser-web-automation-qa-engineers",
+            "title": "How DIA Browser Is Revolutionizing Web Automation for QA Engineers",
+            "date": "2025-06-18",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Explore how DIA Browser transforms web automation for QA engineers with AI, cross-browser support, & low-code. Boost efficiency & reliability in software testing.",
+            "path": "blogs/dia-browser-web-automation-qa-engineers.html",
+            "image": "../assets/images/dia-browser-web-automation.png",
+            "readTime": "18 min read"
+        },
+        {
+            "id": "mabl-2025-testing-revolution-ai-agents-qa-efficiency",
+            "title": "mabl’s 2025 Testing Revolution: How AI Agents Are Redefining QA Efficiency",
+            "date": "2025-06-19",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Discover how mabl's AI agents are revolutionizing QA efficiency in 2025. Explore AI-powered testing, self-healing tests, and predictive insights for software quality.",
+            "path": "blogs/mabl-2025-testing-revolution-ai-agents-qa-efficiency.html",
+            "image": "../assets/images/mabl-2025-testing-revolution.png",
+            "readTime": "16 min read"
         }
     ],
     "pagination": {
