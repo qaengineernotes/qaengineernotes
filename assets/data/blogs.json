@@ -428,10 +428,21 @@
             "path": "blogs/mabl-2025-testing-revolution-ai-agents-qa-efficiency.html",
             "image": "../assets/images/mabl-2025-testing-revolution.png",
             "readTime": "16 min read"
+        },
+        {
+            "id": "daily-qa-digest-mobile-accessibility-safety-critical-cloud-native-june-2025",
+            "title": "Daily QA Digest: Mobile Accessibility, Safety-Critical Testing, and Cloud-Native Agility (June 21, 2025)",
+            "date": "2025-06-20",
+            "author": "Nikunj Mistri",
+            "category": "Testing Trends",
+            "description": "Explore the June 21, 2025 QA Digest on mobile accessibility (EAA/WCAG 2.2), safety-critical testing (ISO 26262), & cloud-native agility. Actionable insights for QA pros.",
+            "path": "blogs/daily-qa-digest-mobile-accessibility-safety-critical-cloud-native-june-2025.html",
+            "image": "../assets/images/daily-qa-digest-june-2025.png",
+            "readTime": "12 min read"
         }
     ],
     "pagination": {
         "itemsPerPage": 6,
-        "totalPages": 7
+        "totalPages": 8
     }
 }
