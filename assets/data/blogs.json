@@ -439,10 +439,21 @@
             "path": "blogs/daily-qa-digest-mobile-accessibility-safety-critical-cloud-native-june-2025.html",
             "image": "../assets/images/daily-qa-digest-june-2025.png",
             "readTime": "12 min read"
+        },
+        {
+            "id": "weekend-qa-insights-ai-cloud-compliance-june-2025",
+            "title": "Weekend QA Insights: AI's Human Element, Cloud Test Challenges, and the Future of Compliance (June 22, 2025)",
+            "date": "2025-06-22",
+            "author": "Nikunj Mistri",
+            "category": "Testing Trends",
+            "description": "Explore our June 22, 2025 QA insights on AI's human element, cloud testing challenges, and the future of compliance. Actionable strategies for QA professionals.",
+            "path": "blogs/weekend-qa-insights-ai-cloud-compliance-june-2025.html",
+            "image": "../assets/images/weekend-qa-insights-june-2025.png",
+            "readTime": "14 min read"
         }
     ],
     "pagination": {
         "itemsPerPage": 6,
-        "totalPages": 8
+        "totalPages": 9
     }
 }

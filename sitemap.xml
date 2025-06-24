@@ -271,5 +271,11 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://qablogs.com/blogs/weekend-qa-insights-ai-cloud-compliance-june-2025.html</loc>
+        <lastmod>2025-06-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     
 </urlset> 
