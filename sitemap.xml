@@ -272,6 +272,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://qablogs.com/blogs/frontend-testing-testcafe-cypress-2025.html</loc>
+        <lastmod>2025-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://qablogs.com/blogs/weekend-qa-insights-ai-cloud-compliance-june-2025.html</loc>
         <lastmod>2025-06-22</lastmod>
         <changefreq>weekly</changefreq>

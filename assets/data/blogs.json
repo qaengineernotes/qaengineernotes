@@ -450,6 +450,17 @@
             "path": "blogs/weekend-qa-insights-ai-cloud-compliance-june-2025.html",
             "image": "../assets/images/weekend-qa-insights-june-2025.png",
             "readTime": "14 min read"
+        },
+        {
+            "id": "frontend-testing-testcafe-cypress-2025",
+            "title": "Frontend Testing in 2025: TestCafe vs. Cypress - Which Tool Reigns Supreme?",
+            "date": "2025-06-24",
+            "author": "Nikunj Mistri",
+            "category": "Testing Tools",
+            "description": "Explore the differences between TestCafe and Cypress for frontend testing in 2025. Discover which tool reigns supreme and why.",
+            "path": "blogs/frontend-testing-testcafe-cypress-2025.html",
+            "image": "../assets/images/frontend-testing-testcafe-cypress-2025.webp",
+            "readTime": "18 min read"
         }
     ],
     "pagination": {
