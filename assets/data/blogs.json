@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "top-5-open-source-bug-tracking-tools-2025",
+            "title": "Top 5 Open-Source Bug Tracking Tools in 2025",
+            "date": "2025-06-25",
+            "author": "Nikunj Mistri",
+            "category": "Testing Tools",
+            "description": "Discover the top 5 open-source bug tracking tools for 2025. Streamline your QA process, manage defects efficiently, and deliver high-quality software with these flexible and cost-effective solutions.",
+            "path": "blogs/top-5-open-source-bug-tracking-tools-2025.html",
+            "image": "../assets/images/open-source-bug-tracking-tools.webp",
+            "readTime": "18 min read"
+        },
+        {
             "id": "tricentis-agentic-test-automation-enterprise-qa-2025",
             "title": "Tricentis’ Agentic Test Automation: The Future of Enterprise QA in 2025",
             "date": "2025-06-25",
