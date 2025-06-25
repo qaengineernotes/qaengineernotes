@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "tricentis-agentic-test-automation-enterprise-qa-2025",
+            "title": "Tricentis’ Agentic Test Automation: The Future of Enterprise QA in 2025",
+            "date": "2025-06-25",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Explore Tricentis' Agentic Test Automation, a groundbreaking AI platform redefining enterprise QA in 2025. Learn how it streamlines testing and boosts productivity.",
+            "path": "blogs/tricentis-agentic-test-automation-enterprise-qa-2025.html",
+            "image": "../assets/images/tricentis-agentic-test-automation.png",
+            "readTime": "18 min read"
+        },
+        {
             "id": "zentester-ai-e2e-software-testing-2025",
             "title": "Zentester Unveiled: How AI is Redefining End-to-End Software Testing in 2025",
             "date": "2025-06-16",
@@ -465,6 +476,6 @@
     ],
     "pagination": {
         "itemsPerPage": 6,
-        "totalPages": 9
+        "totalPages": 8
     }
 }
