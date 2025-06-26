@@ -1,28 +1,6 @@
 {
     "blogs": [
         {
-            "id": "top-5-open-source-bug-tracking-tools-2025",
-            "title": "Top 5 Open-Source Bug Tracking Tools in 2025",
-            "date": "2025-06-25",
-            "author": "Nikunj Mistri",
-            "category": "Testing Tools",
-            "description": "Discover the top 5 open-source bug tracking tools for 2025. Streamline your QA process, manage defects efficiently, and deliver high-quality software with these flexible and cost-effective solutions.",
-            "path": "blogs/top-5-open-source-bug-tracking-tools-2025.html",
-            "image": "../assets/images/open-source-bug-tracking-tools.webp",
-            "readTime": "18 min read"
-        },
-        {
-            "id": "tricentis-agentic-test-automation-enterprise-qa-2025",
-            "title": "Tricentis’ Agentic Test Automation: The Future of Enterprise QA in 2025",
-            "date": "2025-06-25",
-            "author": "Nikunj Mistri",
-            "category": "AI & Automation",
-            "description": "Explore Tricentis' Agentic Test Automation, a groundbreaking AI platform redefining enterprise QA in 2025. Learn how it streamlines testing and boosts productivity.",
-            "path": "blogs/tricentis-agentic-test-automation-enterprise-qa-2025.html",
-            "image": "../assets/images/tricentis-agentic-test-automation.webp",
-            "readTime": "18 min read"
-        },
-        {
             "id": "zentester-ai-e2e-software-testing-2025",
             "title": "Zentester Unveiled: How AI is Redefining End-to-End Software Testing in 2025",
             "date": "2025-06-16",
@@ -483,6 +461,39 @@
             "path": "blogs/frontend-testing-testcafe-cypress-2025.html",
             "image": "../assets/images/frontend-testing-testcafe-cypress-2025.webp",
             "readTime": "18 min read"
+        },
+        {
+            "id": "top-5-open-source-bug-tracking-tools-2025",
+            "title": "Top 5 Open-Source Bug Tracking Tools in 2025",
+            "date": "2025-06-25",
+            "author": "Nikunj Mistri",
+            "category": "Testing Tools",
+            "description": "Discover the top 5 open-source bug tracking tools for 2025. Streamline your QA process, manage defects efficiently, and deliver high-quality software with these flexible and cost-effective solutions.",
+            "path": "blogs/top-5-open-source-bug-tracking-tools-2025.html",
+            "image": "../assets/images/open-source-bug-tracking-tools.webp",
+            "readTime": "18 min read"
+        },
+        {
+            "id": "tricentis-agentic-test-automation-enterprise-qa-2025",
+            "title": "Tricentis’ Agentic Test Automation: The Future of Enterprise QA in 2025",
+            "date": "2025-06-25",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Explore Tricentis' Agentic Test Automation, a groundbreaking AI platform redefining enterprise QA in 2025. Learn how it streamlines testing and boosts productivity.",
+            "path": "blogs/tricentis-agentic-test-automation-enterprise-qa-2025.html",
+            "image": "../assets/images/tricentis-agentic-test-automation.webp",
+            "readTime": "18 min read"
+        },
+        {
+            "id": "how-to-write-effective-bug-reports-2025",
+            "title": "How to Write Effective Bug Reports (With Examples) for 2025",
+            "date": "2025-06-26",
+            "author": "Nikunj Mistri",
+            "category": "QA Best Practices",
+            "description": "Master writing effective bug reports with examples and best practices. Improve communication between QA and developers, streamline software development, and ensure swift issue resolution.",
+            "path": "blogs/how-to-write-effective-bug-reports.html",
+            "image": "../assets/images/how-to-write-effective-bug-reports.webp",
+            "readTime": "15 min read"
         }
     ],
     "pagination": {
