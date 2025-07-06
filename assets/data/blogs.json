@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "jira-9-4-ai-features-smart-duplicates-auto-summaries",
+            "title": "Jira 9.4's New AI Features: Smart Duplicates, Auto-Summaries & How to Use Them",
+            "date": "2025-07-01",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Discover Jira 9.4's revolutionary AI features: Smart Duplicate Detection and Auto-Summaries. Learn how these tools transform QA workflows, reduce manual overhead, and improve project management efficiency.",
+            "path": "blogs/jira-9-4-ai-features-smart-duplicates-auto-summaries.html",
+            "image": "../assets/images/jira-9-4-ai-features-smart-duplicates-auto-summaries.webp",
+            "readTime": "22 min read"
+        },
+        {
             "id": "future-qa-jobs-skills-stay-relevant-2025",
             "title": "The Future of QA Jobs: Skills You Need to Stay Relevant",
             "date": "2025-06-30",
