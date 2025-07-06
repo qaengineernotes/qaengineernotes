@@ -495,6 +495,18 @@
             "image": "../assets/images/how-to-write-effective-bug-reports.webp",
             "readTime": "15 min read"
         }
+        ,
+        {
+            "id": "how-to-build-qa-process-for-startups",
+            "title": "How to Build a QA Process from Scratch for Startups: A Complete Guide to Quality Assurance Success",
+            "date": "2025-06-27",
+            "author": "Nikunj Mistri",
+            "category": "QA Best Practices",
+            "description": "Learn to build a robust QA process for your startup from scratch. This guide covers essential strategies, tools, and best practices for quality assurance success and defect reduction.",
+            "path": "blogs/how-to-build-qa-process-for-startups.html",
+            "image": "../assets/images/build-qa-process-startup.webp",
+            "readTime": "15 min read"
+        }
     ],
     "pagination": {
         "itemsPerPage": 6,
