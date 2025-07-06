@@ -307,5 +307,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+    <url>
+        <loc>https://qablogs.com/blogs/integrating-bug-tracking-cicd-pipelines-guide.html</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset> 

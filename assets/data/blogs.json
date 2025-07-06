@@ -386,7 +386,7 @@
             "readTime": "20 min read"
         },
         {
-            "id":"zentester-vs-traditional-qa-ai-accelerating-testing-2025",
+            "id": "zentester-vs-traditional-qa-ai-accelerating-testing-2025",
             "title": "Zentester vs. Traditional QA: How AI is Accelerating Software Testing in 2025",
             "date": "2025-06-17",
             "author": "Nikunj Mistri",
@@ -398,7 +398,7 @@
         },
         {
             "id": "securing-software-2025-microsoft-patch-tuesday-lessons",
-            "title": "Securing Software in 2025: Lessons from Microsoft’s June Patch Tuesday",
+            "title": "Securing Software in 2025: Lessons from Microsoft's June Patch Tuesday",
             "date": "2025-06-17",
             "author": "Nikunj Mistri",
             "category": "Software Security",
@@ -420,7 +420,7 @@
         },
         {
             "id": "mabl-2025-testing-revolution-ai-agents-qa-efficiency",
-            "title": "mabl’s 2025 Testing Revolution: How AI Agents Are Redefining QA Efficiency",
+            "title": "mabl's 2025 Testing Revolution: How AI Agents Are Redefining QA Efficiency",
             "date": "2025-06-19",
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
@@ -475,7 +475,7 @@
         },
         {
             "id": "tricentis-agentic-test-automation-enterprise-qa-2025",
-            "title": "Tricentis’ Agentic Test Automation: The Future of Enterprise QA in 2025",
+            "title": "Tricentis' Agentic Test Automation: The Future of Enterprise QA in 2025",
             "date": "2025-06-25",
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
@@ -494,8 +494,7 @@
             "path": "blogs/how-to-write-effective-bug-reports.html",
             "image": "../assets/images/how-to-write-effective-bug-reports.webp",
             "readTime": "15 min read"
-        }
-        ,
+        },
         {
             "id": "how-to-build-qa-process-for-startups",
             "title": "How to Build a QA Process from Scratch for Startups: A Complete Guide to Quality Assurance Success",
@@ -506,6 +505,17 @@
             "path": "blogs/how-to-build-qa-process-for-startups.html",
             "image": "../assets/images/build-qa-process-startup.webp",
             "readTime": "15 min read"
+        },
+        {
+            "id": "integrating-bug-tracking-cicd-pipelines-guide",
+            "title": "Integrating Bug Tracking with CI/CD Pipelines: A Step-by-Step Guide",
+            "date": "2025-06-28",
+            "author": "Nikunj Mistri",
+            "category": "Testing",
+            "description": "Learn how to seamlessly integrate bug tracking with CI/CD pipelines. Boost software quality, automate bug reporting, and streamline your QA workflow.",
+            "path": "blogs/integrating-bug-tracking-cicd-pipelines-guide.html",
+            "image": "../assets/images/integrating-bug-tracking-cicd-pipelines.webp",
+            "readTime": "20 min read"
         }
     ],
     "pagination": {
