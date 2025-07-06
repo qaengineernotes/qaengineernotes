@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "future-qa-jobs-skills-stay-relevant-2025",
+            "title": "The Future of QA Jobs: Skills You Need to Stay Relevant",
+            "date": "2025-06-30",
+            "author": "Nikunj Mistri",
+            "category": "Career & Skills",
+            "description": "Discover the essential skills QA professionals need to stay competitive in 2025. Learn about automation, AI, cloud testing, and career development strategies for modern quality assurance.",
+            "path": "blogs/future-qa-jobs-skills-stay-relevant-2025.html",
+            "image": "../assets/images/future-qa-jobs-skills-stay-relevant-2025.webp",
+            "readTime": "25 min read"
+        },
+        {
             "id": "top-5-security-testing-tools-qa-professionals-2025",
             "title": "Top 5 Security Testing Tools Every QA Should Know",
             "date": "2025-06-29",
