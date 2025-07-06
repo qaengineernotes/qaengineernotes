@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "qa-survival-guide-ai-powered-testing-2025",
+            "title": "The 2025 QA Survival Guide: Thriving in the Age of AI-Powered Testing",
+            "date": "2025-07-03",
+            "author": "Nikunj Mistri",
+            "category": "AI & Automation",
+            "description": "Master QA in 2025 with this survival guide. Discover essential AI-powered testing skills, tools, and strategies to thrive in the evolving software landscape.",
+            "path": "blogs/qa-survival-guide-ai-powered-testing-2025.html",
+            "image": "../assets/images/qa-survival-guide-ai-powered-testing-2025.webp",
+            "readTime": "22 min read"
+        },
+        {
             "id": "playwright-vs-cypress-vs-selenium-ultimate-2025-comparison",
             "title": "Playwright vs. Cypress vs. Selenium: The Ultimate 2025 Comparison",
             "date": "2025-07-02",

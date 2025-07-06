@@ -7,6 +7,12 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://qablogs.com/blogs/qa-survival-guide-ai-powered-testing-2025.html</loc>
+        <lastmod>2025-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://qablogs.com/blogs/jira-9-4-ai-features-smart-duplicates-auto-summaries.html</loc>
         <lastmod>2025-07-01</lastmod>
         <changefreq>monthly</changefreq>
