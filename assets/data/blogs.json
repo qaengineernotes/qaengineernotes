@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "playwright-vs-cypress-vs-selenium-ultimate-2025-comparison",
+            "title": "Playwright vs. Cypress vs. Selenium: The Ultimate 2025 Comparison",
+            "date": "2025-07-02",
+            "author": "Nikunj Mistri",
+            "category": "Testing Frameworks",
+            "description": "Compare Playwright, Cypress, and Selenium in 2025. Discover strengths, weaknesses, and which web automation testing framework is best for your QA needs.",
+            "path": "blogs/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison.html",
+            "image": "../assets/images/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison.webp",
+            "readTime": "28 min read"
+        },
+        {
             "id": "jira-9-4-ai-features-smart-duplicates-auto-summaries",
             "title": "Jira 9.4's New AI Features: Smart Duplicates, Auto-Summaries & How to Use Them",
             "date": "2025-07-01",

@@ -54,6 +54,12 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://qablogs.com/blogs/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison.html</loc>
+        <lastmod>2025-07-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <!-- Blog Posts -->
     <url>
         <loc>https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025.html</loc>
