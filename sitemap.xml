@@ -44,6 +44,12 @@
     </url>
     <!-- Blog Posts -->
     <url>
+        <loc>https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025.html</loc>
+        <lastmod>2025-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://qablogs.com/blogs/continuous-learning-qa-2025.html</loc>
         <lastmod>2025-06-03</lastmod>
         <changefreq>monthly</changefreq>
@@ -310,6 +316,12 @@
     <url>
         <loc>https://qablogs.com/blogs/integrating-bug-tracking-cicd-pipelines-guide.html</loc>
         <lastmod>2025-06-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025.html</loc>
+        <lastmod>2025-06-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

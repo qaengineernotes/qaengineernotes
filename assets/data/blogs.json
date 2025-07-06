@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "top-5-security-testing-tools-qa-professionals-2025",
+            "title": "Top 5 Security Testing Tools Every QA Should Know",
+            "date": "2025-06-29",
+            "author": "Nikunj Mistri",
+            "category": "Security & Testing",
+            "description": "Discover the top 5 security testing tools every QA should know in 2025. Boost your QA skills, prevent breaches, and secure your applications with these essential tools.",
+            "path": "blogs/top-5-security-testing-tools-qa-professionals-2025.html",
+            "image": "../assets/images/top-5-security-testing-tools.webp",
+            "readTime": "20 min read"
+        },
+        {
             "id": "zentester-ai-e2e-software-testing-2025",
             "title": "Zentester Unveiled: How AI is Redefining End-to-End Software Testing in 2025",
             "date": "2025-06-16",
