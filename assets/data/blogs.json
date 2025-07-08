@@ -571,6 +571,17 @@
             "path": "blogs/integrating-bug-tracking-cicd-pipelines-guide.html",
             "image": "../assets/images/integrating-bug-tracking-cicd-pipelines.webp",
             "readTime": "20 min read"
+        },
+        {
+            "id": "the-great-testing-layoff-qa-jobs-evolve-quality-engineers",
+            "title": "The Great Testing Layoff: How 40% of QA Jobs Evolved Into 'Quality Engineers'",
+            "date": "2025-07-04",
+            "author": "Nikunj Mistri",
+            "category": "Career & Skills",
+            "description": "Discover how 40% of QA jobs evolved into Quality Engineering roles. Explore the skills, trends, and strategies shaping the future of software testing careers.",
+            "path": "blogs/the-great-testing-layoff-qa-jobs-evolve-quality-engineers.html",
+            "image": "../assets/images/the-great-testing-layoff-qa-jobs-evolve-quality-engineers.webp",
+            "readTime": "24 min read"
         }
     ],
     "pagination": {

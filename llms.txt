@@ -1,0 +1,103 @@
+# QA Engineer Notes: LLMs Knowledge Index
+
+---
+
+## 1. Core Concepts & Definitions
+
+- **Quality Assurance (QA):** Systematic process to ensure a product meets requirements and standards, focusing on prevention of defects ([Glossary](https://qablogs.com/blogs/qa-testing-glossary.html)).
+- **Software Testing:** Evaluation of software to ensure it behaves as expected and is free of defects. Includes manual, automated, functional, non-functional, and regression testing.
+- **Shift-Left Testing:** Testing as early as possible in the development lifecycle to catch defects early ([Shift-Left Guide](https://qablogs.com/blogs/shift-left-testing-early-sdlc-qa.html)).
+- **Test Case:** A set of conditions to determine if a system meets requirements ([How to Write a Great Test Case](https://qablogs.com/blogs/how-to-write-great-test-case.html)).
+- **Defect/Bug:** A flaw causing unexpected behavior or deviation from requirements.
+- **Regression Testing:** Re-testing after changes to ensure existing functionality is not broken.
+- **Exploratory Testing:** Unscripted, dynamic testing to uncover unexpected issues.
+
+For more, see the [QA Testing Glossary](https://qablogs.com/blogs/qa-testing-glossary.html) and [QA Testing Terms Glossary](https://qablogs.com/blogs/qa-testing-terms-glossary.html).
+
+---
+
+## 2. Key Articles & Tutorials
+
+- [The 2025 QA Survival Guide: Thriving in the Age of AI-Powered Testing](https://qablogs.com/blogs/qa-survival-guide-ai-powered-testing-2025.html)
+- [Playwright vs. Cypress vs. Selenium: The Ultimate 2025 Comparison](https://qablogs.com/blogs/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison.html)
+- [Jira 9.4's New AI Features: Smart Duplicates, Auto-Summaries & How to Use Them](https://qablogs.com/blogs/jira-9-4-ai-features-smart-duplicates-auto-summaries.html)
+- [The Future of QA Jobs: Skills You Need to Stay Relevant](https://qablogs.com/blogs/future-qa-jobs-skills-stay-relevant-2025.html)
+- [Top 5 Security Testing Tools Every QA Should Know](https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025.html)
+- [Best Practices for Writing Test Cases](https://qablogs.com/blogs/best-practices-test-cases.html)
+- [Introduction to AI in Software Testing](https://qablogs.com/blogs/intro-ai-software-testing.html)
+- [How to Write a Great Test Case](https://qablogs.com/blogs/how-to-write-great-test-case.html)
+- [How to Perform Effective Regression Testing](https://qablogs.com/blogs/effective-regression-testing.html)
+- [What is Software Testing? A Beginner's Guide](https://qablogs.com/blogs/what-is-software-testing.html)
+- [Understanding the Role of a QA Engineer](https://qablogs.com/blogs/role-of-qa-engineer.html)
+- [Understanding the Software Development Life Cycle (SDLC)](https://qablogs.com/blogs/software-development-life-cycle.html)
+- [Software Testing Life Cycle (STLC): A Complete Overview](https://qablogs.com/blogs/software-testing-life-cycle.html)
+
+---
+
+## 3. Best Practices
+
+- **Risk-Based Testing:** Focus on high-risk areas that impact user experience or business operations.
+- **Test Pyramid:** Emphasize unit tests, fewer integration tests, and minimal but comprehensive end-to-end tests.
+- **Continuous Optimization:** Regularly review and improve QA processes.
+- **Cross-Browser & Device Testing:** Ensure compatibility across browsers and devices.
+- **Automation:** Start with unit tests, expand to integration and E2E tests. Use automation frameworks suitable for your stack.
+- **Documentation:** Maintain clear, concise documentation for test cases, processes, and standards.
+- **Metrics:** Track defect detection rate, test coverage, MTTR, and customer-reported issues.
+- **Collaboration:** Foster shared responsibility for quality across teams.
+
+See [How to Build a QA Process for Startups](https://qablogs.com/blogs/how-to-build-qa-process-for-startups.html) and [QA Survival Guide](https://qablogs.com/blogs/qa-survival-guide-ai-powered-testing-2025.html).
+
+---
+
+## 4. Tools & Technologies
+
+- **Test Automation:** Selenium, Cypress, Playwright, Appium
+- **CI/CD:** Jenkins, GitHub Actions, GitLab CI, Azure DevOps, CircleCI
+- **Performance Testing:** JMeter, LoadRunner, NeoLoad
+- **Monitoring:** New Relic, Datadog, Sentry, Grafana
+- **Security Testing:** SonarQube, OWASP ZAP, Nessus, Metasploit
+- **Accessibility:** axe-core
+- **AI/Agentic Tools:** Testim, Mabl, Applitools, KaneAI, Zentester, Fellou AI
+- **Bug Tracking:** Jira, Bugzilla, TestRail, Zephyr
+
+See [Top 5 Security Testing Tools](https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025.html), [QA Survival Guide](https://qablogs.com/blogs/qa-survival-guide-ai-powered-testing-2025.html), and [How to Build a QA Process for Startups](https://qablogs.com/blogs/how-to-build-qa-process-for-startups.html).
+
+---
+
+## 5. FAQs
+
+- [Software Testing FAQs](https://qablogs.com/faqs.html)
+- [QA Testing Terms Glossary](https://qablogs.com/blogs/qa-testing-terms-glossary.html)
+- [How to Build a QA Process for Startups](https://qablogs.com/blogs/how-to-build-qa-process-for-startups.html#faqs)
+- [Continuous Learning in QA](https://qablogs.com/blogs/continuous-learning-qa-2025.html#faqs)
+- [Zentester vs. Traditional QA](https://qablogs.com/blogs/zentester-vs-traditional-qa-ai-accelerating-testing-2025.html#faqs)
+- [Testing AI Applications](https://qablogs.com/blogs/testing-ai-applications-challenges.html#faq)
+- [Fellou AI Agentic Browser](https://qablogs.com/blogs/fellou-ai-agentic-browser-qa-automation.html#faqs)
+- [Reviewing Jules-Generated Tests](https://qablogs.com/blogs/reviewing-jules-generated-tests.html#faqs)
+- [Shift-Left Testing](https://qablogs.com/blogs/shift-left-testing-early-sdlc-qa.html#faq)
+
+---
+
+## 6. Site Structure for AI (Simplified Sitemap)
+
+- [Home](https://qablogs.com/)
+- [About](https://qablogs.com/about.html)
+- [Blog Index](https://qablogs.com/blog.html)
+- [Categories](https://qablogs.com/categories.html)
+- [AI Testing](https://qablogs.com/ai-testing.html)
+- [FAQs](https://qablogs.com/faqs.html)
+- [Contact](https://qablogs.com/contact.html)
+- [Privacy](https://qablogs.com/privacy.html)
+- [Terms](https://qablogs.com/terms.html)
+
+**Key Blog Categories:**
+- AI & Automation
+- Testing Frameworks
+- Security & Testing
+- Career & Skills
+- Development
+- Accessibility
+
+---
+
+*This file is designed for LLMs and AI agents to quickly understand the core QA knowledge, resources, and structure of QA Engineer Notes. For more, visit [QA Blogs](https://qablogs.com/).* 
