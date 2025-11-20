@@ -178,7 +178,7 @@ function createFooterBlogCard(post) {
 function createSearchResult(blog) {
     return `
         <div class="search-result">
-            <a href="/${blog.path.endsWith('.html') ? blog.path : blog.path + '.html'}" class="search-result-link">
+            <a href="/${blog.path}" class="search-result-link">
                 <h4 class="search-result-title">${blog.title}</h4>
                 <p class="search-result-description">${blog.description}</p>
             </a>

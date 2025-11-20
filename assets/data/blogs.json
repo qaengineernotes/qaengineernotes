@@ -1,6 +1,17 @@
 {
     "blogs": [
         {
+            "id": "google-antigravity-qa-testing",
+            "title": "Beyond Bugs: How Google's \"Antigravity\" is Reshaping QA for Complex Systems",
+            "date": "2025-11-20",
+            "author": "Nikunj Mistri",
+            "category": "Testing Strategies",
+            "description": "Discover Google's Antigravity philosophy for QA testing. Learn how isolation, determinism, and test doubles eliminate flaky tests and build reliable QA processes.",
+            "path": "blogs/google-antigravity-qa-testing",
+            "image": "../assets/images/google-antigravity-qa.webp",
+            "readTime": "15 min read"
+        },
+        {
             "id": "qa-survival-guide-ai-powered-testing-2025",
             "title": "The 2025 QA Survival Guide: Thriving in the Age of AI-Powered Testing",
             "date": "2025-07-03",

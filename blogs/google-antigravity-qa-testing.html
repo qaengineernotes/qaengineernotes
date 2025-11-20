@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Bugs: How Google's "Antigravity" is Reshaping QA for Complex Systems | QA Blogs</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Discover Google's Antigravity philosophy for QA testing. Learn how isolation, determinism, and test doubles eliminate flaky tests and build reliable QA processes.">
+    <meta name="keywords"
+        content="Google Antigravity, QA testing, deterministic testing, test isolation, mocking, stubbing, flaky tests, software testing, QA best practices, test reliability">
+    <meta name="author" content="Nikunj Mistri">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="copyright" content="QA Blogs">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://qablogs.com/blogs/google-antigravity-qa-testing.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Beyond Bugs: How Google's Antigravity is Reshaping QA for Complex Systems">
+    <meta property="og:description"
+        content="Discover Google's Antigravity philosophy for QA testing. Learn how isolation, determinism, and test doubles eliminate flaky tests and build reliable QA processes.">
+    <meta property="og:image" content="https://qablogs.com/assets/images/google-antigravity-qa.webp">
+    <meta property="og:url" content="https://qablogs.com/blogs/google-antigravity-qa-testing.html">
+    <meta property="article:published_time" content="2025-11-20">
+    <meta property="article:author" content="https://qablogs.com/about">
+
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Beyond Bugs: How Google's Antigravity is Reshaping QA for Complex Systems">
+    <meta name="twitter:description"
+        content="Discover Google's Antigravity philosophy for QA testing. Learn how isolation, determinism, and test doubles eliminate flaky tests and build reliable QA processes.">
+    <meta name="twitter:image" content="https://qablogs.com/assets/images/google-antigravity-qa.webp">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Beyond Bugs: How Google's Antigravity is Reshaping QA for Complex Systems",
+        "description": "Discover Google's Antigravity philosophy for QA testing. Learn how isolation, determinism, and test doubles eliminate flaky tests and build reliable QA processes.",
+        "author": {
+            "@type": "Person",
+            "name": "Nikunj Mistri",
+            "url": "https://qablogs.com/about.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "QA Blogs",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://qablogs.com/assets/images/logo.png"
+            }
+        },
+        "datePublished": "2025-11-20",
+        "dateModified": "2025-11-20",
+        "image": "https://qablogs.com/assets/images/google-antigravity-qa.webp",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://qablogs.com/blogs/google-antigravity-qa-testing.html"
+        },
+        "keywords": "Google Antigravity, QA testing, deterministic testing, test isolation, mocking, stubbing, flaky tests"
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EV2406R3X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7EV2406R3X');
+    </script>
+</head>
+
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="navbar" role="banner">
+        <div class="container-fluid px-4">
+            <nav class="navbar-nav custom-navbar-layout" role="navigation" aria-label="Main navigation">
+                <div class="navbar-section navbar-brand-section">
+                    <a href="/" class="navbar-brand" aria-label="QA Blogs Home">QA Blogs</a>
+                </div>
+                <div class="navbar-section nav-links-section">
+                    <div class="nav-links">
+                        <a href="/" class="nav-link">Home</a>
+                        <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
+                        <a href="/categories.html" class="nav-link">Categories</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-section navbar-search-section">
+                    <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper w-100">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search articles..."
+                            aria-label="Search articles">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close search"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results" role="region" aria-label="Search results">
+                        <!-- Search States -->
+                        <div id="searchLoading" class="search-state" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Searching...</span>
+                            </div>
+                            <p>Searching articles...</p>
+                        </div>
+                        <div id="searchNoResults" class="search-state" style="display: none;">
+                            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+                            <p>No articles found matching your search.</p>
+                            <p class="text-muted">Try different keywords or browse our categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Reading Progress Bar -->
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+
+        <!-- Blog Post -->
+        <article class="blog-post py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Blog Header -->
+                        <header class="blog-header mb-5">
+                            <div class="blog-meta mb-3">
+                                <span><i class="far fa-calendar"></i> November 20, 2025</span>
+                                <span><i class="far fa-folder"></i> Testing Strategies</span>
+                                <span><i class="far fa-clock"></i> 15 min read</span>
+                            </div>
+                            <h1 class="blog-title display-4 fw-bold mb-4">Beyond Bugs: How Google's "Antigravity" is
+                                Reshaping QA for Complex Systems</h1>
+                            <!-- Featured Image -->
+                            <img src="../assets/images/google-antigravity-qa.webp" alt="Google Antigravity QA Testing"
+                                class="featured-image">
+                            <div class="blog-author d-flex align-items-center">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri"
+                                    class="author-avatar rounded-circle me-3">
+                                <div>
+                                    <p class="author-name mb-1">Nikunj Mistri</p>
+                                    <p class="author-title text-muted mb-0">Founder, QA Blogs</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Key Takeaways -->
+                        <div class="key-takeaways">
+                            <h3><i class="fas fa-lightbulb me-2"></i>Key Takeaways</h3>
+                            <ul>
+                                <li>"Antigravity" represents a shift towards defying the "gravity" of technical debt and
+                                    flakiness in large-scale systems.</li>
+                                <li>The core philosophy relies on strict test isolation and determinism to eliminate
+                                    flaky tests.</li>
+                                <li>Effective use of test doubles (mocks, stubs, fakes) is crucial for simulating
+                                    complex dependencies.</li>
+                                <li>Adopting these principles leads to faster feedback loops and higher developer
+                                    confidence.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <p class="lead">In the world of software testing, we're constantly battling chaos. Flaky
+                                tests, unpredictable environments, and hidden dependencies can make even the most robust
+                                QA process feel like it's fighting against gravity. But what if you could create a
+                                testing environment where these disruptive forces simply... disappeared?</p>
+
+                            <p>Enter the concept of "Google's Antigravity." No, it's not a secret physics lab hidden in
+                                Mountain View. It's a powerful engineering philosophy and a suite of practices designed
+                                to eliminate the "downward pull" of non-determinism in software systems. For QA
+                                professionals, understanding Antigravity isn't just a technical curiosity; it's a
+                                blueprint for building more reliable, scalable, and truly effective testing processes
+                                for the most complex applications.</p>
+
+                            <h2 class="mt-5 mb-4">Core Content: What Exactly is "Antigravity"?</h2>
+                            <p>At its core, Google's Antigravity is the principle of systematically removing randomness
+                                and external dependencies to create perfectly predictable and isolated testing
+                                environments.</p>
+
+                            <p>The term was famously coined in a foundational Google testing paper, "Google's Test
+                                Analytics: The Open-Source Story." It describes the cultural and technical drive to make
+                                tests so reliable that they never fail for reasons outside the code they are validating.
+                                A test should fail for one reason only: a legitimate bug in the code under test, not
+                                because of a network glitch, a timing issue, or a dirty database.</p>
+
+                            <p>The essential components of this philosophy are:</p>
+                            <ul>
+                                <li><strong>Isolation:</strong> Every test must run in a hermetic environment. It should
+                                    not rely on shared databases, external APIs, or the file system of the machine it's
+                                    running on.</li>
+                                <li><strong>Determinism:</strong> Given the same code and the same inputs, a test must
+                                    produce the same result, every single time. No "flakiness" allowed.</li>
+                                <li><strong>Simplicity & Speed:</strong> Tests should be fast and focused. If a test is
+                                    slow, it won't be run frequently. Antigravity promotes mocking and stubbing to
+                                    achieve this.</li>
+                            </ul>
+
+                            <h2 class="mt-5 mb-4">Context (Past): The Birth of a Philosophy</h2>
+                            <p>The need for Antigravity didn't emerge from a theoretical ideal; it was forged in the
+                                fires of necessity. In Google's early days, as the codebase grew exponentially, so did
+                                the test suite. They encountered a critical problem: flaky tests.</p>
+
+                            <p>A test that passes 90% of the time is a cancer in a large-scale CI/CD system. It erodes
+                                trust in the entire testing process. Engineers start ignoring failures, and real bugs
+                                slip through. The cost of investigating these non-deterministic failures was staggering
+                                in terms of engineer-hours and delayed releases.</p>
+
+                            <p>Google's response was a cultural mandate: "Fix the flake!" This evolved into a formalized
+                                engineering discipline. They built tools (like their core testing frameworks) and
+                                established protocols that made writing a flaky test harder than writing a stable one.
+                                Antigravity was the name given to this collective effort to defy the natural entropy of
+                                software systems.</p>
+
+                            <h2 class="mt-5 mb-4">Usage (Present): Antigravity in Action Today</h2>
+                            <p>So, how do you apply Antigravity principles in modern QA? It's about the tools and
+                                techniques you use to create those hermetic, deterministic environments.</p>
+
+                            <h3 class="mt-4 mb-3">The Fundamental Process:</h3>
+                            <ol>
+                                <li><strong>Identify Dependencies:</strong> For any piece of code you're testing, list
+                                    all its dependencies—databases, web services, file I/O, system clock, even random
+                                    number generators.</li>
+                                <li><strong>Replace with Doubles:</strong> This is the heart of Antigravity. Use mocks,
+                                    stubs, and fakes to replace every single dependency.
+                                    <ul class="mt-2">
+                                        <li><strong>Stub:</strong> A simple replacement that returns predefined, canned
+                                            responses.</li>
+                                        <li><strong>Mock:</strong> A smart object that you program with expectations
+                                            (e.g., "this method must be called exactly once with these parameters").
+                                        </li>
+                                        <li><strong>Fake:</strong> A lightweight, functional implementation for testing
+                                            (e.g., an in-memory database instead of a real SQL server).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Control Time:</strong> Instead of relying on System.currentTimeMillis(),
+                                    inject a "time provider" that you can control in your tests. This eliminates
+                                    failures due to timing assumptions.</li>
+                                <li><strong>Run in Isolation:</strong> Use containerization (Docker) to ensure every
+                                    test run starts with a pristine, identical environment.</li>
+                            </ol>
+
+                            <h3 class="mt-5 mb-3">Real-World Example: Testing a Payment Service</h3>
+                            <p>Imagine testing a <code>processPayment(User user, PaymentDetails details)</code> method.
+                            </p>
+
+                            <p><strong>Without Antigravity:</strong> The test connects to a live, shared payment gateway
+                                and a user database. It fails randomly because the gateway is slow, the database is
+                                locked by another test, or the test user's data was changed.</p>
+
+                            <p><strong>With Antigravity:</strong></p>
+                            <ul>
+                                <li>The User object is a mock, returning a fixed, valid user ID.</li>
+                                <li>The call to the external payment gateway is mocked to instantly return a SUCCESS
+                                    response without ever making a network call.</li>
+                                <li>The database connection is faked with an in-memory H2 database that is populated and
+                                    torn down for each test.</li>
+                            </ul>
+                            <p>This test is now fast, reliable, and its success or failure depends only on the logic
+                                inside <code>processPayment</code>.</p>
+
+                            <h2 class="mt-5 mb-4">Future Outlook: The Next Frontier for Deterministic QA</h2>
+                            <p>The principles of Antigravity are becoming even more critical as we move forward:</p>
+
+                            <p><strong>AI and ML Testing:</strong> How do you test non-deterministic systems? The
+                                Antigravity approach will evolve to focus on testing the training data, the model
+                                boundaries, and the pipelines with extreme determinism, even if the model's output has a
+                                degree of variance.</p>
+
+                            <p><strong>Distributed Systems & Microservices:</strong> With chaos engineering, we
+                                intentionally introduce failure. Antigravity is the yin to its yang. You need perfectly
+                                deterministic tests for each service in isolation (Antigravity) before you can
+                                meaningfully test how they behave under failure (Chaos Engineering).</p>
+
+                            <p><strong>Major Challenge:</strong> The biggest challenge is cultural and educational.
+                                Getting entire teams, not just QA, to buy into and consistently apply these practices
+                                requires strong leadership and continuous mentoring.</p>
+
+                            <h2 class="mt-5 mb-4">Analysis: The Pros and Cons of an Antigravity Approach</h2>
+
+                            <h3 class="mt-4 mb-3">Advantages:</h3>
+                            <ul>
+                                <li><strong>Ultra-Reliable Tests:</strong> Drastically reduces false positives and
+                                    flakiness.</li>
+                                <li><strong>Blazing Fast Feedback:</strong> Tests run in milliseconds, not minutes,
+                                    enabling true TDD.</li>
+                                <li><strong>Pinpoint Accuracy:</strong> When a test fails, you know the bug is in the
+                                    code you're looking at, not in some external system.</li>
+                                <li><strong>Enables Scale:</strong> This is the only way to manage testing for a
+                                    codebase with millions of tests.</li>
+                            </ul>
+
+                            <h3 class="mt-4 mb-3">Limitations:</h3>
+                            <ul>
+                                <li><strong>Initial Overhead:</strong> Setting up mocks and fakes requires more upfront
+                                    design and coding time.</li>
+                                <li><strong>Over-Mocking Risk:</strong> You can create a "green test bubble" where your
+                                    mocks behave perfectly, but the integration with the real world fails. You still
+                                    need a smaller suite of integrated/end-to-end tests.</li>
+                                <li><strong>Learning Curve:</strong> Requires a shift in mindset from "test the system"
+                                    to "test the unit in perfect isolation."</li>
+                            </ul>
+
+                            <h2 class="mt-5 mb-4">Conclusion</h2>
+                            <p>Google's Antigravity is more than a clever name; it's a fundamental shift in how we
+                                approach quality. It teaches us that reliability isn't just about finding bugs—it's
+                                about building a testing ecosystem that is inherently immune to the noise and chaos of
+                                distributed software development.</p>
+
+                            <p>By embracing isolation, determinism, and the strategic use of test doubles, we can
+                                elevate our QA processes from a constant battle against instability to a streamlined,
+                                trustworthy pipeline. We can, in effect, make our tests defy gravity.</p>
+                        </div>
+
+                        <!-- Share Section -->
+                        <div class="share-section">
+                            <h3 class="h4 mb-3">Found this article helpful?</h3>
+                            <p class="mb-4">Share it with your network and help others discover the latest QA trends!
+                            </p>
+                            <div class="social-share">
+                                <button class="btn btn-primary" onclick="shareOnTwitter()">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="shareOnLinkedIn()">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="shareOnFacebook()">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="btn btn-primary" onclick="copyLink()">
+                                    <i class="fas fa-link"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Call to Action Section -->
+                        <div class="cta-section">
+                            <div class="cta-content">
+                                <h3>Join Our Community of QA Professionals</h3>
+                                <p>Get exclusive access to in-depth articles, testing strategies, and industry insights.
+                                    Stay ahead of the curve with our expert-curated content delivered straight to your
+                                    inbox.</p>
+
+                                <div class="cta-buttons">
+                                    <a href="#newsletter" class="btn btn-primary">Subscribe Now</a>
+                                    <a href="/blog.html" class="btn btn-outline">Explore More Articles</a>
+                                </div>
+
+                                <div class="cta-features">
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Weekly Updates</span>
+                                    </div>
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Expert Insights</span>
+                                    </div>
+                                    <div class="cta-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Free Resources</span>
+                                    </div>
+                                </div>
+
+                                <div class="cta-signature">
+                                    <img src="../assets/images/profile.png" alt="Nikunj Mistri">
+                                    <div class="signature-text">
+                                        <p class="signature-name">Nikunj Mistri</p>
+                                        <p class="signature-title">Founder, QA Blogs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Articles -->
+                        <div class="related-articles">
+                            <h3>Related Articles</h3>
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">AI and Deterministic Testing: Bridging the Gap</h4>
+                                            <p class="card-text">Learn how to combine AI's probabilistic nature with
+                                                deterministic testing approaches.</p>
+                                            <a href="ai-deterministic-testing-reliable-qa.html" class="btn-link">Read
+                                                More <i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">How to Write Great Test Cases</h4>
+                                            <p class="card-text">Master the art of creating effective and efficient test
+                                                cases for software testing.</p>
+                                            <a href="how-to-write-great-test-case.html" class="btn-link">Read More <i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Author Bio -->
+                        <div class="blog-author-bio">
+                            <h3>About the Author</h3>
+                            <div class="author-info">
+                                <img src="../assets/images/profile.png" alt="Nikunj Mistri" class="author-avatar">
+                                <div class="author-details">
+                                    <h4>Nikunj Mistri</h4>
+                                    <p class="author-title">Founder, QA Blogs</p>
+                                    <p>Passionate about software testing and quality assurance, helping teams deliver
+                                        better software through innovative testing approaches.</p>
+                                    <div class="author-social">
+                                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand-section">
+                    <h3 class="footer-brand">QA Blogs</h3>
+                    <p class="footer-description">Your go-to resource for software testing knowledge, best practices,
+                        and inspiration for QA professionals.</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/qa_blogs_com" class="social-link" aria-label="Twitter"><i
+                                class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/qablogs/" class="social-link" aria-label="Instagram"><i
+                                class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about.html" class="footer-link">About</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Random Blog Posts -->
+                <div class="footer-blogs-section">
+                    <h4 class="footer-title">You Might Also Like</h4>
+                    <div class="footer-blogs" id="footer-blogs" role="list">
+                        <!-- Loading State -->
+                        <div class="loading-state" aria-live="polite">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> QA Blogs. Made with <i
+                        class="fas fa-heart" aria-hidden="true"></i> by Nikunj Mistri
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/share.js"></script>
+</body>
+
+</html>
