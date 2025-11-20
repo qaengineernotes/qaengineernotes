@@ -7,7 +7,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Master QA in 2025 with this survival guide. Discover essential AI-powered testing skills, tools, and strategies to thrive in the evolving software landscape.",
-            "path": "blogs/qa-survival-guide-ai-powered-testing-2025.html",
+            "path": "blogs/qa-survival-guide-ai-powered-testing-2025",
             "image": "../assets/images/qa-survival-guide-ai-powered-testing-2025.webp",
             "readTime": "22 min read"
         },
@@ -18,7 +18,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing Frameworks",
             "description": "Compare Playwright, Cypress, and Selenium in 2025. Discover strengths, weaknesses, and which web automation testing framework is best for your QA needs.",
-            "path": "blogs/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison.html",
+            "path": "blogs/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison",
             "image": "../assets/images/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison.webp",
             "readTime": "28 min read"
         },
@@ -29,7 +29,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Discover Jira 9.4's revolutionary AI features: Smart Duplicate Detection and Auto-Summaries. Learn how these tools transform QA workflows, reduce manual overhead, and improve project management efficiency.",
-            "path": "blogs/jira-9-4-ai-features-smart-duplicates-auto-summaries.html",
+            "path": "blogs/jira-9-4-ai-features-smart-duplicates-auto-summaries",
             "image": "../assets/images/jira-9-4-ai-features-smart-duplicates-auto-summaries.webp",
             "readTime": "22 min read"
         },
@@ -40,7 +40,7 @@
             "author": "Nikunj Mistri",
             "category": "Career & Skills",
             "description": "Discover the essential skills QA professionals need to stay competitive in 2025. Learn about automation, AI, cloud testing, and career development strategies for modern quality assurance.",
-            "path": "blogs/future-qa-jobs-skills-stay-relevant-2025.html",
+            "path": "blogs/future-qa-jobs-skills-stay-relevant-2025",
             "image": "../assets/images/future-qa-jobs-skills-stay-relevant-2025.webp",
             "readTime": "25 min read"
         },
@@ -51,7 +51,7 @@
             "author": "Nikunj Mistri",
             "category": "Security & Testing",
             "description": "Discover the top 5 security testing tools every QA should know in 2025. Boost your QA skills, prevent breaches, and secure your applications with these essential tools.",
-            "path": "blogs/top-5-security-testing-tools-qa-professionals-2025.html",
+            "path": "blogs/top-5-security-testing-tools-qa-professionals-2025",
             "image": "../assets/images/top-5-security-testing-tools.webp",
             "readTime": "20 min read"
         },
@@ -62,7 +62,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Explore Zentester, Zencoder's AI agent, revolutionizing end-to-end software testing in 2025. Learn its features, benefits, and impact on QA automation.",
-            "path": "blogs/zentester-ai-e2e-software-testing-2025.html",
+            "path": "blogs/zentester-ai-e2e-software-testing-2025",
             "image": "../assets/images/zentester-ai-e2e-testing.png",
             "readTime": "16 min read"
         },
@@ -73,7 +73,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "Learn essential guidelines and techniques for creating effective test cases that ensure software quality and reliability.",
-            "path": "blogs/best-practices-test-cases.html",
+            "path": "blogs/best-practices-test-cases",
             "image": "../assets/images/test-case-best-practices.jpg",
             "readTime": "8 min read"
         },
@@ -84,7 +84,7 @@
             "author": "Nikunj Mistri",
             "category": "AI",
             "description": "Explore how artificial intelligence is revolutionizing software quality assurance. Learn about AI-driven testing, defect prediction, and more.",
-            "path": "blogs/intro-ai-software-testing.html",
+            "path": "blogs/intro-ai-software-testing",
             "image": "../assets/images/intro-ai-software-testing.jpg",
             "readTime": "10 min read"
         },
@@ -95,7 +95,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "Master the art of creating effective and efficient test cases for software testing. Learn proven techniques and best practices.",
-            "path": "blogs/how-to-write-great-test-case.html",
+            "path": "blogs/how-to-write-great-test-case",
             "image": "../assets/images/how-to-write-great-test-case.jpg",
             "readTime": "12 min read"
         },
@@ -106,7 +106,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "Learn comprehensive strategies and best practices for performing effective regression testing in software development.",
-            "path": "blogs/effective-regression-testing.html",
+            "path": "blogs/effective-regression-testing",
             "image": "../assets/images/effective-regression-testing.jpg",
             "readTime": "15 min read"
         },
@@ -117,7 +117,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "A comprehensive glossary of QA testing terminology, helping both beginners and experienced testers understand important concepts and jargon.",
-            "path": "blogs/qa-testing-glossary.html",
+            "path": "blogs/qa-testing-glossary",
             "image": "../assets/images/qa-glossary-share.jpg",
             "readTime": "10 min read"
         },
@@ -128,7 +128,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "An introductory guide to software testing fundamentals, types of testing, and why testing is crucial in software development.",
-            "path": "blogs/what-is-software-testing.html",
+            "path": "blogs/what-is-software-testing",
             "image": "../assets/images/what-is-software-testing.jpg",
             "readTime": "8 min read"
         },
@@ -139,7 +139,7 @@
             "author": "Nikunj Mistri",
             "category": "Career",
             "description": "A detailed look at the responsibilities, skills, and day-to-day activities of Quality Assurance Engineers in modern software development.",
-            "path": "blogs/role-of-qa-engineer.html",
+            "path": "blogs/role-of-qa-engineer",
             "image": "../assets/images/qa-engineer-role.jpg",
             "readTime": "10 min read"
         },
@@ -150,7 +150,7 @@
             "author": "Nikunj Mistri",
             "category": "Development",
             "description": "A comprehensive guide to the Software Development Life Cycle (SDLC), including its phases, methodologies, and best practices for successful software delivery.",
-            "path": "blogs/software-development-life-cycle.html",
+            "path": "blogs/software-development-life-cycle",
             "image": "../assets/images/sdlc-guide.jpg",
             "readTime": "12 min read"
         },
@@ -161,7 +161,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "An in-depth exploration of the Software Testing Life Cycle (STLC), covering all phases from requirement analysis to test closure, and best practices for each stage.",
-            "path": "blogs/software-testing-life-cycle.html",
+            "path": "blogs/software-testing-life-cycle",
             "image": "../assets/images/software-testing-life-cycle.jpg",
             "readTime": "12 min read"
         },
@@ -172,7 +172,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Explore how Artificial Intelligence is transforming the role of software testers, from automation to strategic quality assurance. Learn about AI testing tools, automation, and future of QA.",
-            "path": "blogs/beyond-manual-ai-testing.html",
+            "path": "blogs/beyond-manual-ai-testing",
             "image": "../assets/images/beyond-manual-ai-testing.jpg",
             "readTime": "12 min read"
         },
@@ -183,7 +183,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "Learn about the importance of general test scenarios in software testing. Discover how to create effective test cases for different types of software.",
-            "path": "blogs/general-test-scenarios.html",
+            "path": "blogs/general-test-scenarios",
             "image": "../assets/images/general-test-scenarios.jpg",
             "readTime": "12 min read"
         },
@@ -194,7 +194,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Gaming",
             "description": "Discover how Razer's AI QA Copilot is revolutionizing game testing. Learn about the benefits of AI in game testing and how it improves testing efficiency.",
-            "path": "blogs/razers-ai-qa-copilot.html",
+            "path": "blogs/razers-ai-qa-copilot",
             "image": "../assets/images/razers-ai-qa-copilot.jpg",
             "readTime": "15 min read"
         },
@@ -205,7 +205,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn how Spur AI Agents are revolutionizing web testing. Discover the benefits of AI agents in web testing and how they improve testing efficiency.",
-            "path": "blogs/spur-ai-agents-web-testing.html",
+            "path": "blogs/spur-ai-agents-web-testing",
             "image": "../assets/images/spur-ai-testing.jpg",
             "readTime": "15 min read"
         },
@@ -216,7 +216,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn about Google Jules, a new AI-powered testing tool that is changing the way QA engineers test web applications.",
-            "path": "blogs/google-jules-qa-engineers.html",
+            "path": "blogs/google-jules-qa-engineers",
             "image": "../assets/images/google-jules-testing.png",
             "readTime": "15 min read"
         },
@@ -227,7 +227,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn about Google Jules, a new AI-powered testing tool that is changing the way QA engineers test web applications.",
-            "path": "blogs/google-jules-test-case-generation.html",
+            "path": "blogs/google-jules-test-case-generation",
             "image": "../assets/images/google-jules-testcase-generation.png",
             "readTime": "15 min read"
         },
@@ -238,7 +238,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn about Google Jules, a new AI-powered testing tool that is changing the way QA engineers test web applications.",
-            "path": "blogs/can-google-jules-replace-qa-engineers.html",
+            "path": "blogs/can-google-jules-replace-qa-engineers",
             "image": "../assets/images/google-jules-qa-engineers.png",
             "readTime": "15 min read"
         },
@@ -249,7 +249,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Explore the most impactful emerging technologies of 2025 and how they're transforming software development and QA. Learn about AI, quantum computing, blockchain, and more.",
-            "path": "blogs/tech-landscape-2025.html",
+            "path": "blogs/tech-landscape-2025",
             "image": "../assets/images/tech-landscape-2025.png",
             "readTime": "15 min read"
         },
@@ -260,7 +260,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Explore how quantum computing is reshaping software testing and security. Learn about post-quantum cryptography, its impact on QA, and how to prepare your team for the quantum age.",
-            "path": "blogs/testing-quantum-computing-pqc-qa.html",
+            "path": "blogs/testing-quantum-computing-pqc-qa",
             "image": "../assets/images/testing-quantum-computing-pqc-qa.png",
             "readTime": "15 min read"
         },
@@ -271,7 +271,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn how Google Jules is revolutionizing bug detection and fixing with AI-powered testing. Discover the benefits of AI in bug detection and how it improves testing efficiency.",
-            "path": "blogs/google-jules-bug-detection.html",
+            "path": "blogs/google-jules-bug-detection",
             "image": "../assets/images/google-jules-bug-detection.png",
             "readTime": "15 min read"
         },
@@ -282,7 +282,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn how AI is transforming the role of QA engineers. Discover the benefits of AI in QA and how it improves testing efficiency.",
-            "path": "blogs/qa-role-ai-driven-development.html",
+            "path": "blogs/qa-role-ai-driven-development",
             "image": "../assets/images/qa-role-ai-driven-development.png",
             "readTime": "15 min read"
         },
@@ -293,7 +293,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn about the challenges of testing AI applications and how to overcome them. Discover the benefits of AI in testing and how it improves testing efficiency.",
-            "path": "blogs/testing-ai-applications-challenges.html",
+            "path": "blogs/testing-ai-applications-challenges",
             "image": "../assets/images/testing-ai-applications.png",
             "readTime": "15 min read"
         },
@@ -304,7 +304,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn about the challenges of testing AI applications and how to overcome them. Discover the benefits of AI in testing and how it improves testing efficiency.",
-            "path": "blogs/reviewing-jules-generated-tests.html",
+            "path": "blogs/reviewing-jules-generated-tests",
             "image": "../assets/images/reviewing-jules-tests.png",
             "readTime": "15 min read"
         },
@@ -315,7 +315,7 @@
             "author": "Nikunj Mistri",
             "category": "Career Development",
             "description": "Discover why continuous learning is crucial for QA professionals in 2025. Learn about edge computing, privacy-first testing, and automation trends to stay ahead in your QA career.",
-            "path": "blogs/continuous-learning-qa-2025.html",
+            "path": "blogs/continuous-learning-qa-2025",
             "image": "../assets/images/continuous-learning-qa-2025.png",
             "readTime": "15 min read"
         },
@@ -326,7 +326,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "Master 10 essential QA/testing terms with our beginner-friendly glossary. Learn about bugs, test cases, regression testing, and more to kickstart your QA career in 2025.",
-            "path": "blogs/qa-testing-terms-glossary.html",
+            "path": "blogs/qa-testing-terms-glossary",
             "image": "../assets/images/qa-testing-terms-glossary.png",
             "readTime": "10 min read"
         },
@@ -337,7 +337,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn how to combine AI's probabilistic nature with deterministic testing approaches. Discover practical strategies and best practices for reliable QA in AI-driven applications.",
-            "path": "blogs/ai-deterministic-testing-reliable-qa.html",
+            "path": "blogs/ai-deterministic-testing-reliable-qa",
             "image": "../assets/images/ai-deterministic-testing.png",
             "readTime": "18 min read"
         },
@@ -348,7 +348,7 @@
             "author": "Nikunj Mistri",
             "category": "DevOps & SRE",
             "description": "Learn how Site Reliability Engineering (SRE) is transforming Quality Assurance (QA) in 2025. Discover the benefits of SRE in QA and how it improves testing efficiency.",
-            "path": "blogs/qa-sre-transforming-quality-assurance-2025.html",
+            "path": "blogs/qa-sre-transforming-quality-assurance-2025",
             "image": "../assets/images/qa-sre-transformation.png",
             "readTime": "15 min read"
         },
@@ -359,7 +359,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "Learn about shift-left testing in financial services and how it's becoming the new standard for QA in 2025.",
-            "path": "blogs/shift-left-testing-financial-services-qa-2025.html",
+            "path": "blogs/shift-left-testing-financial-services-qa-2025",
             "image": "../assets/images/shift-left-testing.png",
             "readTime": "15 min read"
         },
@@ -370,7 +370,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "Learn about shift-left testing and how it's embedding test cases early in the SDLC.",
-            "path": "blogs/shift-left-testing-early-sdlc-qa.html",
+            "path": "blogs/shift-left-testing-early-sdlc-qa",
             "image": "../assets/images/shift-left-testing-early-sdlc-qa.png",
             "readTime": "15 min read"
         },
@@ -381,7 +381,7 @@
             "author": "Nikunj Mistri",
             "category": "Accessibility & Compliance",
             "description": "Learn about the European Accessibility Act and how it's impacting QA engineers.",
-            "path": "blogs/european-accessibility-act-qa-guide-2025.html",
+            "path": "blogs/european-accessibility-act-qa-guide-2025",
             "image": "../assets/images/european-accessibility-act-qa-guide-2025.png",
             "readTime": "15 min read"
         },
@@ -392,7 +392,7 @@
             "author": "Nikunj Mistri",
             "category": "QA Trends & Reports",
             "description": "Discover TestRail's 2025 QA Report insights on automation's impact on release cycles and quality. Learn key trends, challenges, and actionable strategies for modern QA teams.",
-            "path": "blogs/testrail-2025-report-qa-trends-automation.html",
+            "path": "blogs/testrail-2025-report-qa-trends-automation",
             "image": "../assets/images/testrail-2025-report.png",
             "readTime": "15 min read"
         },
@@ -403,7 +403,7 @@
             "author": "Nikunj Mistri",
             "category": "Mobile Testing",
             "description": "Learn about BrowserStack's new feature that enables Playwright testing on real iOS devices with Safari. Discover the benefits of this new capability for QA teams in 2025.",
-            "path": "blogs/browserstack-playwright-ios-safari-testing.html",
+            "path": "blogs/browserstack-playwright-ios-safari-testing",
             "image": "../assets/images/browserstack-playwright-ios.png",
             "readTime": "15 min read"
         },
@@ -414,7 +414,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing Trends",
             "description": "Discover the top 5 software testing innovations of June 2025, including Playwright on iOS, shift-right testing, AI self-healing, cybersecurity, and low-code platforms.",
-            "path": "blogs/weekly-software-testing-trends-june-2025.html",
+            "path": "blogs/weekly-software-testing-trends-june-2025",
             "image": "../assets/images/testing-trends-2025.png",
             "readTime": "15 min read"
         },
@@ -425,7 +425,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Learn about Fellou AI's agentic browser and how it's revolutionizing QA with automated testing workflows. Discover the benefits of this new technology for QA teams in 2025.",
-            "path": "blogs/fellou-ai-agentic-browser-qa-automation.html",
+            "path": "blogs/fellou-ai-agentic-browser-qa-automation",
             "image": "../assets/images/fellou-ai-agentic-browser.png",
             "readTime": "18 min read"
         },
@@ -436,7 +436,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing Tools",
             "description": "Unlock the full potential of Chrome for your QA testing needs. This guide covers essential developer tools, extensions, and techniques for efficient web application testing.",
-            "path": "blogs/mastering-chrome-qa-testing-guide.html",
+            "path": "blogs/mastering-chrome-qa-testing-guide",
             "image": "../assets/images/mastering-chrome-qa-testing.png",
             "readTime": "20 min read"
         },
@@ -447,7 +447,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Compare Zentester's AI-powered E2E testing with traditional QA. Learn how AI accelerates software testing in 2025, its benefits, and challenges for QA teams.",
-            "path": "blogs/zentester-vs-traditional-qa-ai-accelerating-testing-2025.html",
+            "path": "blogs/zentester-vs-traditional-qa-ai-accelerating-testing-2025",
             "image": "../assets/images/zentester-vs-traditional-qa.png",
             "readTime": "17 min read"
         },
@@ -458,7 +458,7 @@
             "author": "Nikunj Mistri",
             "category": "Software Security",
             "description": "Explore key lessons from Microsoft's June 2025 Patch Tuesday for securing software. Learn about zero-day exploits, shift-left testing, AI tools, and API security to enhance your QA strategy in 2025.",
-            "path": "blogs/securing-software-2025-microsoft-patch-tuesday-lessons.html",
+            "path": "blogs/securing-software-2025-microsoft-patch-tuesday-lessons",
             "image": "../assets/images/securing-software-2025.png",
             "readTime": "18 min read"
         },
@@ -469,7 +469,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Explore how DIA Browser transforms web automation for QA engineers with AI, cross-browser support, & low-code. Boost efficiency & reliability in software testing.",
-            "path": "blogs/dia-browser-web-automation-qa-engineers.html",
+            "path": "blogs/dia-browser-web-automation-qa-engineers",
             "image": "../assets/images/dia-browser-web-automation.png",
             "readTime": "18 min read"
         },
@@ -480,7 +480,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Discover how mabl's AI agents are revolutionizing QA efficiency in 2025. Explore AI-powered testing, self-healing tests, and predictive insights for software quality.",
-            "path": "blogs/mabl-2025-testing-revolution-ai-agents-qa-efficiency.html",
+            "path": "blogs/mabl-2025-testing-revolution-ai-agents-qa-efficiency",
             "image": "../assets/images/mabl-2025-testing-revolution.png",
             "readTime": "16 min read"
         },
@@ -491,7 +491,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing Trends",
             "description": "Explore the June 21, 2025 QA Digest on mobile accessibility (EAA/WCAG 2.2), safety-critical testing (ISO 26262), & cloud-native agility. Actionable insights for QA pros.",
-            "path": "blogs/daily-qa-digest-mobile-accessibility-safety-critical-cloud-native-june-2025.html",
+            "path": "blogs/daily-qa-digest-mobile-accessibility-safety-critical-cloud-native-june-2025",
             "image": "../assets/images/daily-qa-digest-june-2025.png",
             "readTime": "12 min read"
         },
@@ -502,7 +502,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing Trends",
             "description": "Explore our June 22, 2025 QA insights on AI's human element, cloud testing challenges, and the future of compliance. Actionable strategies for QA professionals.",
-            "path": "blogs/weekend-qa-insights-ai-cloud-compliance-june-2025.html",
+            "path": "blogs/weekend-qa-insights-ai-cloud-compliance-june-2025",
             "image": "../assets/images/weekend-qa-insights-june-2025.png",
             "readTime": "14 min read"
         },
@@ -513,7 +513,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing Tools",
             "description": "Explore the differences between TestCafe and Cypress for frontend testing in 2025. Discover which tool reigns supreme and why.",
-            "path": "blogs/frontend-testing-testcafe-cypress-2025.html",
+            "path": "blogs/frontend-testing-testcafe-cypress-2025",
             "image": "../assets/images/frontend-testing-testcafe-cypress-2025.webp",
             "readTime": "18 min read"
         },
@@ -524,7 +524,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing Tools",
             "description": "Discover the top 5 open-source bug tracking tools for 2025. Streamline your QA process, manage defects efficiently, and deliver high-quality software with these flexible and cost-effective solutions.",
-            "path": "blogs/top-5-open-source-bug-tracking-tools-2025.html",
+            "path": "blogs/top-5-open-source-bug-tracking-tools-2025",
             "image": "../assets/images/open-source-bug-tracking-tools.webp",
             "readTime": "18 min read"
         },
@@ -535,7 +535,7 @@
             "author": "Nikunj Mistri",
             "category": "AI & Automation",
             "description": "Explore Tricentis' Agentic Test Automation, a groundbreaking AI platform redefining enterprise QA in 2025. Learn how it streamlines testing and boosts productivity.",
-            "path": "blogs/tricentis-agentic-test-automation-enterprise-qa-2025.html",
+            "path": "blogs/tricentis-agentic-test-automation-enterprise-qa-2025",
             "image": "../assets/images/tricentis-agentic-test-automation.webp",
             "readTime": "18 min read"
         },
@@ -546,7 +546,7 @@
             "author": "Nikunj Mistri",
             "category": "QA Best Practices",
             "description": "Master writing effective bug reports with examples and best practices. Improve communication between QA and developers, streamline software development, and ensure swift issue resolution.",
-            "path": "blogs/how-to-write-effective-bug-reports.html",
+            "path": "blogs/how-to-write-effective-bug-reports",
             "image": "../assets/images/how-to-write-effective-bug-reports.webp",
             "readTime": "15 min read"
         },
@@ -557,7 +557,7 @@
             "author": "Nikunj Mistri",
             "category": "QA Best Practices",
             "description": "Learn to build a robust QA process for your startup from scratch. This guide covers essential strategies, tools, and best practices for quality assurance success and defect reduction.",
-            "path": "blogs/how-to-build-qa-process-for-startups.html",
+            "path": "blogs/how-to-build-qa-process-for-startups",
             "image": "../assets/images/build-qa-process-startup.webp",
             "readTime": "15 min read"
         },
@@ -568,7 +568,7 @@
             "author": "Nikunj Mistri",
             "category": "Testing",
             "description": "Learn how to seamlessly integrate bug tracking with CI/CD pipelines. Boost software quality, automate bug reporting, and streamline your QA workflow.",
-            "path": "blogs/integrating-bug-tracking-cicd-pipelines-guide.html",
+            "path": "blogs/integrating-bug-tracking-cicd-pipelines-guide",
             "image": "../assets/images/integrating-bug-tracking-cicd-pipelines.webp",
             "readTime": "20 min read"
         },
@@ -579,7 +579,7 @@
             "author": "Nikunj Mistri",
             "category": "Career & Skills",
             "description": "Discover how 40% of QA jobs evolved into Quality Engineering roles. Explore the skills, trends, and strategies shaping the future of software testing careers.",
-            "path": "blogs/the-great-testing-layoff-qa-jobs-evolve-quality-engineers.html",
+            "path": "blogs/the-great-testing-layoff-qa-jobs-evolve-quality-engineers",
             "image": "../assets/images/the-great-testing-layoff-qa-jobs-evolve-quality-engineers.webp",
             "readTime": "24 min read"
         }
