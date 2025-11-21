@@ -7,352 +7,358 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/qa-survival-guide-ai-powered-testing-2025.html</loc>
+        <loc>https://qablogs.com/blogs/qa-survival-guide-ai-powered-testing-2025</loc>
         <lastmod>2025-07-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/jira-9-4-ai-features-smart-duplicates-auto-summaries.html</loc>
+        <loc>https://qablogs.com/blogs/jira-9-4-ai-features-smart-duplicates-auto-summaries</loc>
         <lastmod>2025-07-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/future-qa-jobs-skills-stay-relevant-2025.html</loc>
+        <loc>https://qablogs.com/blogs/future-qa-jobs-skills-stay-relevant-2025</loc>
         <lastmod>2025-06-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/about.html</loc>
+        <loc>https://qablogs.com/about</loc>
         <lastmod>2025-05-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blog.html</loc>
+        <loc>https://qablogs.com/blog</loc>
         <lastmod>2025-05-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/categories.html</loc>
+        <loc>https://qablogs.com/categories</loc>
         <lastmod>2025-05-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/contact.html</loc>
+        <loc>https://qablogs.com/contact</loc>
         <lastmod>2025-05-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/ai-testing.html</loc>
+        <loc>https://qablogs.com/ai-testing</loc>
         <lastmod>2025-05-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/faqs.html</loc>
+        <loc>https://qablogs.com/faqs</loc>
         <lastmod>2025-05-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison.html</loc>
+        <loc>https://qablogs.com/blogs/playwright-vs-cypress-vs-selenium-ultimate-2025-comparison</loc>
         <lastmod>2025-07-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- Blog Posts -->
     <url>
-        <loc>https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025.html</loc>
+        <loc>https://qablogs.com/blogs/google-antigravity-qa-testing</loc>
+        <lastmod>2025-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025</loc>
         <lastmod>2025-06-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/continuous-learning-qa-2025.html</loc>
+        <loc>https://qablogs.com/blogs/continuous-learning-qa-2025</loc>
         <lastmod>2025-06-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/reviewing-jules-generated-tests.html</loc>
+        <loc>https://qablogs.com/blogs/reviewing-jules-generated-tests</loc>
         <lastmod>2025-06-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/testing-ai-applications-challenges.html</loc>
+        <loc>https://qablogs.com/blogs/testing-ai-applications-challenges</loc>
         <lastmod>2025-05-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/qa-role-ai-driven-development.html</loc>
+        <loc>https://qablogs.com/blogs/qa-role-ai-driven-development</loc>
         <lastmod>2025-05-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/google-jules-bug-detection.html</loc>
+        <loc>https://qablogs.com/blogs/google-jules-bug-detection</loc>
         <lastmod>2025-05-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/can-google-jules-replace-qa-engineers.html</loc>
+        <loc>https://qablogs.com/blogs/can-google-jules-replace-qa-engineers</loc>
         <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/google-jules-test-case-generation.html</loc>
+        <loc>https://qablogs.com/blogs/google-jules-test-case-generation</loc>
         <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/google-jules-qa-engineers.html</loc>
+        <loc>https://qablogs.com/blogs/google-jules-qa-engineers</loc>
         <lastmod>2025-05-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/spur-ai-agents-web-testing.html</loc>
+        <loc>https://qablogs.com/blogs/spur-ai-agents-web-testing</loc>
         <lastmod>2025-05-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/razers-ai-qa-copilot.html</loc>
+        <loc>https://qablogs.com/blogs/razers-ai-qa-copilot</loc>
         <lastmod>2025-05-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/effective-regression-testing.html</loc>
+        <loc>https://qablogs.com/blogs/effective-regression-testing</loc>
         <lastmod>2025-05-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/how-to-write-great-test-case.html</loc>
+        <loc>https://qablogs.com/blogs/how-to-write-great-test-case</loc>
         <lastmod>2025-05-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/best-practices-test-cases.html</loc>
+        <loc>https://qablogs.com/blogs/best-practices-test-cases</loc>
         <lastmod>2025-05-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/intro-ai-software-testing.html</loc>
+        <loc>https://qablogs.com/blogs/intro-ai-software-testing</loc>
         <lastmod>2025-05-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/qa-testing-glossary.html</loc>
+        <loc>https://qablogs.com/blogs/qa-testing-glossary</loc>
         <lastmod>2025-05-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/what-is-software-testing.html</loc>
+        <loc>https://qablogs.com/blogs/what-is-software-testing</loc>
         <lastmod>2025-04-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/role-of-qa-engineer.html</loc>
+        <loc>https://qablogs.com/blogs/role-of-qa-engineer</loc>
         <lastmod>2025-03-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/beyond-manual-ai-testing.html</loc>
+        <loc>https://qablogs.com/blogs/beyond-manual-ai-testing</loc>
         <lastmod>2025-03-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/general-test-scenarios.html</loc>
+        <loc>https://qablogs.com/blogs/general-test-scenarios</loc>
         <lastmod>2025-03-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/software-development-life-cycle.html</loc>
+        <loc>https://qablogs.com/blogs/software-development-life-cycle</loc>
         <lastmod>2025-03-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/software-testing-life-cycle.html</loc>
+        <loc>https://qablogs.com/blogs/software-testing-life-cycle</loc>
         <lastmod>2025-03-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/qa-testing-terms-glossary.html</loc>
+        <loc>https://qablogs.com/blogs/qa-testing-terms-glossary</loc>
         <lastmod>2025-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/ai-deterministic-testing-reliable-qa.html</loc>
+        <loc>https://qablogs.com/blogs/ai-deterministic-testing-reliable-qa</loc>
         <lastmod>2025-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/qa-sre-transforming-quality-assurance-2025.html</loc>
+        <loc>https://qablogs.com/blogs/qa-sre-transforming-quality-assurance-2025</loc>
         <lastmod>2025-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/shift-left-testing-financial-services-qa-2025.html</loc>
+        <loc>https://qablogs.com/blogs/shift-left-testing-financial-services-qa-2025</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/shift-left-testing-early-sdlc-qa.html</loc>
+        <loc>https://qablogs.com/blogs/shift-left-testing-early-sdlc-qa</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/european-accessibility-act-qa-guide-2025.html</loc>
+        <loc>https://qablogs.com/blogs/european-accessibility-act-qa-guide-2025</loc>
         <lastmod>2025-06-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/testrail-2025-report-qa-trends-automation.html</loc>
+        <loc>https://qablogs.com/blogs/testrail-2025-report-qa-trends-automation</loc>
         <lastmod>2025-06-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/browserstack-playwright-ios-safari-testing.html</loc>
+        <loc>https://qablogs.com/blogs/browserstack-playwright-ios-safari-testing</loc>
         <lastmod>2025-06-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/weekly-software-testing-trends-june-2025.html</loc>
+        <loc>https://qablogs.com/blogs/weekly-software-testing-trends-june-2025</loc>
         <lastmod>2025-06-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/fellou-ai-agentic-browser-qa-automation.html</loc>
+        <loc>https://qablogs.com/blogs/fellou-ai-agentic-browser-qa-automation</loc>
         <lastmod>2025-06-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/zentester-ai-e2e-software-testing-2025.html</loc>
+        <loc>https://qablogs.com/blogs/zentester-ai-e2e-software-testing-2025</loc>
         <lastmod>2025-06-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/zentester-vs-traditional-qa-ai-accelerating-testing-2025.html</loc>
+        <loc>https://qablogs.com/blogs/zentester-vs-traditional-qa-ai-accelerating-testing-2025</loc>
         <lastmod>2025-06-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/mastering-chrome-qa-testing-guide.html</loc>
+        <loc>https://qablogs.com/blogs/mastering-chrome-qa-testing-guide</loc>
         <lastmod>2025-06-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/securing-software-2025-microsoft-patch-tuesday-lessons.html</loc>
+        <loc>https://qablogs.com/blogs/securing-software-2025-microsoft-patch-tuesday-lessons</loc>
         <lastmod>2025-06-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/dia-browser-web-automation-qa-engineers.html</loc>
+        <loc>https://qablogs.com/blogs/dia-browser-web-automation-qa-engineers</loc>
         <lastmod>2025-06-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/mabl-2025-testing-revolution-ai-agents-qa-efficiency.html</loc>
+        <loc>https://qablogs.com/blogs/mabl-2025-testing-revolution-ai-agents-qa-efficiency</loc>
         <lastmod>2025-06-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/daily-qa-digest-mobile-accessibility-safety-critical-cloud-native-june-2025.html</loc>
+        <loc>https://qablogs.com/blogs/daily-qa-digest-mobile-accessibility-safety-critical-cloud-native-june-2025</loc>
         <lastmod>2025-06-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/frontend-testing-testcafe-cypress-2025.html</loc>
+        <loc>https://qablogs.com/blogs/frontend-testing-testcafe-cypress-2025</loc>
         <lastmod>2025-06-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/weekend-qa-insights-ai-cloud-compliance-june-2025.html</loc>
+        <loc>https://qablogs.com/blogs/weekend-qa-insights-ai-cloud-compliance-june-2025</loc>
         <lastmod>2025-06-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/top-5-open-source-bug-tracking-tools-2025.html</loc>
+        <loc>https://qablogs.com/blogs/top-5-open-source-bug-tracking-tools-2025</loc>
         <lastmod>2025-06-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/tricentis-agentic-test-automation-enterprise-qa-2025.html</loc>
+        <loc>https://qablogs.com/blogs/tricentis-agentic-test-automation-enterprise-qa-2025</loc>
         <lastmod>2025-06-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/how-to-build-qa-process-for-startups.html</loc>
+        <loc>https://qablogs.com/blogs/how-to-build-qa-process-for-startups</loc>
         <lastmod>2025-06-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/how-to-write-effective-bug-reports.html</loc>
+        <loc>https://qablogs.com/blogs/how-to-write-effective-bug-reports</loc>
         <lastmod>2025-06-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/integrating-bug-tracking-cicd-pipelines-guide.html</loc>
+        <loc>https://qablogs.com/blogs/integrating-bug-tracking-cicd-pipelines-guide</loc>
         <lastmod>2025-06-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025.html</loc>
+        <loc>https://qablogs.com/blogs/top-5-security-testing-tools-qa-professionals-2025</loc>
         <lastmod>2025-06-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qablogs.com/blogs/the-great-testing-layoff-qa-jobs-evolve-quality-engineers.html</loc>
+        <loc>https://qablogs.com/blogs/the-great-testing-layoff-qa-jobs-evolve-quality-engineers</loc>
         <lastmod>2025-07-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-</urlset> 
+</urlset>
