@@ -4,13 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>QA Blogs - Modern Software Testing Resources</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://qablogs.com/" />
 
     <!-- Meta Tags -->
     <meta name="description"
         content="A comprehensive resource for software testing professionals from beginner to advanced levels">
     <meta name="keywords"
         content="software testing, QA engineer, test automation, testing resources, quality assurance">
+    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Nikunj Mistri">
 
     <!-- Favicon -->
@@ -70,6 +79,14 @@
         "author": {
             "@type": "Person",
             "name": "Nikunj Mistri"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://qablogs.com/blog?search={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
         }
     }
     </script>
@@ -83,6 +100,33 @@
             "name": "Home",
             "item": "https://qablogs.com/"
         }]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "QA Blogs",
+        "url": "https://qablogs.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://qablogs.com/assets/images/logo.png"
+        },
+        "description": "A comprehensive resource for software testing professionals from beginner to advanced levels",
+        "founder": {
+            "@type": "Person",
+            "name": "Nikunj Mistri"
+        },
+        "sameAs": [
+            "https://x.com/qa_blogs_com",
+            "https://www.instagram.com/qablogs/"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "url": "https://qablogs.com/contact"
+        }
     }
     </script>
 
